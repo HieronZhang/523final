@@ -1,0 +1,431 @@
+AlexNet      line 1 cols 1-7 is T_Identifier 
+(            line 1 cols 8-8 is '(' 
+(            line 2 cols 3-3 is '(' 
+features     line 2 cols 4-11 is T_Identifier 
+)            line 2 cols 12-12 is ')' 
+:            line 2 cols 13-13 is ':' 
+Sequential   line 2 cols 15-24 is T_Sequential 
+(            line 2 cols 25-25 is '(' 
+(            line 3 cols 5-5 is '(' 
+0            line 3 cols 6-6 is T_IntConstant (value = 0)
+)            line 3 cols 7-7 is ')' 
+:            line 3 cols 8-8 is ':' 
+Conv2d       line 3 cols 10-15 is T_Conv2d 
+(            line 3 cols 16-16 is '(' 
+3            line 3 cols 17-17 is T_IntConstant (value = 3)
+,            line 3 cols 18-18 is ',' 
+64           line 3 cols 20-21 is T_IntConstant (value = 64)
+,            line 3 cols 22-22 is ',' 
+kernel_size  line 3 cols 24-34 is T_kernel_size 
+=            line 3 cols 35-35 is '=' 
+(            line 3 cols 36-36 is '(' 
+11           line 3 cols 37-38 is T_IntConstant (value = 11)
+,            line 3 cols 39-39 is ',' 
+11           line 3 cols 41-42 is T_IntConstant (value = 11)
+)            line 3 cols 43-43 is ')' 
+,            line 3 cols 44-44 is ',' 
+stride       line 3 cols 46-51 is T_stride 
+=            line 3 cols 52-52 is '=' 
+(            line 3 cols 53-53 is '(' 
+4            line 3 cols 54-54 is T_IntConstant (value = 4)
+,            line 3 cols 55-55 is ',' 
+4            line 3 cols 57-57 is T_IntConstant (value = 4)
+)            line 3 cols 58-58 is ')' 
+,            line 3 cols 59-59 is ',' 
+padding      line 3 cols 61-67 is T_padding 
+=            line 3 cols 68-68 is '=' 
+(            line 3 cols 69-69 is '(' 
+2            line 3 cols 70-70 is T_IntConstant (value = 2)
+,            line 3 cols 71-71 is ',' 
+2            line 3 cols 73-73 is T_IntConstant (value = 2)
+)            line 3 cols 74-74 is ')' 
+)            line 3 cols 75-75 is ')' 
+(            line 4 cols 5-5 is '(' 
+1            line 4 cols 6-6 is T_IntConstant (value = 1)
+)            line 4 cols 7-7 is ')' 
+:            line 4 cols 8-8 is ':' 
+ReLU         line 4 cols 10-13 is T_ReLU 
+(            line 4 cols 14-14 is '(' 
+inplace      line 4 cols 15-21 is T_inplace 
+=            line 4 cols 22-22 is '=' 
+True         line 4 cols 23-26 is T_BoolConstant (value = true)
+)            line 4 cols 27-27 is ')' 
+(            line 5 cols 5-5 is '(' 
+2            line 5 cols 6-6 is T_IntConstant (value = 2)
+)            line 5 cols 7-7 is ')' 
+:            line 5 cols 8-8 is ':' 
+MaxPool2d    line 5 cols 10-18 is T_MaxPool2d 
+(            line 5 cols 19-19 is '(' 
+kernel_size  line 5 cols 20-30 is T_kernel_size 
+=            line 5 cols 31-31 is '=' 
+3            line 5 cols 32-32 is T_IntConstant (value = 3)
+,            line 5 cols 33-33 is ',' 
+stride       line 5 cols 35-40 is T_stride 
+=            line 5 cols 41-41 is '=' 
+2            line 5 cols 42-42 is T_IntConstant (value = 2)
+,            line 5 cols 43-43 is ',' 
+padding      line 5 cols 45-51 is T_padding 
+=            line 5 cols 52-52 is '=' 
+0            line 5 cols 53-53 is T_IntConstant (value = 0)
+,            line 5 cols 54-54 is ',' 
+dilation     line 5 cols 56-63 is T_dilation 
+=            line 5 cols 64-64 is '=' 
+1            line 5 cols 65-65 is T_IntConstant (value = 1)
+,            line 5 cols 66-66 is ',' 
+ceil_mode    line 5 cols 68-76 is T_ceil_mode 
+=            line 5 cols 77-77 is '=' 
+False        line 5 cols 78-82 is T_BoolConstant (value = false)
+)            line 5 cols 83-83 is ')' 
+(            line 6 cols 5-5 is '(' 
+3            line 6 cols 6-6 is T_IntConstant (value = 3)
+)            line 6 cols 7-7 is ')' 
+:            line 6 cols 8-8 is ':' 
+Conv2d       line 6 cols 10-15 is T_Conv2d 
+(            line 6 cols 16-16 is '(' 
+64           line 6 cols 17-18 is T_IntConstant (value = 64)
+,            line 6 cols 19-19 is ',' 
+192          line 6 cols 21-23 is T_IntConstant (value = 192)
+,            line 6 cols 24-24 is ',' 
+kernel_size  line 6 cols 26-36 is T_kernel_size 
+=            line 6 cols 37-37 is '=' 
+(            line 6 cols 38-38 is '(' 
+5            line 6 cols 39-39 is T_IntConstant (value = 5)
+,            line 6 cols 40-40 is ',' 
+5            line 6 cols 42-42 is T_IntConstant (value = 5)
+)            line 6 cols 43-43 is ')' 
+,            line 6 cols 44-44 is ',' 
+stride       line 6 cols 46-51 is T_stride 
+=            line 6 cols 52-52 is '=' 
+(            line 6 cols 53-53 is '(' 
+1            line 6 cols 54-54 is T_IntConstant (value = 1)
+,            line 6 cols 55-55 is ',' 
+1            line 6 cols 57-57 is T_IntConstant (value = 1)
+)            line 6 cols 58-58 is ')' 
+,            line 6 cols 59-59 is ',' 
+padding      line 6 cols 61-67 is T_padding 
+=            line 6 cols 68-68 is '=' 
+(            line 6 cols 69-69 is '(' 
+2            line 6 cols 70-70 is T_IntConstant (value = 2)
+,            line 6 cols 71-71 is ',' 
+2            line 6 cols 73-73 is T_IntConstant (value = 2)
+)            line 6 cols 74-74 is ')' 
+)            line 6 cols 75-75 is ')' 
+(            line 7 cols 5-5 is '(' 
+4            line 7 cols 6-6 is T_IntConstant (value = 4)
+)            line 7 cols 7-7 is ')' 
+:            line 7 cols 8-8 is ':' 
+ReLU         line 7 cols 10-13 is T_ReLU 
+(            line 7 cols 14-14 is '(' 
+inplace      line 7 cols 15-21 is T_inplace 
+=            line 7 cols 22-22 is '=' 
+True         line 7 cols 23-26 is T_BoolConstant (value = true)
+)            line 7 cols 27-27 is ')' 
+(            line 8 cols 5-5 is '(' 
+5            line 8 cols 6-6 is T_IntConstant (value = 5)
+)            line 8 cols 7-7 is ')' 
+:            line 8 cols 8-8 is ':' 
+MaxPool2d    line 8 cols 10-18 is T_MaxPool2d 
+(            line 8 cols 19-19 is '(' 
+kernel_size  line 8 cols 20-30 is T_kernel_size 
+=            line 8 cols 31-31 is '=' 
+3            line 8 cols 32-32 is T_IntConstant (value = 3)
+,            line 8 cols 33-33 is ',' 
+stride       line 8 cols 35-40 is T_stride 
+=            line 8 cols 41-41 is '=' 
+2            line 8 cols 42-42 is T_IntConstant (value = 2)
+,            line 8 cols 43-43 is ',' 
+padding      line 8 cols 45-51 is T_padding 
+=            line 8 cols 52-52 is '=' 
+0            line 8 cols 53-53 is T_IntConstant (value = 0)
+,            line 8 cols 54-54 is ',' 
+dilation     line 8 cols 56-63 is T_dilation 
+=            line 8 cols 64-64 is '=' 
+1            line 8 cols 65-65 is T_IntConstant (value = 1)
+,            line 8 cols 66-66 is ',' 
+ceil_mode    line 8 cols 68-76 is T_ceil_mode 
+=            line 8 cols 77-77 is '=' 
+False        line 8 cols 78-82 is T_BoolConstant (value = false)
+)            line 8 cols 83-83 is ')' 
+(            line 9 cols 5-5 is '(' 
+6            line 9 cols 6-6 is T_IntConstant (value = 6)
+)            line 9 cols 7-7 is ')' 
+:            line 9 cols 8-8 is ':' 
+Conv2d       line 9 cols 10-15 is T_Conv2d 
+(            line 9 cols 16-16 is '(' 
+192          line 9 cols 17-19 is T_IntConstant (value = 192)
+,            line 9 cols 20-20 is ',' 
+384          line 9 cols 22-24 is T_IntConstant (value = 384)
+,            line 9 cols 25-25 is ',' 
+kernel_size  line 9 cols 27-37 is T_kernel_size 
+=            line 9 cols 38-38 is '=' 
+(            line 9 cols 39-39 is '(' 
+3            line 9 cols 40-40 is T_IntConstant (value = 3)
+,            line 9 cols 41-41 is ',' 
+3            line 9 cols 43-43 is T_IntConstant (value = 3)
+)            line 9 cols 44-44 is ')' 
+,            line 9 cols 45-45 is ',' 
+stride       line 9 cols 47-52 is T_stride 
+=            line 9 cols 53-53 is '=' 
+(            line 9 cols 54-54 is '(' 
+1            line 9 cols 55-55 is T_IntConstant (value = 1)
+,            line 9 cols 56-56 is ',' 
+1            line 9 cols 58-58 is T_IntConstant (value = 1)
+)            line 9 cols 59-59 is ')' 
+,            line 9 cols 60-60 is ',' 
+padding      line 9 cols 62-68 is T_padding 
+=            line 9 cols 69-69 is '=' 
+(            line 9 cols 70-70 is '(' 
+1            line 9 cols 71-71 is T_IntConstant (value = 1)
+,            line 9 cols 72-72 is ',' 
+1            line 9 cols 74-74 is T_IntConstant (value = 1)
+)            line 9 cols 75-75 is ')' 
+)            line 9 cols 76-76 is ')' 
+(            line 10 cols 5-5 is '(' 
+7            line 10 cols 6-6 is T_IntConstant (value = 7)
+)            line 10 cols 7-7 is ')' 
+:            line 10 cols 8-8 is ':' 
+ReLU         line 10 cols 10-13 is T_ReLU 
+(            line 10 cols 14-14 is '(' 
+inplace      line 10 cols 15-21 is T_inplace 
+=            line 10 cols 22-22 is '=' 
+True         line 10 cols 23-26 is T_BoolConstant (value = true)
+)            line 10 cols 27-27 is ')' 
+(            line 11 cols 5-5 is '(' 
+8            line 11 cols 6-6 is T_IntConstant (value = 8)
+)            line 11 cols 7-7 is ')' 
+:            line 11 cols 8-8 is ':' 
+Conv2d       line 11 cols 10-15 is T_Conv2d 
+(            line 11 cols 16-16 is '(' 
+384          line 11 cols 17-19 is T_IntConstant (value = 384)
+,            line 11 cols 20-20 is ',' 
+256          line 11 cols 22-24 is T_IntConstant (value = 256)
+,            line 11 cols 25-25 is ',' 
+kernel_size  line 11 cols 27-37 is T_kernel_size 
+=            line 11 cols 38-38 is '=' 
+(            line 11 cols 39-39 is '(' 
+3            line 11 cols 40-40 is T_IntConstant (value = 3)
+,            line 11 cols 41-41 is ',' 
+3            line 11 cols 43-43 is T_IntConstant (value = 3)
+)            line 11 cols 44-44 is ')' 
+,            line 11 cols 45-45 is ',' 
+stride       line 11 cols 47-52 is T_stride 
+=            line 11 cols 53-53 is '=' 
+(            line 11 cols 54-54 is '(' 
+1            line 11 cols 55-55 is T_IntConstant (value = 1)
+,            line 11 cols 56-56 is ',' 
+1            line 11 cols 58-58 is T_IntConstant (value = 1)
+)            line 11 cols 59-59 is ')' 
+,            line 11 cols 60-60 is ',' 
+padding      line 11 cols 62-68 is T_padding 
+=            line 11 cols 69-69 is '=' 
+(            line 11 cols 70-70 is '(' 
+1            line 11 cols 71-71 is T_IntConstant (value = 1)
+,            line 11 cols 72-72 is ',' 
+1            line 11 cols 74-74 is T_IntConstant (value = 1)
+)            line 11 cols 75-75 is ')' 
+)            line 11 cols 76-76 is ')' 
+(            line 12 cols 5-5 is '(' 
+9            line 12 cols 6-6 is T_IntConstant (value = 9)
+)            line 12 cols 7-7 is ')' 
+:            line 12 cols 8-8 is ':' 
+ReLU         line 12 cols 10-13 is T_ReLU 
+(            line 12 cols 14-14 is '(' 
+inplace      line 12 cols 15-21 is T_inplace 
+=            line 12 cols 22-22 is '=' 
+True         line 12 cols 23-26 is T_BoolConstant (value = true)
+)            line 12 cols 27-27 is ')' 
+(            line 13 cols 5-5 is '(' 
+10           line 13 cols 6-7 is T_IntConstant (value = 10)
+)            line 13 cols 8-8 is ')' 
+:            line 13 cols 9-9 is ':' 
+Conv2d       line 13 cols 11-16 is T_Conv2d 
+(            line 13 cols 17-17 is '(' 
+256          line 13 cols 18-20 is T_IntConstant (value = 256)
+,            line 13 cols 21-21 is ',' 
+256          line 13 cols 23-25 is T_IntConstant (value = 256)
+,            line 13 cols 26-26 is ',' 
+kernel_size  line 13 cols 28-38 is T_kernel_size 
+=            line 13 cols 39-39 is '=' 
+(            line 13 cols 40-40 is '(' 
+3            line 13 cols 41-41 is T_IntConstant (value = 3)
+,            line 13 cols 42-42 is ',' 
+3            line 13 cols 44-44 is T_IntConstant (value = 3)
+)            line 13 cols 45-45 is ')' 
+,            line 13 cols 46-46 is ',' 
+stride       line 13 cols 48-53 is T_stride 
+=            line 13 cols 54-54 is '=' 
+(            line 13 cols 55-55 is '(' 
+1            line 13 cols 56-56 is T_IntConstant (value = 1)
+,            line 13 cols 57-57 is ',' 
+1            line 13 cols 59-59 is T_IntConstant (value = 1)
+)            line 13 cols 60-60 is ')' 
+,            line 13 cols 61-61 is ',' 
+padding      line 13 cols 63-69 is T_padding 
+=            line 13 cols 70-70 is '=' 
+(            line 13 cols 71-71 is '(' 
+1            line 13 cols 72-72 is T_IntConstant (value = 1)
+,            line 13 cols 73-73 is ',' 
+1            line 13 cols 75-75 is T_IntConstant (value = 1)
+)            line 13 cols 76-76 is ')' 
+)            line 13 cols 77-77 is ')' 
+(            line 14 cols 5-5 is '(' 
+11           line 14 cols 6-7 is T_IntConstant (value = 11)
+)            line 14 cols 8-8 is ')' 
+:            line 14 cols 9-9 is ':' 
+ReLU         line 14 cols 11-14 is T_ReLU 
+(            line 14 cols 15-15 is '(' 
+inplace      line 14 cols 16-22 is T_inplace 
+=            line 14 cols 23-23 is '=' 
+True         line 14 cols 24-27 is T_BoolConstant (value = true)
+)            line 14 cols 28-28 is ')' 
+(            line 15 cols 5-5 is '(' 
+12           line 15 cols 6-7 is T_IntConstant (value = 12)
+)            line 15 cols 8-8 is ')' 
+:            line 15 cols 9-9 is ':' 
+MaxPool2d    line 15 cols 11-19 is T_MaxPool2d 
+(            line 15 cols 20-20 is '(' 
+kernel_size  line 15 cols 21-31 is T_kernel_size 
+=            line 15 cols 32-32 is '=' 
+3            line 15 cols 33-33 is T_IntConstant (value = 3)
+,            line 15 cols 34-34 is ',' 
+stride       line 15 cols 36-41 is T_stride 
+=            line 15 cols 42-42 is '=' 
+2            line 15 cols 43-43 is T_IntConstant (value = 2)
+,            line 15 cols 44-44 is ',' 
+padding      line 15 cols 46-52 is T_padding 
+=            line 15 cols 53-53 is '=' 
+0            line 15 cols 54-54 is T_IntConstant (value = 0)
+,            line 15 cols 55-55 is ',' 
+dilation     line 15 cols 57-64 is T_dilation 
+=            line 15 cols 65-65 is '=' 
+1            line 15 cols 66-66 is T_IntConstant (value = 1)
+,            line 15 cols 67-67 is ',' 
+ceil_mode    line 15 cols 69-77 is T_ceil_mode 
+=            line 15 cols 78-78 is '=' 
+False        line 15 cols 79-83 is T_BoolConstant (value = false)
+)            line 15 cols 84-84 is ')' 
+)            line 16 cols 3-3 is ')' 
+(            line 17 cols 3-3 is '(' 
+avgpool      line 17 cols 4-10 is T_Identifier 
+)            line 17 cols 11-11 is ')' 
+:            line 17 cols 12-12 is ':' 
+AdaptiveAvgPool2d line 17 cols 14-30 is T_AdaptiveAvgPool2d 
+(            line 17 cols 31-31 is '(' 
+output_size  line 17 cols 32-42 is T_output_size 
+=            line 17 cols 43-43 is '=' 
+(            line 17 cols 44-44 is '(' 
+6            line 17 cols 45-45 is T_IntConstant (value = 6)
+,            line 17 cols 46-46 is ',' 
+6            line 17 cols 48-48 is T_IntConstant (value = 6)
+)            line 17 cols 49-49 is ')' 
+)            line 17 cols 50-50 is ')' 
+(            line 18 cols 3-3 is '(' 
+classifier   line 18 cols 4-13 is T_Identifier 
+)            line 18 cols 14-14 is ')' 
+:            line 18 cols 15-15 is ':' 
+Sequential   line 18 cols 17-26 is T_Sequential 
+(            line 18 cols 27-27 is '(' 
+(            line 19 cols 5-5 is '(' 
+0            line 19 cols 6-6 is T_IntConstant (value = 0)
+)            line 19 cols 7-7 is ')' 
+:            line 19 cols 8-8 is ':' 
+Dropout      line 19 cols 10-16 is T_Dropout 
+(            line 19 cols 17-17 is '(' 
+p            line 19 cols 18-18 is T_p 
+=            line 19 cols 19-19 is '=' 
+0.5          line 19 cols 20-22 is T_DoubleConstant (value = 0.5)
+,            line 19 cols 23-23 is ',' 
+inplace      line 19 cols 25-31 is T_inplace 
+=            line 19 cols 32-32 is '=' 
+False        line 19 cols 33-37 is T_BoolConstant (value = false)
+)            line 19 cols 38-38 is ')' 
+(            line 20 cols 5-5 is '(' 
+1            line 20 cols 6-6 is T_IntConstant (value = 1)
+)            line 20 cols 7-7 is ')' 
+:            line 20 cols 8-8 is ':' 
+Linear       line 20 cols 10-15 is T_Linear 
+(            line 20 cols 16-16 is '(' 
+in_features  line 20 cols 17-27 is T_in_features 
+=            line 20 cols 28-28 is '=' 
+9216         line 20 cols 29-32 is T_IntConstant (value = 9216)
+,            line 20 cols 33-33 is ',' 
+out_features line 20 cols 35-46 is T_out_features 
+=            line 20 cols 47-47 is '=' 
+4096         line 20 cols 48-51 is T_IntConstant (value = 4096)
+,            line 20 cols 52-52 is ',' 
+bias         line 20 cols 54-57 is T_bias 
+=            line 20 cols 58-58 is '=' 
+True         line 20 cols 59-62 is T_BoolConstant (value = true)
+)            line 20 cols 63-63 is ')' 
+(            line 21 cols 5-5 is '(' 
+2            line 21 cols 6-6 is T_IntConstant (value = 2)
+)            line 21 cols 7-7 is ')' 
+:            line 21 cols 8-8 is ':' 
+ReLU         line 21 cols 10-13 is T_ReLU 
+(            line 21 cols 14-14 is '(' 
+inplace      line 21 cols 15-21 is T_inplace 
+=            line 21 cols 22-22 is '=' 
+True         line 21 cols 23-26 is T_BoolConstant (value = true)
+)            line 21 cols 27-27 is ')' 
+(            line 22 cols 5-5 is '(' 
+3            line 22 cols 6-6 is T_IntConstant (value = 3)
+)            line 22 cols 7-7 is ')' 
+:            line 22 cols 8-8 is ':' 
+Dropout      line 22 cols 10-16 is T_Dropout 
+(            line 22 cols 17-17 is '(' 
+p            line 22 cols 18-18 is T_p 
+=            line 22 cols 19-19 is '=' 
+0.5          line 22 cols 20-22 is T_DoubleConstant (value = 0.5)
+,            line 22 cols 23-23 is ',' 
+inplace      line 22 cols 25-31 is T_inplace 
+=            line 22 cols 32-32 is '=' 
+False        line 22 cols 33-37 is T_BoolConstant (value = false)
+)            line 22 cols 38-38 is ')' 
+(            line 23 cols 5-5 is '(' 
+4            line 23 cols 6-6 is T_IntConstant (value = 4)
+)            line 23 cols 7-7 is ')' 
+:            line 23 cols 8-8 is ':' 
+Linear       line 23 cols 10-15 is T_Linear 
+(            line 23 cols 16-16 is '(' 
+in_features  line 23 cols 17-27 is T_in_features 
+=            line 23 cols 28-28 is '=' 
+4096         line 23 cols 29-32 is T_IntConstant (value = 4096)
+,            line 23 cols 33-33 is ',' 
+out_features line 23 cols 35-46 is T_out_features 
+=            line 23 cols 47-47 is '=' 
+4096         line 23 cols 48-51 is T_IntConstant (value = 4096)
+,            line 23 cols 52-52 is ',' 
+bias         line 23 cols 54-57 is T_bias 
+=            line 23 cols 58-58 is '=' 
+True         line 23 cols 59-62 is T_BoolConstant (value = true)
+)            line 23 cols 63-63 is ')' 
+(            line 24 cols 5-5 is '(' 
+5            line 24 cols 6-6 is T_IntConstant (value = 5)
+)            line 24 cols 7-7 is ')' 
+:            line 24 cols 8-8 is ':' 
+ReLU         line 24 cols 10-13 is T_ReLU 
+(            line 24 cols 14-14 is '(' 
+inplace      line 24 cols 15-21 is T_inplace 
+=            line 24 cols 22-22 is '=' 
+True         line 24 cols 23-26 is T_BoolConstant (value = true)
+)            line 24 cols 27-27 is ')' 
+(            line 25 cols 5-5 is '(' 
+6            line 25 cols 6-6 is T_IntConstant (value = 6)
+)            line 25 cols 7-7 is ')' 
+:            line 25 cols 8-8 is ':' 
+Linear       line 25 cols 10-15 is T_Linear 
+(            line 25 cols 16-16 is '(' 
+in_features  line 25 cols 17-27 is T_in_features 
+=            line 25 cols 28-28 is '=' 
+4096         line 25 cols 29-32 is T_IntConstant (value = 4096)
+,            line 25 cols 33-33 is ',' 
+out_features line 25 cols 35-46 is T_out_features 
+=            line 25 cols 47-47 is '=' 
+1000         line 25 cols 48-51 is T_IntConstant (value = 1000)
+,            line 25 cols 52-52 is ',' 
+bias         line 25 cols 54-57 is T_bias 
+=            line 25 cols 58-58 is '=' 
+True         line 25 cols 59-62 is T_BoolConstant (value = true)
+)            line 25 cols 63-63 is ')' 
+)            line 26 cols 3-3 is ')' 
+)            line 27 cols 1-1 is ')' 

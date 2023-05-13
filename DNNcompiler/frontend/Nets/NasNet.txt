@@ -1,0 +1,1777 @@
+NASNet(
+  (features): DualPathSequential(
+    (init_block): NASNetInitBlock(
+      (conv): Conv2d(3, 32, kernel_size=(3, 3), stride=(2, 2), bias=False)
+      (bn): BatchNorm2d(32, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (stem1_unit): Stem1Unit(
+      (conv1x1): NasConv(
+        (activ): ReLU()
+        (conv): Conv2d(32, 11, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn): BatchNorm2d(11, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (comb0_left): DwsBranch(
+        (conv1): NasDwsConv(
+          (activ): ReLU()
+          (conv): DwsConv(
+            (dw_conv): Conv2d(11, 11, kernel_size=(5, 5), stride=(2, 2), padding=(2, 2), groups=11, bias=False)
+            (pw_conv): Conv2d(11, 11, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          )
+          (bn): BatchNorm2d(11, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+        )
+        (conv2): NasDwsConv(
+          (activ): ReLU()
+          (conv): DwsConv(
+            (dw_conv): Conv2d(11, 11, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2), groups=11, bias=False)
+            (pw_conv): Conv2d(11, 11, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          )
+          (bn): BatchNorm2d(11, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+        )
+      )
+      (comb0_right): DwsBranch(
+        (conv1): NasDwsConv(
+          (activ): ReLU()
+          (conv): DwsConv(
+            (dw_conv): Conv2d(32, 32, kernel_size=(7, 7), stride=(2, 2), padding=(3, 3), groups=32, bias=False)
+            (pw_conv): Conv2d(32, 11, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          )
+          (bn): BatchNorm2d(11, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+        )
+        (conv2): NasDwsConv(
+          (activ): ReLU()
+          (conv): DwsConv(
+            (dw_conv): Conv2d(11, 11, kernel_size=(7, 7), stride=(1, 1), padding=(3, 3), groups=11, bias=False)
+            (pw_conv): Conv2d(11, 11, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          )
+          (bn): BatchNorm2d(11, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+        )
+      )
+      (comb1_left): NasMaxPoolBlock(
+        (pool): MaxPool2d(kernel_size=3, stride=2, padding=1, dilation=1, ceil_mode=False)
+      )
+      (comb1_right): DwsBranch(
+        (conv1): NasDwsConv(
+          (activ): ReLU()
+          (conv): DwsConv(
+            (dw_conv): Conv2d(32, 32, kernel_size=(7, 7), stride=(2, 2), padding=(3, 3), groups=32, bias=False)
+            (pw_conv): Conv2d(32, 11, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          )
+          (bn): BatchNorm2d(11, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+        )
+        (conv2): NasDwsConv(
+          (activ): ReLU()
+          (conv): DwsConv(
+            (dw_conv): Conv2d(11, 11, kernel_size=(7, 7), stride=(1, 1), padding=(3, 3), groups=11, bias=False)
+            (pw_conv): Conv2d(11, 11, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          )
+          (bn): BatchNorm2d(11, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+        )
+      )
+      (comb2_left): AvgPool2d(kernel_size=3, stride=2, padding=1)
+      (comb2_right): DwsBranch(
+        (conv1): NasDwsConv(
+          (activ): ReLU()
+          (conv): DwsConv(
+            (dw_conv): Conv2d(32, 32, kernel_size=(5, 5), stride=(2, 2), padding=(2, 2), groups=32, bias=False)
+            (pw_conv): Conv2d(32, 11, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          )
+          (bn): BatchNorm2d(11, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+        )
+        (conv2): NasDwsConv(
+          (activ): ReLU()
+          (conv): DwsConv(
+            (dw_conv): Conv2d(11, 11, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2), groups=11, bias=False)
+            (pw_conv): Conv2d(11, 11, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          )
+          (bn): BatchNorm2d(11, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+        )
+      )
+      (comb3_right): AvgPool2d(kernel_size=3, stride=1, padding=1)
+      (comb4_left): DwsBranch(
+        (conv1): NasDwsConv(
+          (activ): ReLU()
+          (conv): DwsConv(
+            (dw_conv): Conv2d(11, 11, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=11, bias=False)
+            (pw_conv): Conv2d(11, 11, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          )
+          (bn): BatchNorm2d(11, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+        )
+        (conv2): NasDwsConv(
+          (activ): ReLU()
+          (conv): DwsConv(
+            (dw_conv): Conv2d(11, 11, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=11, bias=False)
+            (pw_conv): Conv2d(11, 11, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          )
+          (bn): BatchNorm2d(11, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+        )
+      )
+      (comb4_right): NasMaxPoolBlock(
+        (pool): MaxPool2d(kernel_size=3, stride=2, padding=1, dilation=1, ceil_mode=False)
+      )
+    )
+    (stem2_unit): Stem2Unit(
+      (conv1x1): NasConv(
+        (activ): ReLU()
+        (conv): Conv2d(44, 22, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn): BatchNorm2d(22, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (path): NasPathBlock(
+        (activ): ReLU()
+        (path1): NasPathBranch(
+          (avgpool): AvgPool2d(kernel_size=1, stride=2, padding=0)
+          (conv): Conv2d(32, 11, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        )
+        (path2): NasPathBranch(
+          (avgpool): AvgPool2d(kernel_size=1, stride=2, padding=0)
+          (conv): Conv2d(32, 11, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (pad): ZeroPad2d(padding=(0, 1, 0, 1), value=0.0)
+        )
+        (bn): BatchNorm2d(22, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (comb0_left): DwsBranch(
+        (conv1): NasDwsConv(
+          (activ): ReLU()
+          (conv): DwsConv(
+            (dw_conv): Conv2d(22, 22, kernel_size=(5, 5), stride=(2, 2), padding=(2, 2), groups=22, bias=False)
+            (pw_conv): Conv2d(22, 22, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          )
+          (bn): BatchNorm2d(22, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+          (pad): ZeroPad2d(padding=(1, 0, 1, 0), value=0.0)
+        )
+        (conv2): NasDwsConv(
+          (activ): ReLU()
+          (conv): DwsConv(
+            (dw_conv): Conv2d(22, 22, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2), groups=22, bias=False)
+            (pw_conv): Conv2d(22, 22, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          )
+          (bn): BatchNorm2d(22, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+        )
+      )
+      (comb0_right): DwsBranch(
+        (conv1): NasDwsConv(
+          (activ): ReLU()
+          (conv): DwsConv(
+            (dw_conv): Conv2d(22, 22, kernel_size=(7, 7), stride=(2, 2), padding=(3, 3), groups=22, bias=False)
+            (pw_conv): Conv2d(22, 22, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          )
+          (bn): BatchNorm2d(22, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+          (pad): ZeroPad2d(padding=(1, 0, 1, 0), value=0.0)
+        )
+        (conv2): NasDwsConv(
+          (activ): ReLU()
+          (conv): DwsConv(
+            (dw_conv): Conv2d(22, 22, kernel_size=(7, 7), stride=(1, 1), padding=(3, 3), groups=22, bias=False)
+            (pw_conv): Conv2d(22, 22, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          )
+          (bn): BatchNorm2d(22, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+        )
+      )
+      (comb1_left): NasMaxPoolBlock(
+        (pool): MaxPool2d(kernel_size=3, stride=2, padding=1, dilation=1, ceil_mode=False)
+        (pad): ZeroPad2d(padding=(1, 0, 1, 0), value=0.0)
+      )
+      (comb1_right): DwsBranch(
+        (conv1): NasDwsConv(
+          (activ): ReLU()
+          (conv): DwsConv(
+            (dw_conv): Conv2d(22, 22, kernel_size=(7, 7), stride=(2, 2), padding=(3, 3), groups=22, bias=False)
+            (pw_conv): Conv2d(22, 22, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          )
+          (bn): BatchNorm2d(22, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+          (pad): ZeroPad2d(padding=(1, 0, 1, 0), value=0.0)
+        )
+        (conv2): NasDwsConv(
+          (activ): ReLU()
+          (conv): DwsConv(
+            (dw_conv): Conv2d(22, 22, kernel_size=(7, 7), stride=(1, 1), padding=(3, 3), groups=22, bias=False)
+            (pw_conv): Conv2d(22, 22, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          )
+          (bn): BatchNorm2d(22, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+        )
+      )
+      (comb2_left): NasAvgPoolBlock(
+        (pool): AvgPool2d(kernel_size=3, stride=2, padding=1)
+        (pad): ZeroPad2d(padding=(1, 0, 1, 0), value=0.0)
+      )
+      (comb2_right): DwsBranch(
+        (conv1): NasDwsConv(
+          (activ): ReLU()
+          (conv): DwsConv(
+            (dw_conv): Conv2d(22, 22, kernel_size=(5, 5), stride=(2, 2), padding=(2, 2), groups=22, bias=False)
+            (pw_conv): Conv2d(22, 22, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          )
+          (bn): BatchNorm2d(22, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+          (pad): ZeroPad2d(padding=(1, 0, 1, 0), value=0.0)
+        )
+        (conv2): NasDwsConv(
+          (activ): ReLU()
+          (conv): DwsConv(
+            (dw_conv): Conv2d(22, 22, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2), groups=22, bias=False)
+            (pw_conv): Conv2d(22, 22, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          )
+          (bn): BatchNorm2d(22, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+        )
+      )
+      (comb3_right): AvgPool2d(kernel_size=3, stride=1, padding=1)
+      (comb4_left): DwsBranch(
+        (conv1): NasDwsConv(
+          (activ): ReLU()
+          (conv): DwsConv(
+            (dw_conv): Conv2d(22, 22, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=22, bias=False)
+            (pw_conv): Conv2d(22, 22, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          )
+          (bn): BatchNorm2d(22, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+          (pad): ZeroPad2d(padding=(1, 0, 1, 0), value=0.0)
+        )
+        (conv2): NasDwsConv(
+          (activ): ReLU()
+          (conv): DwsConv(
+            (dw_conv): Conv2d(22, 22, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=22, bias=False)
+            (pw_conv): Conv2d(22, 22, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          )
+          (bn): BatchNorm2d(22, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+        )
+      )
+      (comb4_right): NasMaxPoolBlock(
+        (pool): MaxPool2d(kernel_size=3, stride=2, padding=1, dilation=1, ceil_mode=False)
+        (pad): ZeroPad2d(padding=(1, 0, 1, 0), value=0.0)
+      )
+    )
+    (stage1): DualPathSequential(
+      (unit1): FirstUnit(
+        (conv1x1): NasConv(
+          (activ): ReLU()
+          (conv): Conv2d(88, 44, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (bn): BatchNorm2d(44, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+        )
+        (path): NasPathBlock(
+          (activ): ReLU()
+          (path1): NasPathBranch(
+            (avgpool): AvgPool2d(kernel_size=1, stride=2, padding=0)
+            (conv): Conv2d(44, 22, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          )
+          (path2): NasPathBranch(
+            (avgpool): AvgPool2d(kernel_size=1, stride=2, padding=0)
+            (conv): Conv2d(44, 22, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            (pad): ZeroPad2d(padding=(0, 1, 0, 1), value=0.0)
+          )
+          (bn): BatchNorm2d(44, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+        )
+        (comb0_left): DwsBranch(
+          (conv1): NasDwsConv(
+            (activ): ReLU()
+            (conv): DwsConv(
+              (dw_conv): Conv2d(44, 44, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2), groups=44, bias=False)
+              (pw_conv): Conv2d(44, 44, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            )
+            (bn): BatchNorm2d(44, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+          )
+          (conv2): NasDwsConv(
+            (activ): ReLU()
+            (conv): DwsConv(
+              (dw_conv): Conv2d(44, 44, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2), groups=44, bias=False)
+              (pw_conv): Conv2d(44, 44, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            )
+            (bn): BatchNorm2d(44, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+          )
+        )
+        (comb0_right): DwsBranch(
+          (conv1): NasDwsConv(
+            (activ): ReLU()
+            (conv): DwsConv(
+              (dw_conv): Conv2d(44, 44, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=44, bias=False)
+              (pw_conv): Conv2d(44, 44, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            )
+            (bn): BatchNorm2d(44, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+          )
+          (conv2): NasDwsConv(
+            (activ): ReLU()
+            (conv): DwsConv(
+              (dw_conv): Conv2d(44, 44, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=44, bias=False)
+              (pw_conv): Conv2d(44, 44, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            )
+            (bn): BatchNorm2d(44, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+          )
+        )
+        (comb1_left): DwsBranch(
+          (conv1): NasDwsConv(
+            (activ): ReLU()
+            (conv): DwsConv(
+              (dw_conv): Conv2d(44, 44, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2), groups=44, bias=False)
+              (pw_conv): Conv2d(44, 44, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            )
+            (bn): BatchNorm2d(44, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+          )
+          (conv2): NasDwsConv(
+            (activ): ReLU()
+            (conv): DwsConv(
+              (dw_conv): Conv2d(44, 44, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2), groups=44, bias=False)
+              (pw_conv): Conv2d(44, 44, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            )
+            (bn): BatchNorm2d(44, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+          )
+        )
+        (comb1_right): DwsBranch(
+          (conv1): NasDwsConv(
+            (activ): ReLU()
+            (conv): DwsConv(
+              (dw_conv): Conv2d(44, 44, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=44, bias=False)
+              (pw_conv): Conv2d(44, 44, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            )
+            (bn): BatchNorm2d(44, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+          )
+          (conv2): NasDwsConv(
+            (activ): ReLU()
+            (conv): DwsConv(
+              (dw_conv): Conv2d(44, 44, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=44, bias=False)
+              (pw_conv): Conv2d(44, 44, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            )
+            (bn): BatchNorm2d(44, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+          )
+        )
+        (comb2_left): AvgPool2d(kernel_size=3, stride=1, padding=1)
+        (comb3_left): AvgPool2d(kernel_size=3, stride=1, padding=1)
+        (comb3_right): AvgPool2d(kernel_size=3, stride=1, padding=1)
+        (comb4_left): DwsBranch(
+          (conv1): NasDwsConv(
+            (activ): ReLU()
+            (conv): DwsConv(
+              (dw_conv): Conv2d(44, 44, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=44, bias=False)
+              (pw_conv): Conv2d(44, 44, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            )
+            (bn): BatchNorm2d(44, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+          )
+          (conv2): NasDwsConv(
+            (activ): ReLU()
+            (conv): DwsConv(
+              (dw_conv): Conv2d(44, 44, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=44, bias=False)
+              (pw_conv): Conv2d(44, 44, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            )
+            (bn): BatchNorm2d(44, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+          )
+        )
+      )
+      (unit2): NormalUnit(
+        (conv1x1_prev): NasConv(
+          (activ): ReLU()
+          (conv): Conv2d(88, 44, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (bn): BatchNorm2d(44, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+        )
+        (conv1x1): NasConv(
+          (activ): ReLU()
+          (conv): Conv2d(264, 44, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (bn): BatchNorm2d(44, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+        )
+        (comb0_left): DwsBranch(
+          (conv1): NasDwsConv(
+            (activ): ReLU()
+            (conv): DwsConv(
+              (dw_conv): Conv2d(44, 44, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2), groups=44, bias=False)
+              (pw_conv): Conv2d(44, 44, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            )
+            (bn): BatchNorm2d(44, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+          )
+          (conv2): NasDwsConv(
+            (activ): ReLU()
+            (conv): DwsConv(
+              (dw_conv): Conv2d(44, 44, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2), groups=44, bias=False)
+              (pw_conv): Conv2d(44, 44, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            )
+            (bn): BatchNorm2d(44, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+          )
+        )
+        (comb0_right): DwsBranch(
+          (conv1): NasDwsConv(
+            (activ): ReLU()
+            (conv): DwsConv(
+              (dw_conv): Conv2d(44, 44, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=44, bias=False)
+              (pw_conv): Conv2d(44, 44, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            )
+            (bn): BatchNorm2d(44, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+          )
+          (conv2): NasDwsConv(
+            (activ): ReLU()
+            (conv): DwsConv(
+              (dw_conv): Conv2d(44, 44, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=44, bias=False)
+              (pw_conv): Conv2d(44, 44, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            )
+            (bn): BatchNorm2d(44, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+          )
+        )
+        (comb1_left): DwsBranch(
+          (conv1): NasDwsConv(
+            (activ): ReLU()
+            (conv): DwsConv(
+              (dw_conv): Conv2d(44, 44, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2), groups=44, bias=False)
+              (pw_conv): Conv2d(44, 44, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            )
+            (bn): BatchNorm2d(44, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+          )
+          (conv2): NasDwsConv(
+            (activ): ReLU()
+            (conv): DwsConv(
+              (dw_conv): Conv2d(44, 44, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2), groups=44, bias=False)
+              (pw_conv): Conv2d(44, 44, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            )
+            (bn): BatchNorm2d(44, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+          )
+        )
+        (comb1_right): DwsBranch(
+          (conv1): NasDwsConv(
+            (activ): ReLU()
+            (conv): DwsConv(
+              (dw_conv): Conv2d(44, 44, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=44, bias=False)
+              (pw_conv): Conv2d(44, 44, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            )
+            (bn): BatchNorm2d(44, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+          )
+          (conv2): NasDwsConv(
+            (activ): ReLU()
+            (conv): DwsConv(
+              (dw_conv): Conv2d(44, 44, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=44, bias=False)
+              (pw_conv): Conv2d(44, 44, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            )
+            (bn): BatchNorm2d(44, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+          )
+        )
+        (comb2_left): AvgPool2d(kernel_size=3, stride=1, padding=1)
+        (comb3_left): AvgPool2d(kernel_size=3, stride=1, padding=1)
+        (comb3_right): AvgPool2d(kernel_size=3, stride=1, padding=1)
+        (comb4_left): DwsBranch(
+          (conv1): NasDwsConv(
+            (activ): ReLU()
+            (conv): DwsConv(
+              (dw_conv): Conv2d(44, 44, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=44, bias=False)
+              (pw_conv): Conv2d(44, 44, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            )
+            (bn): BatchNorm2d(44, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+          )
+          (conv2): NasDwsConv(
+            (activ): ReLU()
+            (conv): DwsConv(
+              (dw_conv): Conv2d(44, 44, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=44, bias=False)
+              (pw_conv): Conv2d(44, 44, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            )
+            (bn): BatchNorm2d(44, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+          )
+        )
+      )
+      (unit3): NormalUnit(
+        (conv1x1_prev): NasConv(
+          (activ): ReLU()
+          (conv): Conv2d(264, 44, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (bn): BatchNorm2d(44, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+        )
+        (conv1x1): NasConv(
+          (activ): ReLU()
+          (conv): Conv2d(264, 44, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (bn): BatchNorm2d(44, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+        )
+        (comb0_left): DwsBranch(
+          (conv1): NasDwsConv(
+            (activ): ReLU()
+            (conv): DwsConv(
+              (dw_conv): Conv2d(44, 44, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2), groups=44, bias=False)
+              (pw_conv): Conv2d(44, 44, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            )
+            (bn): BatchNorm2d(44, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+          )
+          (conv2): NasDwsConv(
+            (activ): ReLU()
+            (conv): DwsConv(
+              (dw_conv): Conv2d(44, 44, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2), groups=44, bias=False)
+              (pw_conv): Conv2d(44, 44, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            )
+            (bn): BatchNorm2d(44, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+          )
+        )
+        (comb0_right): DwsBranch(
+          (conv1): NasDwsConv(
+            (activ): ReLU()
+            (conv): DwsConv(
+              (dw_conv): Conv2d(44, 44, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=44, bias=False)
+              (pw_conv): Conv2d(44, 44, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            )
+            (bn): BatchNorm2d(44, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+          )
+          (conv2): NasDwsConv(
+            (activ): ReLU()
+            (conv): DwsConv(
+              (dw_conv): Conv2d(44, 44, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=44, bias=False)
+              (pw_conv): Conv2d(44, 44, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            )
+            (bn): BatchNorm2d(44, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+          )
+        )
+        (comb1_left): DwsBranch(
+          (conv1): NasDwsConv(
+            (activ): ReLU()
+            (conv): DwsConv(
+              (dw_conv): Conv2d(44, 44, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2), groups=44, bias=False)
+              (pw_conv): Conv2d(44, 44, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            )
+            (bn): BatchNorm2d(44, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+          )
+          (conv2): NasDwsConv(
+            (activ): ReLU()
+            (conv): DwsConv(
+              (dw_conv): Conv2d(44, 44, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2), groups=44, bias=False)
+              (pw_conv): Conv2d(44, 44, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            )
+            (bn): BatchNorm2d(44, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+          )
+        )
+        (comb1_right): DwsBranch(
+          (conv1): NasDwsConv(
+            (activ): ReLU()
+            (conv): DwsConv(
+              (dw_conv): Conv2d(44, 44, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=44, bias=False)
+              (pw_conv): Conv2d(44, 44, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            )
+            (bn): BatchNorm2d(44, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+          )
+          (conv2): NasDwsConv(
+            (activ): ReLU()
+            (conv): DwsConv(
+              (dw_conv): Conv2d(44, 44, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=44, bias=False)
+              (pw_conv): Conv2d(44, 44, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            )
+            (bn): BatchNorm2d(44, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+          )
+        )
+        (comb2_left): AvgPool2d(kernel_size=3, stride=1, padding=1)
+        (comb3_left): AvgPool2d(kernel_size=3, stride=1, padding=1)
+        (comb3_right): AvgPool2d(kernel_size=3, stride=1, padding=1)
+        (comb4_left): DwsBranch(
+          (conv1): NasDwsConv(
+            (activ): ReLU()
+            (conv): DwsConv(
+              (dw_conv): Conv2d(44, 44, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=44, bias=False)
+              (pw_conv): Conv2d(44, 44, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            )
+            (bn): BatchNorm2d(44, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+          )
+          (conv2): NasDwsConv(
+            (activ): ReLU()
+            (conv): DwsConv(
+              (dw_conv): Conv2d(44, 44, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=44, bias=False)
+              (pw_conv): Conv2d(44, 44, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            )
+            (bn): BatchNorm2d(44, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+          )
+        )
+      )
+      (unit4): NormalUnit(
+        (conv1x1_prev): NasConv(
+          (activ): ReLU()
+          (conv): Conv2d(264, 44, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (bn): BatchNorm2d(44, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+        )
+        (conv1x1): NasConv(
+          (activ): ReLU()
+          (conv): Conv2d(264, 44, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (bn): BatchNorm2d(44, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+        )
+        (comb0_left): DwsBranch(
+          (conv1): NasDwsConv(
+            (activ): ReLU()
+            (conv): DwsConv(
+              (dw_conv): Conv2d(44, 44, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2), groups=44, bias=False)
+              (pw_conv): Conv2d(44, 44, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            )
+            (bn): BatchNorm2d(44, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+          )
+          (conv2): NasDwsConv(
+            (activ): ReLU()
+            (conv): DwsConv(
+              (dw_conv): Conv2d(44, 44, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2), groups=44, bias=False)
+              (pw_conv): Conv2d(44, 44, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            )
+            (bn): BatchNorm2d(44, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+          )
+        )
+        (comb0_right): DwsBranch(
+          (conv1): NasDwsConv(
+            (activ): ReLU()
+            (conv): DwsConv(
+              (dw_conv): Conv2d(44, 44, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=44, bias=False)
+              (pw_conv): Conv2d(44, 44, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            )
+            (bn): BatchNorm2d(44, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+          )
+          (conv2): NasDwsConv(
+            (activ): ReLU()
+            (conv): DwsConv(
+              (dw_conv): Conv2d(44, 44, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=44, bias=False)
+              (pw_conv): Conv2d(44, 44, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            )
+            (bn): BatchNorm2d(44, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+          )
+        )
+        (comb1_left): DwsBranch(
+          (conv1): NasDwsConv(
+            (activ): ReLU()
+            (conv): DwsConv(
+              (dw_conv): Conv2d(44, 44, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2), groups=44, bias=False)
+              (pw_conv): Conv2d(44, 44, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            )
+            (bn): BatchNorm2d(44, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+          )
+          (conv2): NasDwsConv(
+            (activ): ReLU()
+            (conv): DwsConv(
+              (dw_conv): Conv2d(44, 44, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2), groups=44, bias=False)
+              (pw_conv): Conv2d(44, 44, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            )
+            (bn): BatchNorm2d(44, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+          )
+        )
+        (comb1_right): DwsBranch(
+          (conv1): NasDwsConv(
+            (activ): ReLU()
+            (conv): DwsConv(
+              (dw_conv): Conv2d(44, 44, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=44, bias=False)
+              (pw_conv): Conv2d(44, 44, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            )
+            (bn): BatchNorm2d(44, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+          )
+          (conv2): NasDwsConv(
+            (activ): ReLU()
+            (conv): DwsConv(
+              (dw_conv): Conv2d(44, 44, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=44, bias=False)
+              (pw_conv): Conv2d(44, 44, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            )
+            (bn): BatchNorm2d(44, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+          )
+        )
+        (comb2_left): AvgPool2d(kernel_size=3, stride=1, padding=1)
+        (comb3_left): AvgPool2d(kernel_size=3, stride=1, padding=1)
+        (comb3_right): AvgPool2d(kernel_size=3, stride=1, padding=1)
+        (comb4_left): DwsBranch(
+          (conv1): NasDwsConv(
+            (activ): ReLU()
+            (conv): DwsConv(
+              (dw_conv): Conv2d(44, 44, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=44, bias=False)
+              (pw_conv): Conv2d(44, 44, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            )
+            (bn): BatchNorm2d(44, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+          )
+          (conv2): NasDwsConv(
+            (activ): ReLU()
+            (conv): DwsConv(
+              (dw_conv): Conv2d(44, 44, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=44, bias=False)
+              (pw_conv): Conv2d(44, 44, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            )
+            (bn): BatchNorm2d(44, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+          )
+        )
+      )
+    )
+    (stage2): DualPathSequential(
+      (unit1): Reduction1Unit(
+        (conv1x1_prev): NasConv(
+          (activ): ReLU()
+          (conv): Conv2d(264, 88, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (bn): BatchNorm2d(88, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+        )
+        (conv1x1): NasConv(
+          (activ): ReLU()
+          (conv): Conv2d(264, 88, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (bn): BatchNorm2d(88, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+        )
+        (comb0_left): DwsBranch(
+          (conv1): NasDwsConv(
+            (activ): ReLU()
+            (conv): DwsConv(
+              (dw_conv): Conv2d(88, 88, kernel_size=(5, 5), stride=(2, 2), padding=(2, 2), groups=88, bias=False)
+              (pw_conv): Conv2d(88, 88, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            )
+            (bn): BatchNorm2d(88, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+            (pad): ZeroPad2d(padding=(1, 0, 1, 0), value=0.0)
+          )
+          (conv2): NasDwsConv(
+            (activ): ReLU()
+            (conv): DwsConv(
+              (dw_conv): Conv2d(88, 88, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2), groups=88, bias=False)
+              (pw_conv): Conv2d(88, 88, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            )
+            (bn): BatchNorm2d(88, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+          )
+        )
+        (comb0_right): DwsBranch(
+          (conv1): NasDwsConv(
+            (activ): ReLU()
+            (conv): DwsConv(
+              (dw_conv): Conv2d(88, 88, kernel_size=(7, 7), stride=(2, 2), padding=(3, 3), groups=88, bias=False)
+              (pw_conv): Conv2d(88, 88, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            )
+            (bn): BatchNorm2d(88, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+            (pad): ZeroPad2d(padding=(1, 0, 1, 0), value=0.0)
+          )
+          (conv2): NasDwsConv(
+            (activ): ReLU()
+            (conv): DwsConv(
+              (dw_conv): Conv2d(88, 88, kernel_size=(7, 7), stride=(1, 1), padding=(3, 3), groups=88, bias=False)
+              (pw_conv): Conv2d(88, 88, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            )
+            (bn): BatchNorm2d(88, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+          )
+        )
+        (comb1_left): NasMaxPoolBlock(
+          (pool): MaxPool2d(kernel_size=3, stride=2, padding=1, dilation=1, ceil_mode=False)
+          (pad): ZeroPad2d(padding=(1, 0, 1, 0), value=0.0)
+        )
+        (comb1_right): DwsBranch(
+          (conv1): NasDwsConv(
+            (activ): ReLU()
+            (conv): DwsConv(
+              (dw_conv): Conv2d(88, 88, kernel_size=(7, 7), stride=(2, 2), padding=(3, 3), groups=88, bias=False)
+              (pw_conv): Conv2d(88, 88, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            )
+            (bn): BatchNorm2d(88, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+            (pad): ZeroPad2d(padding=(1, 0, 1, 0), value=0.0)
+          )
+          (conv2): NasDwsConv(
+            (activ): ReLU()
+            (conv): DwsConv(
+              (dw_conv): Conv2d(88, 88, kernel_size=(7, 7), stride=(1, 1), padding=(3, 3), groups=88, bias=False)
+              (pw_conv): Conv2d(88, 88, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            )
+            (bn): BatchNorm2d(88, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+          )
+        )
+        (comb2_left): NasAvgPoolBlock(
+          (pool): AvgPool2d(kernel_size=3, stride=2, padding=1)
+          (pad): ZeroPad2d(padding=(1, 0, 1, 0), value=0.0)
+        )
+        (comb2_right): DwsBranch(
+          (conv1): NasDwsConv(
+            (activ): ReLU()
+            (conv): DwsConv(
+              (dw_conv): Conv2d(88, 88, kernel_size=(5, 5), stride=(2, 2), padding=(2, 2), groups=88, bias=False)
+              (pw_conv): Conv2d(88, 88, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            )
+            (bn): BatchNorm2d(88, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+            (pad): ZeroPad2d(padding=(1, 0, 1, 0), value=0.0)
+          )
+          (conv2): NasDwsConv(
+            (activ): ReLU()
+            (conv): DwsConv(
+              (dw_conv): Conv2d(88, 88, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2), groups=88, bias=False)
+              (pw_conv): Conv2d(88, 88, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            )
+            (bn): BatchNorm2d(88, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+          )
+        )
+        (comb3_right): AvgPool2d(kernel_size=3, stride=1, padding=1)
+        (comb4_left): DwsBranch(
+          (conv1): NasDwsConv(
+            (activ): ReLU()
+            (conv): DwsConv(
+              (dw_conv): Conv2d(88, 88, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=88, bias=False)
+              (pw_conv): Conv2d(88, 88, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            )
+            (bn): BatchNorm2d(88, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+            (pad): ZeroPad2d(padding=(1, 0, 1, 0), value=0.0)
+          )
+          (conv2): NasDwsConv(
+            (activ): ReLU()
+            (conv): DwsConv(
+              (dw_conv): Conv2d(88, 88, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=88, bias=False)
+              (pw_conv): Conv2d(88, 88, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            )
+            (bn): BatchNorm2d(88, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+          )
+        )
+        (comb4_right): NasMaxPoolBlock(
+          (pool): MaxPool2d(kernel_size=3, stride=2, padding=1, dilation=1, ceil_mode=False)
+          (pad): ZeroPad2d(padding=(1, 0, 1, 0), value=0.0)
+        )
+      )
+      (unit2): FirstUnit(
+        (conv1x1): NasConv(
+          (activ): ReLU()
+          (conv): Conv2d(352, 88, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (bn): BatchNorm2d(88, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+        )
+        (path): NasPathBlock(
+          (activ): ReLU()
+          (path1): NasPathBranch(
+            (avgpool): AvgPool2d(kernel_size=1, stride=2, padding=0)
+            (conv): Conv2d(264, 44, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          )
+          (path2): NasPathBranch(
+            (avgpool): AvgPool2d(kernel_size=1, stride=2, padding=0)
+            (conv): Conv2d(264, 44, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            (pad): ZeroPad2d(padding=(0, 1, 0, 1), value=0.0)
+          )
+          (bn): BatchNorm2d(88, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+        )
+        (comb0_left): DwsBranch(
+          (conv1): NasDwsConv(
+            (activ): ReLU()
+            (conv): DwsConv(
+              (dw_conv): Conv2d(88, 88, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2), groups=88, bias=False)
+              (pw_conv): Conv2d(88, 88, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            )
+            (bn): BatchNorm2d(88, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+          )
+          (conv2): NasDwsConv(
+            (activ): ReLU()
+            (conv): DwsConv(
+              (dw_conv): Conv2d(88, 88, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2), groups=88, bias=False)
+              (pw_conv): Conv2d(88, 88, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            )
+            (bn): BatchNorm2d(88, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+          )
+        )
+        (comb0_right): DwsBranch(
+          (conv1): NasDwsConv(
+            (activ): ReLU()
+            (conv): DwsConv(
+              (dw_conv): Conv2d(88, 88, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=88, bias=False)
+              (pw_conv): Conv2d(88, 88, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            )
+            (bn): BatchNorm2d(88, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+          )
+          (conv2): NasDwsConv(
+            (activ): ReLU()
+            (conv): DwsConv(
+              (dw_conv): Conv2d(88, 88, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=88, bias=False)
+              (pw_conv): Conv2d(88, 88, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            )
+            (bn): BatchNorm2d(88, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+          )
+        )
+        (comb1_left): DwsBranch(
+          (conv1): NasDwsConv(
+            (activ): ReLU()
+            (conv): DwsConv(
+              (dw_conv): Conv2d(88, 88, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2), groups=88, bias=False)
+              (pw_conv): Conv2d(88, 88, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            )
+            (bn): BatchNorm2d(88, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+          )
+          (conv2): NasDwsConv(
+            (activ): ReLU()
+            (conv): DwsConv(
+              (dw_conv): Conv2d(88, 88, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2), groups=88, bias=False)
+              (pw_conv): Conv2d(88, 88, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            )
+            (bn): BatchNorm2d(88, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+          )
+        )
+        (comb1_right): DwsBranch(
+          (conv1): NasDwsConv(
+            (activ): ReLU()
+            (conv): DwsConv(
+              (dw_conv): Conv2d(88, 88, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=88, bias=False)
+              (pw_conv): Conv2d(88, 88, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            )
+            (bn): BatchNorm2d(88, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+          )
+          (conv2): NasDwsConv(
+            (activ): ReLU()
+            (conv): DwsConv(
+              (dw_conv): Conv2d(88, 88, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=88, bias=False)
+              (pw_conv): Conv2d(88, 88, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            )
+            (bn): BatchNorm2d(88, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+          )
+        )
+        (comb2_left): AvgPool2d(kernel_size=3, stride=1, padding=1)
+        (comb3_left): AvgPool2d(kernel_size=3, stride=1, padding=1)
+        (comb3_right): AvgPool2d(kernel_size=3, stride=1, padding=1)
+        (comb4_left): DwsBranch(
+          (conv1): NasDwsConv(
+            (activ): ReLU()
+            (conv): DwsConv(
+              (dw_conv): Conv2d(88, 88, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=88, bias=False)
+              (pw_conv): Conv2d(88, 88, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            )
+            (bn): BatchNorm2d(88, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+          )
+          (conv2): NasDwsConv(
+            (activ): ReLU()
+            (conv): DwsConv(
+              (dw_conv): Conv2d(88, 88, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=88, bias=False)
+              (pw_conv): Conv2d(88, 88, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            )
+            (bn): BatchNorm2d(88, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+          )
+        )
+      )
+      (unit3): NormalUnit(
+        (conv1x1_prev): NasConv(
+          (activ): ReLU()
+          (conv): Conv2d(352, 88, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (bn): BatchNorm2d(88, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+        )
+        (conv1x1): NasConv(
+          (activ): ReLU()
+          (conv): Conv2d(528, 88, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (bn): BatchNorm2d(88, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+        )
+        (comb0_left): DwsBranch(
+          (conv1): NasDwsConv(
+            (activ): ReLU()
+            (conv): DwsConv(
+              (dw_conv): Conv2d(88, 88, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2), groups=88, bias=False)
+              (pw_conv): Conv2d(88, 88, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            )
+            (bn): BatchNorm2d(88, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+          )
+          (conv2): NasDwsConv(
+            (activ): ReLU()
+            (conv): DwsConv(
+              (dw_conv): Conv2d(88, 88, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2), groups=88, bias=False)
+              (pw_conv): Conv2d(88, 88, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            )
+            (bn): BatchNorm2d(88, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+          )
+        )
+        (comb0_right): DwsBranch(
+          (conv1): NasDwsConv(
+            (activ): ReLU()
+            (conv): DwsConv(
+              (dw_conv): Conv2d(88, 88, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=88, bias=False)
+              (pw_conv): Conv2d(88, 88, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            )
+            (bn): BatchNorm2d(88, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+          )
+          (conv2): NasDwsConv(
+            (activ): ReLU()
+            (conv): DwsConv(
+              (dw_conv): Conv2d(88, 88, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=88, bias=False)
+              (pw_conv): Conv2d(88, 88, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            )
+            (bn): BatchNorm2d(88, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+          )
+        )
+        (comb1_left): DwsBranch(
+          (conv1): NasDwsConv(
+            (activ): ReLU()
+            (conv): DwsConv(
+              (dw_conv): Conv2d(88, 88, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2), groups=88, bias=False)
+              (pw_conv): Conv2d(88, 88, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            )
+            (bn): BatchNorm2d(88, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+          )
+          (conv2): NasDwsConv(
+            (activ): ReLU()
+            (conv): DwsConv(
+              (dw_conv): Conv2d(88, 88, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2), groups=88, bias=False)
+              (pw_conv): Conv2d(88, 88, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            )
+            (bn): BatchNorm2d(88, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+          )
+        )
+        (comb1_right): DwsBranch(
+          (conv1): NasDwsConv(
+            (activ): ReLU()
+            (conv): DwsConv(
+              (dw_conv): Conv2d(88, 88, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=88, bias=False)
+              (pw_conv): Conv2d(88, 88, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            )
+            (bn): BatchNorm2d(88, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+          )
+          (conv2): NasDwsConv(
+            (activ): ReLU()
+            (conv): DwsConv(
+              (dw_conv): Conv2d(88, 88, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=88, bias=False)
+              (pw_conv): Conv2d(88, 88, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            )
+            (bn): BatchNorm2d(88, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+          )
+        )
+        (comb2_left): AvgPool2d(kernel_size=3, stride=1, padding=1)
+        (comb3_left): AvgPool2d(kernel_size=3, stride=1, padding=1)
+        (comb3_right): AvgPool2d(kernel_size=3, stride=1, padding=1)
+        (comb4_left): DwsBranch(
+          (conv1): NasDwsConv(
+            (activ): ReLU()
+            (conv): DwsConv(
+              (dw_conv): Conv2d(88, 88, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=88, bias=False)
+              (pw_conv): Conv2d(88, 88, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            )
+            (bn): BatchNorm2d(88, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+          )
+          (conv2): NasDwsConv(
+            (activ): ReLU()
+            (conv): DwsConv(
+              (dw_conv): Conv2d(88, 88, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=88, bias=False)
+              (pw_conv): Conv2d(88, 88, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            )
+            (bn): BatchNorm2d(88, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+          )
+        )
+      )
+      (unit4): NormalUnit(
+        (conv1x1_prev): NasConv(
+          (activ): ReLU()
+          (conv): Conv2d(528, 88, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (bn): BatchNorm2d(88, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+        )
+        (conv1x1): NasConv(
+          (activ): ReLU()
+          (conv): Conv2d(528, 88, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (bn): BatchNorm2d(88, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+        )
+        (comb0_left): DwsBranch(
+          (conv1): NasDwsConv(
+            (activ): ReLU()
+            (conv): DwsConv(
+              (dw_conv): Conv2d(88, 88, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2), groups=88, bias=False)
+              (pw_conv): Conv2d(88, 88, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            )
+            (bn): BatchNorm2d(88, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+          )
+          (conv2): NasDwsConv(
+            (activ): ReLU()
+            (conv): DwsConv(
+              (dw_conv): Conv2d(88, 88, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2), groups=88, bias=False)
+              (pw_conv): Conv2d(88, 88, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            )
+            (bn): BatchNorm2d(88, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+          )
+        )
+        (comb0_right): DwsBranch(
+          (conv1): NasDwsConv(
+            (activ): ReLU()
+            (conv): DwsConv(
+              (dw_conv): Conv2d(88, 88, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=88, bias=False)
+              (pw_conv): Conv2d(88, 88, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            )
+            (bn): BatchNorm2d(88, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+          )
+          (conv2): NasDwsConv(
+            (activ): ReLU()
+            (conv): DwsConv(
+              (dw_conv): Conv2d(88, 88, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=88, bias=False)
+              (pw_conv): Conv2d(88, 88, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            )
+            (bn): BatchNorm2d(88, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+          )
+        )
+        (comb1_left): DwsBranch(
+          (conv1): NasDwsConv(
+            (activ): ReLU()
+            (conv): DwsConv(
+              (dw_conv): Conv2d(88, 88, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2), groups=88, bias=False)
+              (pw_conv): Conv2d(88, 88, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            )
+            (bn): BatchNorm2d(88, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+          )
+          (conv2): NasDwsConv(
+            (activ): ReLU()
+            (conv): DwsConv(
+              (dw_conv): Conv2d(88, 88, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2), groups=88, bias=False)
+              (pw_conv): Conv2d(88, 88, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            )
+            (bn): BatchNorm2d(88, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+          )
+        )
+        (comb1_right): DwsBranch(
+          (conv1): NasDwsConv(
+            (activ): ReLU()
+            (conv): DwsConv(
+              (dw_conv): Conv2d(88, 88, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=88, bias=False)
+              (pw_conv): Conv2d(88, 88, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            )
+            (bn): BatchNorm2d(88, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+          )
+          (conv2): NasDwsConv(
+            (activ): ReLU()
+            (conv): DwsConv(
+              (dw_conv): Conv2d(88, 88, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=88, bias=False)
+              (pw_conv): Conv2d(88, 88, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            )
+            (bn): BatchNorm2d(88, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+          )
+        )
+        (comb2_left): AvgPool2d(kernel_size=3, stride=1, padding=1)
+        (comb3_left): AvgPool2d(kernel_size=3, stride=1, padding=1)
+        (comb3_right): AvgPool2d(kernel_size=3, stride=1, padding=1)
+        (comb4_left): DwsBranch(
+          (conv1): NasDwsConv(
+            (activ): ReLU()
+            (conv): DwsConv(
+              (dw_conv): Conv2d(88, 88, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=88, bias=False)
+              (pw_conv): Conv2d(88, 88, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            )
+            (bn): BatchNorm2d(88, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+          )
+          (conv2): NasDwsConv(
+            (activ): ReLU()
+            (conv): DwsConv(
+              (dw_conv): Conv2d(88, 88, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=88, bias=False)
+              (pw_conv): Conv2d(88, 88, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            )
+            (bn): BatchNorm2d(88, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+          )
+        )
+      )
+      (unit5): NormalUnit(
+        (conv1x1_prev): NasConv(
+          (activ): ReLU()
+          (conv): Conv2d(528, 88, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (bn): BatchNorm2d(88, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+        )
+        (conv1x1): NasConv(
+          (activ): ReLU()
+          (conv): Conv2d(528, 88, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (bn): BatchNorm2d(88, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+        )
+        (comb0_left): DwsBranch(
+          (conv1): NasDwsConv(
+            (activ): ReLU()
+            (conv): DwsConv(
+              (dw_conv): Conv2d(88, 88, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2), groups=88, bias=False)
+              (pw_conv): Conv2d(88, 88, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            )
+            (bn): BatchNorm2d(88, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+          )
+          (conv2): NasDwsConv(
+            (activ): ReLU()
+            (conv): DwsConv(
+              (dw_conv): Conv2d(88, 88, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2), groups=88, bias=False)
+              (pw_conv): Conv2d(88, 88, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            )
+            (bn): BatchNorm2d(88, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+          )
+        )
+        (comb0_right): DwsBranch(
+          (conv1): NasDwsConv(
+            (activ): ReLU()
+            (conv): DwsConv(
+              (dw_conv): Conv2d(88, 88, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=88, bias=False)
+              (pw_conv): Conv2d(88, 88, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            )
+            (bn): BatchNorm2d(88, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+          )
+          (conv2): NasDwsConv(
+            (activ): ReLU()
+            (conv): DwsConv(
+              (dw_conv): Conv2d(88, 88, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=88, bias=False)
+              (pw_conv): Conv2d(88, 88, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            )
+            (bn): BatchNorm2d(88, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+          )
+        )
+        (comb1_left): DwsBranch(
+          (conv1): NasDwsConv(
+            (activ): ReLU()
+            (conv): DwsConv(
+              (dw_conv): Conv2d(88, 88, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2), groups=88, bias=False)
+              (pw_conv): Conv2d(88, 88, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            )
+            (bn): BatchNorm2d(88, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+          )
+          (conv2): NasDwsConv(
+            (activ): ReLU()
+            (conv): DwsConv(
+              (dw_conv): Conv2d(88, 88, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2), groups=88, bias=False)
+              (pw_conv): Conv2d(88, 88, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            )
+            (bn): BatchNorm2d(88, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+          )
+        )
+        (comb1_right): DwsBranch(
+          (conv1): NasDwsConv(
+            (activ): ReLU()
+            (conv): DwsConv(
+              (dw_conv): Conv2d(88, 88, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=88, bias=False)
+              (pw_conv): Conv2d(88, 88, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            )
+            (bn): BatchNorm2d(88, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+          )
+          (conv2): NasDwsConv(
+            (activ): ReLU()
+            (conv): DwsConv(
+              (dw_conv): Conv2d(88, 88, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=88, bias=False)
+              (pw_conv): Conv2d(88, 88, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            )
+            (bn): BatchNorm2d(88, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+          )
+        )
+        (comb2_left): AvgPool2d(kernel_size=3, stride=1, padding=1)
+        (comb3_left): AvgPool2d(kernel_size=3, stride=1, padding=1)
+        (comb3_right): AvgPool2d(kernel_size=3, stride=1, padding=1)
+        (comb4_left): DwsBranch(
+          (conv1): NasDwsConv(
+            (activ): ReLU()
+            (conv): DwsConv(
+              (dw_conv): Conv2d(88, 88, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=88, bias=False)
+              (pw_conv): Conv2d(88, 88, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            )
+            (bn): BatchNorm2d(88, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+          )
+          (conv2): NasDwsConv(
+            (activ): ReLU()
+            (conv): DwsConv(
+              (dw_conv): Conv2d(88, 88, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=88, bias=False)
+              (pw_conv): Conv2d(88, 88, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            )
+            (bn): BatchNorm2d(88, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+          )
+        )
+      )
+    )
+    (stage3): DualPathSequential(
+      (unit1): Reduction2Unit(
+        (conv1x1_prev): NasConv(
+          (activ): ReLU()
+          (conv): Conv2d(528, 176, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (bn): BatchNorm2d(176, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+        )
+        (conv1x1): NasConv(
+          (activ): ReLU()
+          (conv): Conv2d(528, 176, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (bn): BatchNorm2d(176, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+        )
+        (comb0_left): DwsBranch(
+          (conv1): NasDwsConv(
+            (activ): ReLU()
+            (conv): DwsConv(
+              (dw_conv): Conv2d(176, 176, kernel_size=(5, 5), stride=(2, 2), padding=(2, 2), groups=176, bias=False)
+              (pw_conv): Conv2d(176, 176, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            )
+            (bn): BatchNorm2d(176, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+            (pad): ZeroPad2d(padding=(1, 0, 1, 0), value=0.0)
+          )
+          (conv2): NasDwsConv(
+            (activ): ReLU()
+            (conv): DwsConv(
+              (dw_conv): Conv2d(176, 176, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2), groups=176, bias=False)
+              (pw_conv): Conv2d(176, 176, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            )
+            (bn): BatchNorm2d(176, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+          )
+        )
+        (comb0_right): DwsBranch(
+          (conv1): NasDwsConv(
+            (activ): ReLU()
+            (conv): DwsConv(
+              (dw_conv): Conv2d(176, 176, kernel_size=(7, 7), stride=(2, 2), padding=(3, 3), groups=176, bias=False)
+              (pw_conv): Conv2d(176, 176, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            )
+            (bn): BatchNorm2d(176, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+            (pad): ZeroPad2d(padding=(1, 0, 1, 0), value=0.0)
+          )
+          (conv2): NasDwsConv(
+            (activ): ReLU()
+            (conv): DwsConv(
+              (dw_conv): Conv2d(176, 176, kernel_size=(7, 7), stride=(1, 1), padding=(3, 3), groups=176, bias=False)
+              (pw_conv): Conv2d(176, 176, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            )
+            (bn): BatchNorm2d(176, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+          )
+        )
+        (comb1_left): NasMaxPoolBlock(
+          (pool): MaxPool2d(kernel_size=3, stride=2, padding=1, dilation=1, ceil_mode=False)
+          (pad): ZeroPad2d(padding=(1, 0, 1, 0), value=0.0)
+        )
+        (comb1_right): DwsBranch(
+          (conv1): NasDwsConv(
+            (activ): ReLU()
+            (conv): DwsConv(
+              (dw_conv): Conv2d(176, 176, kernel_size=(7, 7), stride=(2, 2), padding=(3, 3), groups=176, bias=False)
+              (pw_conv): Conv2d(176, 176, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            )
+            (bn): BatchNorm2d(176, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+            (pad): ZeroPad2d(padding=(1, 0, 1, 0), value=0.0)
+          )
+          (conv2): NasDwsConv(
+            (activ): ReLU()
+            (conv): DwsConv(
+              (dw_conv): Conv2d(176, 176, kernel_size=(7, 7), stride=(1, 1), padding=(3, 3), groups=176, bias=False)
+              (pw_conv): Conv2d(176, 176, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            )
+            (bn): BatchNorm2d(176, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+          )
+        )
+        (comb2_left): NasAvgPoolBlock(
+          (pool): AvgPool2d(kernel_size=3, stride=2, padding=1)
+          (pad): ZeroPad2d(padding=(1, 0, 1, 0), value=0.0)
+        )
+        (comb2_right): DwsBranch(
+          (conv1): NasDwsConv(
+            (activ): ReLU()
+            (conv): DwsConv(
+              (dw_conv): Conv2d(176, 176, kernel_size=(5, 5), stride=(2, 2), padding=(2, 2), groups=176, bias=False)
+              (pw_conv): Conv2d(176, 176, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            )
+            (bn): BatchNorm2d(176, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+            (pad): ZeroPad2d(padding=(1, 0, 1, 0), value=0.0)
+          )
+          (conv2): NasDwsConv(
+            (activ): ReLU()
+            (conv): DwsConv(
+              (dw_conv): Conv2d(176, 176, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2), groups=176, bias=False)
+              (pw_conv): Conv2d(176, 176, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            )
+            (bn): BatchNorm2d(176, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+          )
+        )
+        (comb3_right): AvgPool2d(kernel_size=3, stride=1, padding=1)
+        (comb4_left): DwsBranch(
+          (conv1): NasDwsConv(
+            (activ): ReLU()
+            (conv): DwsConv(
+              (dw_conv): Conv2d(176, 176, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=176, bias=False)
+              (pw_conv): Conv2d(176, 176, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            )
+            (bn): BatchNorm2d(176, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+            (pad): ZeroPad2d(padding=(1, 0, 1, 0), value=0.0)
+          )
+          (conv2): NasDwsConv(
+            (activ): ReLU()
+            (conv): DwsConv(
+              (dw_conv): Conv2d(176, 176, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=176, bias=False)
+              (pw_conv): Conv2d(176, 176, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            )
+            (bn): BatchNorm2d(176, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+          )
+        )
+        (comb4_right): NasMaxPoolBlock(
+          (pool): MaxPool2d(kernel_size=3, stride=2, padding=1, dilation=1, ceil_mode=False)
+          (pad): ZeroPad2d(padding=(1, 0, 1, 0), value=0.0)
+        )
+      )
+      (unit2): FirstUnit(
+        (conv1x1): NasConv(
+          (activ): ReLU()
+          (conv): Conv2d(704, 176, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (bn): BatchNorm2d(176, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+        )
+        (path): NasPathBlock(
+          (activ): ReLU()
+          (path1): NasPathBranch(
+            (avgpool): AvgPool2d(kernel_size=1, stride=2, padding=0)
+            (conv): Conv2d(528, 88, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          )
+          (path2): NasPathBranch(
+            (avgpool): AvgPool2d(kernel_size=1, stride=2, padding=0)
+            (conv): Conv2d(528, 88, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            (pad): ZeroPad2d(padding=(0, 1, 0, 1), value=0.0)
+          )
+          (bn): BatchNorm2d(176, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+        )
+        (comb0_left): DwsBranch(
+          (conv1): NasDwsConv(
+            (activ): ReLU()
+            (conv): DwsConv(
+              (dw_conv): Conv2d(176, 176, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2), groups=176, bias=False)
+              (pw_conv): Conv2d(176, 176, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            )
+            (bn): BatchNorm2d(176, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+          )
+          (conv2): NasDwsConv(
+            (activ): ReLU()
+            (conv): DwsConv(
+              (dw_conv): Conv2d(176, 176, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2), groups=176, bias=False)
+              (pw_conv): Conv2d(176, 176, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            )
+            (bn): BatchNorm2d(176, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+          )
+        )
+        (comb0_right): DwsBranch(
+          (conv1): NasDwsConv(
+            (activ): ReLU()
+            (conv): DwsConv(
+              (dw_conv): Conv2d(176, 176, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=176, bias=False)
+              (pw_conv): Conv2d(176, 176, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            )
+            (bn): BatchNorm2d(176, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+          )
+          (conv2): NasDwsConv(
+            (activ): ReLU()
+            (conv): DwsConv(
+              (dw_conv): Conv2d(176, 176, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=176, bias=False)
+              (pw_conv): Conv2d(176, 176, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            )
+            (bn): BatchNorm2d(176, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+          )
+        )
+        (comb1_left): DwsBranch(
+          (conv1): NasDwsConv(
+            (activ): ReLU()
+            (conv): DwsConv(
+              (dw_conv): Conv2d(176, 176, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2), groups=176, bias=False)
+              (pw_conv): Conv2d(176, 176, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            )
+            (bn): BatchNorm2d(176, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+          )
+          (conv2): NasDwsConv(
+            (activ): ReLU()
+            (conv): DwsConv(
+              (dw_conv): Conv2d(176, 176, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2), groups=176, bias=False)
+              (pw_conv): Conv2d(176, 176, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            )
+            (bn): BatchNorm2d(176, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+          )
+        )
+        (comb1_right): DwsBranch(
+          (conv1): NasDwsConv(
+            (activ): ReLU()
+            (conv): DwsConv(
+              (dw_conv): Conv2d(176, 176, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=176, bias=False)
+              (pw_conv): Conv2d(176, 176, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            )
+            (bn): BatchNorm2d(176, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+          )
+          (conv2): NasDwsConv(
+            (activ): ReLU()
+            (conv): DwsConv(
+              (dw_conv): Conv2d(176, 176, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=176, bias=False)
+              (pw_conv): Conv2d(176, 176, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            )
+            (bn): BatchNorm2d(176, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+          )
+        )
+        (comb2_left): AvgPool2d(kernel_size=3, stride=1, padding=1)
+        (comb3_left): AvgPool2d(kernel_size=3, stride=1, padding=1)
+        (comb3_right): AvgPool2d(kernel_size=3, stride=1, padding=1)
+        (comb4_left): DwsBranch(
+          (conv1): NasDwsConv(
+            (activ): ReLU()
+            (conv): DwsConv(
+              (dw_conv): Conv2d(176, 176, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=176, bias=False)
+              (pw_conv): Conv2d(176, 176, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            )
+            (bn): BatchNorm2d(176, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+          )
+          (conv2): NasDwsConv(
+            (activ): ReLU()
+            (conv): DwsConv(
+              (dw_conv): Conv2d(176, 176, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=176, bias=False)
+              (pw_conv): Conv2d(176, 176, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            )
+            (bn): BatchNorm2d(176, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+          )
+        )
+      )
+      (unit3): NormalUnit(
+        (conv1x1_prev): NasConv(
+          (activ): ReLU()
+          (conv): Conv2d(704, 176, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (bn): BatchNorm2d(176, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+        )
+        (conv1x1): NasConv(
+          (activ): ReLU()
+          (conv): Conv2d(1056, 176, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (bn): BatchNorm2d(176, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+        )
+        (comb0_left): DwsBranch(
+          (conv1): NasDwsConv(
+            (activ): ReLU()
+            (conv): DwsConv(
+              (dw_conv): Conv2d(176, 176, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2), groups=176, bias=False)
+              (pw_conv): Conv2d(176, 176, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            )
+            (bn): BatchNorm2d(176, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+          )
+          (conv2): NasDwsConv(
+            (activ): ReLU()
+            (conv): DwsConv(
+              (dw_conv): Conv2d(176, 176, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2), groups=176, bias=False)
+              (pw_conv): Conv2d(176, 176, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            )
+            (bn): BatchNorm2d(176, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+          )
+        )
+        (comb0_right): DwsBranch(
+          (conv1): NasDwsConv(
+            (activ): ReLU()
+            (conv): DwsConv(
+              (dw_conv): Conv2d(176, 176, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=176, bias=False)
+              (pw_conv): Conv2d(176, 176, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            )
+            (bn): BatchNorm2d(176, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+          )
+          (conv2): NasDwsConv(
+            (activ): ReLU()
+            (conv): DwsConv(
+              (dw_conv): Conv2d(176, 176, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=176, bias=False)
+              (pw_conv): Conv2d(176, 176, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            )
+            (bn): BatchNorm2d(176, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+          )
+        )
+        (comb1_left): DwsBranch(
+          (conv1): NasDwsConv(
+            (activ): ReLU()
+            (conv): DwsConv(
+              (dw_conv): Conv2d(176, 176, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2), groups=176, bias=False)
+              (pw_conv): Conv2d(176, 176, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            )
+            (bn): BatchNorm2d(176, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+          )
+          (conv2): NasDwsConv(
+            (activ): ReLU()
+            (conv): DwsConv(
+              (dw_conv): Conv2d(176, 176, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2), groups=176, bias=False)
+              (pw_conv): Conv2d(176, 176, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            )
+            (bn): BatchNorm2d(176, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+          )
+        )
+        (comb1_right): DwsBranch(
+          (conv1): NasDwsConv(
+            (activ): ReLU()
+            (conv): DwsConv(
+              (dw_conv): Conv2d(176, 176, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=176, bias=False)
+              (pw_conv): Conv2d(176, 176, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            )
+            (bn): BatchNorm2d(176, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+          )
+          (conv2): NasDwsConv(
+            (activ): ReLU()
+            (conv): DwsConv(
+              (dw_conv): Conv2d(176, 176, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=176, bias=False)
+              (pw_conv): Conv2d(176, 176, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            )
+            (bn): BatchNorm2d(176, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+          )
+        )
+        (comb2_left): AvgPool2d(kernel_size=3, stride=1, padding=1)
+        (comb3_left): AvgPool2d(kernel_size=3, stride=1, padding=1)
+        (comb3_right): AvgPool2d(kernel_size=3, stride=1, padding=1)
+        (comb4_left): DwsBranch(
+          (conv1): NasDwsConv(
+            (activ): ReLU()
+            (conv): DwsConv(
+              (dw_conv): Conv2d(176, 176, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=176, bias=False)
+              (pw_conv): Conv2d(176, 176, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            )
+            (bn): BatchNorm2d(176, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+          )
+          (conv2): NasDwsConv(
+            (activ): ReLU()
+            (conv): DwsConv(
+              (dw_conv): Conv2d(176, 176, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=176, bias=False)
+              (pw_conv): Conv2d(176, 176, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            )
+            (bn): BatchNorm2d(176, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+          )
+        )
+      )
+      (unit4): NormalUnit(
+        (conv1x1_prev): NasConv(
+          (activ): ReLU()
+          (conv): Conv2d(1056, 176, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (bn): BatchNorm2d(176, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+        )
+        (conv1x1): NasConv(
+          (activ): ReLU()
+          (conv): Conv2d(1056, 176, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (bn): BatchNorm2d(176, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+        )
+        (comb0_left): DwsBranch(
+          (conv1): NasDwsConv(
+            (activ): ReLU()
+            (conv): DwsConv(
+              (dw_conv): Conv2d(176, 176, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2), groups=176, bias=False)
+              (pw_conv): Conv2d(176, 176, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            )
+            (bn): BatchNorm2d(176, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+          )
+          (conv2): NasDwsConv(
+            (activ): ReLU()
+            (conv): DwsConv(
+              (dw_conv): Conv2d(176, 176, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2), groups=176, bias=False)
+              (pw_conv): Conv2d(176, 176, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            )
+            (bn): BatchNorm2d(176, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+          )
+        )
+        (comb0_right): DwsBranch(
+          (conv1): NasDwsConv(
+            (activ): ReLU()
+            (conv): DwsConv(
+              (dw_conv): Conv2d(176, 176, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=176, bias=False)
+              (pw_conv): Conv2d(176, 176, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            )
+            (bn): BatchNorm2d(176, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+          )
+          (conv2): NasDwsConv(
+            (activ): ReLU()
+            (conv): DwsConv(
+              (dw_conv): Conv2d(176, 176, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=176, bias=False)
+              (pw_conv): Conv2d(176, 176, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            )
+            (bn): BatchNorm2d(176, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+          )
+        )
+        (comb1_left): DwsBranch(
+          (conv1): NasDwsConv(
+            (activ): ReLU()
+            (conv): DwsConv(
+              (dw_conv): Conv2d(176, 176, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2), groups=176, bias=False)
+              (pw_conv): Conv2d(176, 176, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            )
+            (bn): BatchNorm2d(176, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+          )
+          (conv2): NasDwsConv(
+            (activ): ReLU()
+            (conv): DwsConv(
+              (dw_conv): Conv2d(176, 176, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2), groups=176, bias=False)
+              (pw_conv): Conv2d(176, 176, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            )
+            (bn): BatchNorm2d(176, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+          )
+        )
+        (comb1_right): DwsBranch(
+          (conv1): NasDwsConv(
+            (activ): ReLU()
+            (conv): DwsConv(
+              (dw_conv): Conv2d(176, 176, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=176, bias=False)
+              (pw_conv): Conv2d(176, 176, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            )
+            (bn): BatchNorm2d(176, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+          )
+          (conv2): NasDwsConv(
+            (activ): ReLU()
+            (conv): DwsConv(
+              (dw_conv): Conv2d(176, 176, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=176, bias=False)
+              (pw_conv): Conv2d(176, 176, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            )
+            (bn): BatchNorm2d(176, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+          )
+        )
+        (comb2_left): AvgPool2d(kernel_size=3, stride=1, padding=1)
+        (comb3_left): AvgPool2d(kernel_size=3, stride=1, padding=1)
+        (comb3_right): AvgPool2d(kernel_size=3, stride=1, padding=1)
+        (comb4_left): DwsBranch(
+          (conv1): NasDwsConv(
+            (activ): ReLU()
+            (conv): DwsConv(
+              (dw_conv): Conv2d(176, 176, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=176, bias=False)
+              (pw_conv): Conv2d(176, 176, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            )
+            (bn): BatchNorm2d(176, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+          )
+          (conv2): NasDwsConv(
+            (activ): ReLU()
+            (conv): DwsConv(
+              (dw_conv): Conv2d(176, 176, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=176, bias=False)
+              (pw_conv): Conv2d(176, 176, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            )
+            (bn): BatchNorm2d(176, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+          )
+        )
+      )
+      (unit5): NormalUnit(
+        (conv1x1_prev): NasConv(
+          (activ): ReLU()
+          (conv): Conv2d(1056, 176, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (bn): BatchNorm2d(176, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+        )
+        (conv1x1): NasConv(
+          (activ): ReLU()
+          (conv): Conv2d(1056, 176, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (bn): BatchNorm2d(176, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+        )
+        (comb0_left): DwsBranch(
+          (conv1): NasDwsConv(
+            (activ): ReLU()
+            (conv): DwsConv(
+              (dw_conv): Conv2d(176, 176, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2), groups=176, bias=False)
+              (pw_conv): Conv2d(176, 176, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            )
+            (bn): BatchNorm2d(176, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+          )
+          (conv2): NasDwsConv(
+            (activ): ReLU()
+            (conv): DwsConv(
+              (dw_conv): Conv2d(176, 176, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2), groups=176, bias=False)
+              (pw_conv): Conv2d(176, 176, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            )
+            (bn): BatchNorm2d(176, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+          )
+        )
+        (comb0_right): DwsBranch(
+          (conv1): NasDwsConv(
+            (activ): ReLU()
+            (conv): DwsConv(
+              (dw_conv): Conv2d(176, 176, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=176, bias=False)
+              (pw_conv): Conv2d(176, 176, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            )
+            (bn): BatchNorm2d(176, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+          )
+          (conv2): NasDwsConv(
+            (activ): ReLU()
+            (conv): DwsConv(
+              (dw_conv): Conv2d(176, 176, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=176, bias=False)
+              (pw_conv): Conv2d(176, 176, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            )
+            (bn): BatchNorm2d(176, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+          )
+        )
+        (comb1_left): DwsBranch(
+          (conv1): NasDwsConv(
+            (activ): ReLU()
+            (conv): DwsConv(
+              (dw_conv): Conv2d(176, 176, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2), groups=176, bias=False)
+              (pw_conv): Conv2d(176, 176, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            )
+            (bn): BatchNorm2d(176, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+          )
+          (conv2): NasDwsConv(
+            (activ): ReLU()
+            (conv): DwsConv(
+              (dw_conv): Conv2d(176, 176, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2), groups=176, bias=False)
+              (pw_conv): Conv2d(176, 176, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            )
+            (bn): BatchNorm2d(176, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+          )
+        )
+        (comb1_right): DwsBranch(
+          (conv1): NasDwsConv(
+            (activ): ReLU()
+            (conv): DwsConv(
+              (dw_conv): Conv2d(176, 176, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=176, bias=False)
+              (pw_conv): Conv2d(176, 176, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            )
+            (bn): BatchNorm2d(176, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+          )
+          (conv2): NasDwsConv(
+            (activ): ReLU()
+            (conv): DwsConv(
+              (dw_conv): Conv2d(176, 176, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=176, bias=False)
+              (pw_conv): Conv2d(176, 176, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            )
+            (bn): BatchNorm2d(176, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+          )
+        )
+        (comb2_left): AvgPool2d(kernel_size=3, stride=1, padding=1)
+        (comb3_left): AvgPool2d(kernel_size=3, stride=1, padding=1)
+        (comb3_right): AvgPool2d(kernel_size=3, stride=1, padding=1)
+        (comb4_left): DwsBranch(
+          (conv1): NasDwsConv(
+            (activ): ReLU()
+            (conv): DwsConv(
+              (dw_conv): Conv2d(176, 176, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=176, bias=False)
+              (pw_conv): Conv2d(176, 176, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            )
+            (bn): BatchNorm2d(176, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+          )
+          (conv2): NasDwsConv(
+            (activ): ReLU()
+            (conv): DwsConv(
+              (dw_conv): Conv2d(176, 176, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=176, bias=False)
+              (pw_conv): Conv2d(176, 176, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            )
+            (bn): BatchNorm2d(176, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+          )
+        )
+      )
+    )
+    (activ): ReLU()
+    (final_pool): AvgPool2d(kernel_size=7, stride=1, padding=0)
+  )
+  (output): Sequential(
+    (dropout): Dropout(p=0.5, inplace=False)
+    (fc): Linear(in_features=1056, out_features=1000, bias=True)
+  )
+)

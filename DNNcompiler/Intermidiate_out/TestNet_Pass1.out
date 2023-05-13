@@ -1,0 +1,236 @@
+
+   Model: 
+  1   ModelnameIdentifier: ResNet
+  2   LayersBlockLayer: 
+  2      LayernameIdentifier: conv1
+         BlockOperatorBlock: 
+  2         Conv2d: (3, 64, 7, 7, 2, 2, 3, 3, 0)
+  3   LayersBlockLayer: 
+  3      LayernameIdentifier: bn1
+         BlockOperatorBlock: 
+  3         BatchNorm2d: (64, 0.000010, 0.100000, 1, 1)
+  4   LayersBlockLayer: 
+  4      LayernameIdentifier: relu
+         BlockOperatorBlock: 
+  4         ReLU: (1)
+  5   LayersBlockLayer: 
+  5      LayernameIdentifier: maxpool
+         BlockOperatorBlock: 
+  5         MaxPool2d: (3, 2, 1, 1, 0)
+  6   LayersSeqBlockLayer: 
+  6      LayernameIdentifier: layer1
+         SeqBlocksSeqBlock: 
+            UserBlock: 
+  7            BlocknameIdentifier: BasicBlock
+  8            LayersBlockLayer: 
+  8               LayernameIdentifier: conv1
+                  BlockOperatorBlock: 
+  8                  Conv2d: (64, 64, 3, 3, 1, 1, 1, 1, 0)
+  9            LayersBlockLayer: 
+  9               LayernameIdentifier: bn1
+                  BlockOperatorBlock: 
+  9                  BatchNorm2d: (64, 0.000010, 0.100000, 1, 1)
+ 10            LayersBlockLayer: 
+ 10               LayernameIdentifier: relu
+                  BlockOperatorBlock: 
+ 10                  ReLU: (1)
+ 11            LayersBlockLayer: 
+ 11               LayernameIdentifier: conv2
+                  BlockOperatorBlock: 
+ 11                  Conv2d: (64, 64, 3, 3, 1, 1, 1, 1, 0)
+ 12            LayersBlockLayer: 
+ 12               LayernameIdentifier: bn2
+                  BlockOperatorBlock: 
+ 12                  BatchNorm2d: (64, 0.000010, 0.100000, 1, 1)
+         SeqBlocksSeqBlock: 
+            UserBlock: 
+ 14            BlocknameIdentifier: BasicBlock
+ 15            LayersBlockLayer: 
+ 15               LayernameIdentifier: conv1
+                  BlockOperatorBlock: 
+ 15                  Conv2d: (64, 64, 3, 3, 1, 1, 1, 1, 0)
+ 16            LayersBlockLayer: 
+ 16               LayernameIdentifier: bn1
+                  BlockOperatorBlock: 
+ 16                  BatchNorm2d: (64, 0.000010, 0.100000, 1, 1)
+ 17            LayersBlockLayer: 
+ 17               LayernameIdentifier: relu
+                  BlockOperatorBlock: 
+ 17                  ReLU: (1)
+ 18            LayersBlockLayer: 
+ 18               LayernameIdentifier: conv2
+                  BlockOperatorBlock: 
+ 18                  Conv2d: (64, 64, 3, 3, 1, 1, 1, 1, 0)
+ 19            LayersBlockLayer: 
+ 19               LayernameIdentifier: bn2
+                  BlockOperatorBlock: 
+ 19                  BatchNorm2d: (64, 0.000010, 0.100000, 1, 1)
+ 22   LayersBlockLayer: 
+ 22      LayernameIdentifier: avgpool
+         BlockOperatorBlock: 
+ 22         AdaptiveAvgPool2d: (1, 1)
+ 23   LayersBlockLayer: 
+ 23      LayernameIdentifier: fc
+         BlockOperatorBlock: 
+ 23         Linear: (64, 128, 1)
+ 24   LayersBlockLayer: 
+ 24      LayernameIdentifier: fc
+         BlockOperatorBlock: 
+ 24         Linear: (128, 256, 1)
+Layer ID:0; Name:Conv2d
+(1,3,224,224)
+Input Tensor: Base Address: 0, Size in byte: 1204224
+Output Tensor: Base Address: 1204224, Size in byte: 6422528
+d_Input Tensor: Base Address: 7782400, Size in byte: 1204224
+d_Output Tensor: Base Address: 15409152, Size in byte: 6422528
+Weight Tensor: Base Address: 7626752, Size in byte: 75264
+d_Weight Tensor: Base Address: 7704576, Size in byte: 75264
+______________________________________________________________________________
+Layer ID:1; Name:BatchNorm2d
+(1,64,112,112)
+Input Tensor: Base Address: 1204224, Size in byte: 6422528
+Output Tensor: Base Address: 8986624, Size in byte: 6422528
+d_Input Tensor: Base Address: 15409152, Size in byte: 6422528
+d_Output Tensor: Base Address: 28270592, Size in byte: 6422528
+Alpha_and_Beta Tensor: Base Address: 21831680, Size in byte: 1024
+d_Alpha_and_beta Tensor: Base Address: 21835776, Size in byte: 1024
+Running_m Tensor: Base Address: 21839872, Size in byte: 512
+Running_v Tensor: Base Address: 21843968, Size in byte: 512
+______________________________________________________________________________
+Layer ID:2; Name:ReLU
+(1,64,112,112)
+Input Tensor: Base Address: 8986624, Size in byte: 6422528
+Output Tensor: Base Address: 21848064, Size in byte: 6422528
+d_Input Tensor: Base Address: 28270592, Size in byte: 6422528
+d_Output Tensor: Base Address: 36298752, Size in byte: 6422528
+______________________________________________________________________________
+Layer ID:3; Name:MaxPool2d
+(1,64,112,112)
+Input Tensor: Base Address: 21848064, Size in byte: 6422528
+Output Tensor: Base Address: 34693120, Size in byte: 1605632
+d_Input Tensor: Base Address: 36298752, Size in byte: 6422528
+d_Output Tensor: Base Address: 44916736, Size in byte: 1605632
+______________________________________________________________________________
+Layer ID:4; Name:Conv2d
+(1,64,56,56)
+Input Tensor: Base Address: 34693120, Size in byte: 1605632
+Output Tensor: Base Address: 42721280, Size in byte: 1605632
+d_Input Tensor: Base Address: 44916736, Size in byte: 1605632
+d_Output Tensor: Base Address: 48128000, Size in byte: 1605632
+Weight Tensor: Base Address: 44326912, Size in byte: 294912
+d_Weight Tensor: Base Address: 44621824, Size in byte: 294912
+______________________________________________________________________________
+Layer ID:5; Name:BatchNorm2d
+(1,64,56,56)
+Input Tensor: Base Address: 42721280, Size in byte: 1605632
+Output Tensor: Base Address: 46522368, Size in byte: 1605632
+d_Input Tensor: Base Address: 48128000, Size in byte: 1605632
+d_Output Tensor: Base Address: 51355648, Size in byte: 1605632
+Alpha_and_Beta Tensor: Base Address: 49733632, Size in byte: 1024
+d_Alpha_and_beta Tensor: Base Address: 49737728, Size in byte: 1024
+Running_m Tensor: Base Address: 49741824, Size in byte: 512
+Running_v Tensor: Base Address: 49745920, Size in byte: 512
+______________________________________________________________________________
+Layer ID:6; Name:ReLU
+(1,64,56,56)
+Input Tensor: Base Address: 46522368, Size in byte: 1605632
+Output Tensor: Base Address: 49750016, Size in byte: 1605632
+d_Input Tensor: Base Address: 51355648, Size in byte: 1605632
+d_Output Tensor: Base Address: 55156736, Size in byte: 1605632
+______________________________________________________________________________
+Layer ID:7; Name:Conv2d
+(1,64,56,56)
+Input Tensor: Base Address: 49750016, Size in byte: 1605632
+Output Tensor: Base Address: 52961280, Size in byte: 1605632
+d_Input Tensor: Base Address: 55156736, Size in byte: 1605632
+d_Output Tensor: Base Address: 58368000, Size in byte: 1605632
+Weight Tensor: Base Address: 54566912, Size in byte: 294912
+d_Weight Tensor: Base Address: 54861824, Size in byte: 294912
+______________________________________________________________________________
+Layer ID:8; Name:BatchNorm2d
+(1,64,56,56)
+Input Tensor: Base Address: 52961280, Size in byte: 1605632
+Output Tensor: Base Address: 56762368, Size in byte: 1605632
+d_Input Tensor: Base Address: 58368000, Size in byte: 1605632
+d_Output Tensor: Base Address: 62185472, Size in byte: 1605632
+Alpha_and_Beta Tensor: Base Address: 59973632, Size in byte: 1024
+d_Alpha_and_beta Tensor: Base Address: 59977728, Size in byte: 1024
+Running_m Tensor: Base Address: 59981824, Size in byte: 512
+Running_v Tensor: Base Address: 59985920, Size in byte: 512
+______________________________________________________________________________
+Layer ID:9; Name:Conv2d
+(1,64,56,56)
+Input Tensor: Base Address: 56762368, Size in byte: 1605632
+Output Tensor: Base Address: 59990016, Size in byte: 1605632
+d_Input Tensor: Base Address: 62185472, Size in byte: 1605632
+d_Output Tensor: Base Address: 65396736, Size in byte: 1605632
+Weight Tensor: Base Address: 61595648, Size in byte: 294912
+d_Weight Tensor: Base Address: 61890560, Size in byte: 294912
+______________________________________________________________________________
+Layer ID:10; Name:BatchNorm2d
+(1,64,56,56)
+Input Tensor: Base Address: 59990016, Size in byte: 1605632
+Output Tensor: Base Address: 63791104, Size in byte: 1605632
+d_Input Tensor: Base Address: 65396736, Size in byte: 1605632
+d_Output Tensor: Base Address: 68624384, Size in byte: 1605632
+Alpha_and_Beta Tensor: Base Address: 67002368, Size in byte: 1024
+d_Alpha_and_beta Tensor: Base Address: 67006464, Size in byte: 1024
+Running_m Tensor: Base Address: 67010560, Size in byte: 512
+Running_v Tensor: Base Address: 67014656, Size in byte: 512
+______________________________________________________________________________
+Layer ID:11; Name:ReLU
+(1,64,56,56)
+Input Tensor: Base Address: 63791104, Size in byte: 1605632
+Output Tensor: Base Address: 67018752, Size in byte: 1605632
+d_Input Tensor: Base Address: 68624384, Size in byte: 1605632
+d_Output Tensor: Base Address: 72425472, Size in byte: 1605632
+______________________________________________________________________________
+Layer ID:12; Name:Conv2d
+(1,64,56,56)
+Input Tensor: Base Address: 67018752, Size in byte: 1605632
+Output Tensor: Base Address: 70230016, Size in byte: 1605632
+d_Input Tensor: Base Address: 72425472, Size in byte: 1605632
+d_Output Tensor: Base Address: 75636736, Size in byte: 1605632
+Weight Tensor: Base Address: 71835648, Size in byte: 294912
+d_Weight Tensor: Base Address: 72130560, Size in byte: 294912
+______________________________________________________________________________
+Layer ID:13; Name:BatchNorm2d
+(1,64,56,56)
+Input Tensor: Base Address: 70230016, Size in byte: 1605632
+Output Tensor: Base Address: 74031104, Size in byte: 1605632
+d_Input Tensor: Base Address: 75636736, Size in byte: 1605632
+d_Output Tensor: Base Address: 77262848, Size in byte: 1605632
+Alpha_and_Beta Tensor: Base Address: 77242368, Size in byte: 1024
+d_Alpha_and_beta Tensor: Base Address: 77246464, Size in byte: 1024
+Running_m Tensor: Base Address: 77250560, Size in byte: 512
+Running_v Tensor: Base Address: 77254656, Size in byte: 512
+______________________________________________________________________________
+Layer ID:14; Name:AdaptiveAvgPool2d
+(1,64,56,56)
+Input Tensor: Base Address: 74031104, Size in byte: 1605632
+Output Tensor: Base Address: 77258752, Size in byte: 512
+d_Input Tensor: Base Address: 77262848, Size in byte: 1605632
+d_Output Tensor: Base Address: 78938112, Size in byte: 512
+______________________________________________________________________________
+Layer ID:15; Name:Linear
+(1,64,1,1)
+Input Tensor: Base Address: 77258752, Size in byte: 512
+Output Tensor: Base Address: 78934016, Size in byte: 1024
+d_Input Tensor: Base Address: 78938112, Size in byte: 512
+d_Output Tensor: Base Address: 79282176, Size in byte: 1024
+Weight Tensor: Base Address: 78868480, Size in byte: 65536
+d_Weight Tensor: Base Address: 78942208, Size in byte: 65536
+Bias Tensor: Base Address: 79007744, Size in byte: 1024
+d_Bias Tensor: Base Address: 79011840, Size in byte: 1024
+______________________________________________________________________________
+Layer ID:16; Name:Linear
+(1,128,1,1)
+Input Tensor: Base Address: 78934016, Size in byte: 1024
+Output Tensor: Base Address: 79278080, Size in byte: 2048
+d_Input Tensor: Base Address: 79282176, Size in byte: 1024
+d_Output Tensor: Base Address: 79556608, Size in byte: 2048
+Weight Tensor: Base Address: 79015936, Size in byte: 262144
+d_Weight Tensor: Base Address: 79286272, Size in byte: 262144
+Bias Tensor: Base Address: 79548416, Size in byte: 2048
+d_Bias Tensor: Base Address: 79552512, Size in byte: 2048
+______________________________________________________________________________

@@ -1,0 +1,1227 @@
+
+   Model: 
+  1   ModelnameIdentifier: Inception3
+  2   LayersBlockLayer: 
+  2      LayernameIdentifier: Conv2d_1a_3x3
+         BlockUserBlock: 
+  2         BlocknameIdentifier: BasicConv2d
+  3         LayersBlockLayer: 
+  3            LayernameIdentifier: conv
+               BlockOperatorBlock: 
+  3               Conv2d: (3, 32, 3, 3, 2, 2, 0, 0, 0)
+  4         LayersBlockLayer: 
+  4            LayernameIdentifier: bn
+               BlockOperatorBlock: 
+  4               BatchNorm2d: (32, 0.001000, 0.100000, 1, 1)
+  6   LayersBlockLayer: 
+  6      LayernameIdentifier: Conv2d_2a_3x3
+         BlockUserBlock: 
+  6         BlocknameIdentifier: BasicConv2d
+  7         LayersBlockLayer: 
+  7            LayernameIdentifier: conv
+               BlockOperatorBlock: 
+  7               Conv2d: (32, 32, 3, 3, 1, 1, 0, 0, 0)
+  8         LayersBlockLayer: 
+  8            LayernameIdentifier: bn
+               BlockOperatorBlock: 
+  8               BatchNorm2d: (32, 0.001000, 0.100000, 1, 1)
+ 10   LayersBlockLayer: 
+ 10      LayernameIdentifier: Conv2d_2b_3x3
+         BlockUserBlock: 
+ 10         BlocknameIdentifier: BasicConv2d
+ 11         LayersBlockLayer: 
+ 11            LayernameIdentifier: conv
+               BlockOperatorBlock: 
+ 11               Conv2d: (32, 64, 3, 3, 1, 1, 1, 1, 0)
+ 12         LayersBlockLayer: 
+ 12            LayernameIdentifier: bn
+               BlockOperatorBlock: 
+ 12               BatchNorm2d: (64, 0.001000, 0.100000, 1, 1)
+ 14   LayersBlockLayer: 
+ 14      LayernameIdentifier: maxpool1
+         BlockOperatorBlock: 
+ 14         MaxPool2d: (3, 2, 0, 1, 0)
+ 15   LayersBlockLayer: 
+ 15      LayernameIdentifier: Conv2d_3b_1x1
+         BlockUserBlock: 
+ 15         BlocknameIdentifier: BasicConv2d
+ 16         LayersBlockLayer: 
+ 16            LayernameIdentifier: conv
+               BlockOperatorBlock: 
+ 16               Conv2d: (64, 80, 1, 1, 1, 1, 0, 0, 0)
+ 17         LayersBlockLayer: 
+ 17            LayernameIdentifier: bn
+               BlockOperatorBlock: 
+ 17               BatchNorm2d: (80, 0.001000, 0.100000, 1, 1)
+ 19   LayersBlockLayer: 
+ 19      LayernameIdentifier: Conv2d_4a_3x3
+         BlockUserBlock: 
+ 19         BlocknameIdentifier: BasicConv2d
+ 20         LayersBlockLayer: 
+ 20            LayernameIdentifier: conv
+               BlockOperatorBlock: 
+ 20               Conv2d: (80, 192, 3, 3, 1, 1, 0, 0, 0)
+ 21         LayersBlockLayer: 
+ 21            LayernameIdentifier: bn
+               BlockOperatorBlock: 
+ 21               BatchNorm2d: (192, 0.001000, 0.100000, 1, 1)
+ 23   LayersBlockLayer: 
+ 23      LayernameIdentifier: maxpool2
+         BlockOperatorBlock: 
+ 23         MaxPool2d: (3, 2, 0, 1, 0)
+ 24   LayersBlockLayer: 
+ 24      LayernameIdentifier: Mixed_5b
+         BlockUserBlock: 
+ 24         BlocknameIdentifier: InceptionA
+ 25         LayersBlockLayer: 
+ 25            LayernameIdentifier: branch1x1
+               BlockUserBlock: 
+ 25               BlocknameIdentifier: BasicConv2d
+ 26               LayersBlockLayer: 
+ 26                  LayernameIdentifier: conv
+                     BlockOperatorBlock: 
+ 26                     Conv2d: (192, 64, 1, 1, 1, 1, 0, 0, 0)
+ 27               LayersBlockLayer: 
+ 27                  LayernameIdentifier: bn
+                     BlockOperatorBlock: 
+ 27                     BatchNorm2d: (64, 0.001000, 0.100000, 1, 1)
+ 29         LayersBlockLayer: 
+ 29            LayernameIdentifier: branch5x5_1
+               BlockUserBlock: 
+ 29               BlocknameIdentifier: BasicConv2d
+ 30               LayersBlockLayer: 
+ 30                  LayernameIdentifier: conv
+                     BlockOperatorBlock: 
+ 30                     Conv2d: (192, 48, 1, 1, 1, 1, 0, 0, 0)
+ 31               LayersBlockLayer: 
+ 31                  LayernameIdentifier: bn
+                     BlockOperatorBlock: 
+ 31                     BatchNorm2d: (48, 0.001000, 0.100000, 1, 1)
+ 33         LayersBlockLayer: 
+ 33            LayernameIdentifier: branch5x5_2
+               BlockUserBlock: 
+ 33               BlocknameIdentifier: BasicConv2d
+ 34               LayersBlockLayer: 
+ 34                  LayernameIdentifier: conv
+                     BlockOperatorBlock: 
+ 34                     Conv2d: (48, 64, 5, 5, 1, 1, 2, 2, 0)
+ 35               LayersBlockLayer: 
+ 35                  LayernameIdentifier: bn
+                     BlockOperatorBlock: 
+ 35                     BatchNorm2d: (64, 0.001000, 0.100000, 1, 1)
+ 37         LayersBlockLayer: 
+ 37            LayernameIdentifier: branch3x3dbl_1
+               BlockUserBlock: 
+ 37               BlocknameIdentifier: BasicConv2d
+ 38               LayersBlockLayer: 
+ 38                  LayernameIdentifier: conv
+                     BlockOperatorBlock: 
+ 38                     Conv2d: (192, 64, 1, 1, 1, 1, 0, 0, 0)
+ 39               LayersBlockLayer: 
+ 39                  LayernameIdentifier: bn
+                     BlockOperatorBlock: 
+ 39                     BatchNorm2d: (64, 0.001000, 0.100000, 1, 1)
+ 41         LayersBlockLayer: 
+ 41            LayernameIdentifier: branch3x3dbl_2
+               BlockUserBlock: 
+ 41               BlocknameIdentifier: BasicConv2d
+ 42               LayersBlockLayer: 
+ 42                  LayernameIdentifier: conv
+                     BlockOperatorBlock: 
+ 42                     Conv2d: (64, 96, 3, 3, 1, 1, 1, 1, 0)
+ 43               LayersBlockLayer: 
+ 43                  LayernameIdentifier: bn
+                     BlockOperatorBlock: 
+ 43                     BatchNorm2d: (96, 0.001000, 0.100000, 1, 1)
+ 45         LayersBlockLayer: 
+ 45            LayernameIdentifier: branch3x3dbl_3
+               BlockUserBlock: 
+ 45               BlocknameIdentifier: BasicConv2d
+ 46               LayersBlockLayer: 
+ 46                  LayernameIdentifier: conv
+                     BlockOperatorBlock: 
+ 46                     Conv2d: (96, 96, 3, 3, 1, 1, 1, 1, 0)
+ 47               LayersBlockLayer: 
+ 47                  LayernameIdentifier: bn
+                     BlockOperatorBlock: 
+ 47                     BatchNorm2d: (96, 0.001000, 0.100000, 1, 1)
+ 49         LayersBlockLayer: 
+ 49            LayernameIdentifier: branch_pool
+               BlockUserBlock: 
+ 49               BlocknameIdentifier: BasicConv2d
+ 50               LayersBlockLayer: 
+ 50                  LayernameIdentifier: conv
+                     BlockOperatorBlock: 
+ 50                     Conv2d: (192, 32, 1, 1, 1, 1, 0, 0, 0)
+ 51               LayersBlockLayer: 
+ 51                  LayernameIdentifier: bn
+                     BlockOperatorBlock: 
+ 51                     BatchNorm2d: (32, 0.001000, 0.100000, 1, 1)
+ 54   LayersBlockLayer: 
+ 54      LayernameIdentifier: Mixed_5c
+         BlockUserBlock: 
+ 54         BlocknameIdentifier: InceptionA
+ 55         LayersBlockLayer: 
+ 55            LayernameIdentifier: branch1x1
+               BlockUserBlock: 
+ 55               BlocknameIdentifier: BasicConv2d
+ 56               LayersBlockLayer: 
+ 56                  LayernameIdentifier: conv
+                     BlockOperatorBlock: 
+ 56                     Conv2d: (256, 64, 1, 1, 1, 1, 0, 0, 0)
+ 57               LayersBlockLayer: 
+ 57                  LayernameIdentifier: bn
+                     BlockOperatorBlock: 
+ 57                     BatchNorm2d: (64, 0.001000, 0.100000, 1, 1)
+ 59         LayersBlockLayer: 
+ 59            LayernameIdentifier: branch5x5_1
+               BlockUserBlock: 
+ 59               BlocknameIdentifier: BasicConv2d
+ 60               LayersBlockLayer: 
+ 60                  LayernameIdentifier: conv
+                     BlockOperatorBlock: 
+ 60                     Conv2d: (256, 48, 1, 1, 1, 1, 0, 0, 0)
+ 61               LayersBlockLayer: 
+ 61                  LayernameIdentifier: bn
+                     BlockOperatorBlock: 
+ 61                     BatchNorm2d: (48, 0.001000, 0.100000, 1, 1)
+ 63         LayersBlockLayer: 
+ 63            LayernameIdentifier: branch5x5_2
+               BlockUserBlock: 
+ 63               BlocknameIdentifier: BasicConv2d
+ 64               LayersBlockLayer: 
+ 64                  LayernameIdentifier: conv
+                     BlockOperatorBlock: 
+ 64                     Conv2d: (48, 64, 5, 5, 1, 1, 2, 2, 0)
+ 65               LayersBlockLayer: 
+ 65                  LayernameIdentifier: bn
+                     BlockOperatorBlock: 
+ 65                     BatchNorm2d: (64, 0.001000, 0.100000, 1, 1)
+ 67         LayersBlockLayer: 
+ 67            LayernameIdentifier: branch3x3dbl_1
+               BlockUserBlock: 
+ 67               BlocknameIdentifier: BasicConv2d
+ 68               LayersBlockLayer: 
+ 68                  LayernameIdentifier: conv
+                     BlockOperatorBlock: 
+ 68                     Conv2d: (256, 64, 1, 1, 1, 1, 0, 0, 0)
+ 69               LayersBlockLayer: 
+ 69                  LayernameIdentifier: bn
+                     BlockOperatorBlock: 
+ 69                     BatchNorm2d: (64, 0.001000, 0.100000, 1, 1)
+ 71         LayersBlockLayer: 
+ 71            LayernameIdentifier: branch3x3dbl_2
+               BlockUserBlock: 
+ 71               BlocknameIdentifier: BasicConv2d
+ 72               LayersBlockLayer: 
+ 72                  LayernameIdentifier: conv
+                     BlockOperatorBlock: 
+ 72                     Conv2d: (64, 96, 3, 3, 1, 1, 1, 1, 0)
+ 73               LayersBlockLayer: 
+ 73                  LayernameIdentifier: bn
+                     BlockOperatorBlock: 
+ 73                     BatchNorm2d: (96, 0.001000, 0.100000, 1, 1)
+ 75         LayersBlockLayer: 
+ 75            LayernameIdentifier: branch3x3dbl_3
+               BlockUserBlock: 
+ 75               BlocknameIdentifier: BasicConv2d
+ 76               LayersBlockLayer: 
+ 76                  LayernameIdentifier: conv
+                     BlockOperatorBlock: 
+ 76                     Conv2d: (96, 96, 3, 3, 1, 1, 1, 1, 0)
+ 77               LayersBlockLayer: 
+ 77                  LayernameIdentifier: bn
+                     BlockOperatorBlock: 
+ 77                     BatchNorm2d: (96, 0.001000, 0.100000, 1, 1)
+ 79         LayersBlockLayer: 
+ 79            LayernameIdentifier: branch_pool
+               BlockUserBlock: 
+ 79               BlocknameIdentifier: BasicConv2d
+ 80               LayersBlockLayer: 
+ 80                  LayernameIdentifier: conv
+                     BlockOperatorBlock: 
+ 80                     Conv2d: (256, 64, 1, 1, 1, 1, 0, 0, 0)
+ 81               LayersBlockLayer: 
+ 81                  LayernameIdentifier: bn
+                     BlockOperatorBlock: 
+ 81                     BatchNorm2d: (64, 0.001000, 0.100000, 1, 1)
+ 84   LayersBlockLayer: 
+ 84      LayernameIdentifier: Mixed_5d
+         BlockUserBlock: 
+ 84         BlocknameIdentifier: InceptionA
+ 85         LayersBlockLayer: 
+ 85            LayernameIdentifier: branch1x1
+               BlockUserBlock: 
+ 85               BlocknameIdentifier: BasicConv2d
+ 86               LayersBlockLayer: 
+ 86                  LayernameIdentifier: conv
+                     BlockOperatorBlock: 
+ 86                     Conv2d: (288, 64, 1, 1, 1, 1, 0, 0, 0)
+ 87               LayersBlockLayer: 
+ 87                  LayernameIdentifier: bn
+                     BlockOperatorBlock: 
+ 87                     BatchNorm2d: (64, 0.001000, 0.100000, 1, 1)
+ 89         LayersBlockLayer: 
+ 89            LayernameIdentifier: branch5x5_1
+               BlockUserBlock: 
+ 89               BlocknameIdentifier: BasicConv2d
+ 90               LayersBlockLayer: 
+ 90                  LayernameIdentifier: conv
+                     BlockOperatorBlock: 
+ 90                     Conv2d: (288, 48, 1, 1, 1, 1, 0, 0, 0)
+ 91               LayersBlockLayer: 
+ 91                  LayernameIdentifier: bn
+                     BlockOperatorBlock: 
+ 91                     BatchNorm2d: (48, 0.001000, 0.100000, 1, 1)
+ 93         LayersBlockLayer: 
+ 93            LayernameIdentifier: branch5x5_2
+               BlockUserBlock: 
+ 93               BlocknameIdentifier: BasicConv2d
+ 94               LayersBlockLayer: 
+ 94                  LayernameIdentifier: conv
+                     BlockOperatorBlock: 
+ 94                     Conv2d: (48, 64, 5, 5, 1, 1, 2, 2, 0)
+ 95               LayersBlockLayer: 
+ 95                  LayernameIdentifier: bn
+                     BlockOperatorBlock: 
+ 95                     BatchNorm2d: (64, 0.001000, 0.100000, 1, 1)
+ 97         LayersBlockLayer: 
+ 97            LayernameIdentifier: branch3x3dbl_1
+               BlockUserBlock: 
+ 97               BlocknameIdentifier: BasicConv2d
+ 98               LayersBlockLayer: 
+ 98                  LayernameIdentifier: conv
+                     BlockOperatorBlock: 
+ 98                     Conv2d: (288, 64, 1, 1, 1, 1, 0, 0, 0)
+ 99               LayersBlockLayer: 
+ 99                  LayernameIdentifier: bn
+                     BlockOperatorBlock: 
+ 99                     BatchNorm2d: (64, 0.001000, 0.100000, 1, 1)
+101         LayersBlockLayer: 
+101            LayernameIdentifier: branch3x3dbl_2
+               BlockUserBlock: 
+101               BlocknameIdentifier: BasicConv2d
+102               LayersBlockLayer: 
+102                  LayernameIdentifier: conv
+                     BlockOperatorBlock: 
+102                     Conv2d: (64, 96, 3, 3, 1, 1, 1, 1, 0)
+103               LayersBlockLayer: 
+103                  LayernameIdentifier: bn
+                     BlockOperatorBlock: 
+103                     BatchNorm2d: (96, 0.001000, 0.100000, 1, 1)
+105         LayersBlockLayer: 
+105            LayernameIdentifier: branch3x3dbl_3
+               BlockUserBlock: 
+105               BlocknameIdentifier: BasicConv2d
+106               LayersBlockLayer: 
+106                  LayernameIdentifier: conv
+                     BlockOperatorBlock: 
+106                     Conv2d: (96, 96, 3, 3, 1, 1, 1, 1, 0)
+107               LayersBlockLayer: 
+107                  LayernameIdentifier: bn
+                     BlockOperatorBlock: 
+107                     BatchNorm2d: (96, 0.001000, 0.100000, 1, 1)
+109         LayersBlockLayer: 
+109            LayernameIdentifier: branch_pool
+               BlockUserBlock: 
+109               BlocknameIdentifier: BasicConv2d
+110               LayersBlockLayer: 
+110                  LayernameIdentifier: conv
+                     BlockOperatorBlock: 
+110                     Conv2d: (288, 64, 1, 1, 1, 1, 0, 0, 0)
+111               LayersBlockLayer: 
+111                  LayernameIdentifier: bn
+                     BlockOperatorBlock: 
+111                     BatchNorm2d: (64, 0.001000, 0.100000, 1, 1)
+114   LayersBlockLayer: 
+114      LayernameIdentifier: Mixed_6a
+         BlockUserBlock: 
+114         BlocknameIdentifier: InceptionB
+115         LayersBlockLayer: 
+115            LayernameIdentifier: branch3x3
+               BlockUserBlock: 
+115               BlocknameIdentifier: BasicConv2d
+116               LayersBlockLayer: 
+116                  LayernameIdentifier: conv
+                     BlockOperatorBlock: 
+116                     Conv2d: (288, 384, 3, 3, 2, 2, 0, 0, 0)
+117               LayersBlockLayer: 
+117                  LayernameIdentifier: bn
+                     BlockOperatorBlock: 
+117                     BatchNorm2d: (384, 0.001000, 0.100000, 1, 1)
+119         LayersBlockLayer: 
+119            LayernameIdentifier: branch3x3dbl_1
+               BlockUserBlock: 
+119               BlocknameIdentifier: BasicConv2d
+120               LayersBlockLayer: 
+120                  LayernameIdentifier: conv
+                     BlockOperatorBlock: 
+120                     Conv2d: (288, 64, 1, 1, 1, 1, 0, 0, 0)
+121               LayersBlockLayer: 
+121                  LayernameIdentifier: bn
+                     BlockOperatorBlock: 
+121                     BatchNorm2d: (64, 0.001000, 0.100000, 1, 1)
+123         LayersBlockLayer: 
+123            LayernameIdentifier: branch3x3dbl_2
+               BlockUserBlock: 
+123               BlocknameIdentifier: BasicConv2d
+124               LayersBlockLayer: 
+124                  LayernameIdentifier: conv
+                     BlockOperatorBlock: 
+124                     Conv2d: (64, 96, 3, 3, 1, 1, 1, 1, 0)
+125               LayersBlockLayer: 
+125                  LayernameIdentifier: bn
+                     BlockOperatorBlock: 
+125                     BatchNorm2d: (96, 0.001000, 0.100000, 1, 1)
+127         LayersBlockLayer: 
+127            LayernameIdentifier: branch3x3dbl_3
+               BlockUserBlock: 
+127               BlocknameIdentifier: BasicConv2d
+128               LayersBlockLayer: 
+128                  LayernameIdentifier: conv
+                     BlockOperatorBlock: 
+128                     Conv2d: (96, 96, 3, 3, 2, 2, 0, 0, 0)
+129               LayersBlockLayer: 
+129                  LayernameIdentifier: bn
+                     BlockOperatorBlock: 
+129                     BatchNorm2d: (96, 0.001000, 0.100000, 1, 1)
+132   LayersBlockLayer: 
+132      LayernameIdentifier: Mixed_6b
+         BlockUserBlock: 
+132         BlocknameIdentifier: InceptionC
+133         LayersBlockLayer: 
+133            LayernameIdentifier: branch1x1
+               BlockUserBlock: 
+133               BlocknameIdentifier: BasicConv2d
+134               LayersBlockLayer: 
+134                  LayernameIdentifier: conv
+                     BlockOperatorBlock: 
+134                     Conv2d: (768, 192, 1, 1, 1, 1, 0, 0, 0)
+135               LayersBlockLayer: 
+135                  LayernameIdentifier: bn
+                     BlockOperatorBlock: 
+135                     BatchNorm2d: (192, 0.001000, 0.100000, 1, 1)
+137         LayersBlockLayer: 
+137            LayernameIdentifier: branch7x7_1
+               BlockUserBlock: 
+137               BlocknameIdentifier: BasicConv2d
+138               LayersBlockLayer: 
+138                  LayernameIdentifier: conv
+                     BlockOperatorBlock: 
+138                     Conv2d: (768, 128, 1, 1, 1, 1, 0, 0, 0)
+139               LayersBlockLayer: 
+139                  LayernameIdentifier: bn
+                     BlockOperatorBlock: 
+139                     BatchNorm2d: (128, 0.001000, 0.100000, 1, 1)
+141         LayersBlockLayer: 
+141            LayernameIdentifier: branch7x7_2
+               BlockUserBlock: 
+141               BlocknameIdentifier: BasicConv2d
+142               LayersBlockLayer: 
+142                  LayernameIdentifier: conv
+                     BlockOperatorBlock: 
+142                     Conv2d: (128, 128, 1, 7, 1, 1, 0, 3, 0)
+143               LayersBlockLayer: 
+143                  LayernameIdentifier: bn
+                     BlockOperatorBlock: 
+143                     BatchNorm2d: (128, 0.001000, 0.100000, 1, 1)
+145         LayersBlockLayer: 
+145            LayernameIdentifier: branch7x7_3
+               BlockUserBlock: 
+145               BlocknameIdentifier: BasicConv2d
+146               LayersBlockLayer: 
+146                  LayernameIdentifier: conv
+                     BlockOperatorBlock: 
+146                     Conv2d: (128, 192, 7, 1, 1, 1, 3, 0, 0)
+147               LayersBlockLayer: 
+147                  LayernameIdentifier: bn
+                     BlockOperatorBlock: 
+147                     BatchNorm2d: (192, 0.001000, 0.100000, 1, 1)
+149         LayersBlockLayer: 
+149            LayernameIdentifier: branch7x7dbl_1
+               BlockUserBlock: 
+149               BlocknameIdentifier: BasicConv2d
+150               LayersBlockLayer: 
+150                  LayernameIdentifier: conv
+                     BlockOperatorBlock: 
+150                     Conv2d: (768, 128, 1, 1, 1, 1, 0, 0, 0)
+151               LayersBlockLayer: 
+151                  LayernameIdentifier: bn
+                     BlockOperatorBlock: 
+151                     BatchNorm2d: (128, 0.001000, 0.100000, 1, 1)
+153         LayersBlockLayer: 
+153            LayernameIdentifier: branch7x7dbl_2
+               BlockUserBlock: 
+153               BlocknameIdentifier: BasicConv2d
+154               LayersBlockLayer: 
+154                  LayernameIdentifier: conv
+                     BlockOperatorBlock: 
+154                     Conv2d: (128, 128, 7, 1, 1, 1, 3, 0, 0)
+155               LayersBlockLayer: 
+155                  LayernameIdentifier: bn
+                     BlockOperatorBlock: 
+155                     BatchNorm2d: (128, 0.001000, 0.100000, 1, 1)
+157         LayersBlockLayer: 
+157            LayernameIdentifier: branch7x7dbl_3
+               BlockUserBlock: 
+157               BlocknameIdentifier: BasicConv2d
+158               LayersBlockLayer: 
+158                  LayernameIdentifier: conv
+                     BlockOperatorBlock: 
+158                     Conv2d: (128, 128, 1, 7, 1, 1, 0, 3, 0)
+159               LayersBlockLayer: 
+159                  LayernameIdentifier: bn
+                     BlockOperatorBlock: 
+159                     BatchNorm2d: (128, 0.001000, 0.100000, 1, 1)
+161         LayersBlockLayer: 
+161            LayernameIdentifier: branch7x7dbl_4
+               BlockUserBlock: 
+161               BlocknameIdentifier: BasicConv2d
+162               LayersBlockLayer: 
+162                  LayernameIdentifier: conv
+                     BlockOperatorBlock: 
+162                     Conv2d: (128, 128, 7, 1, 1, 1, 3, 0, 0)
+163               LayersBlockLayer: 
+163                  LayernameIdentifier: bn
+                     BlockOperatorBlock: 
+163                     BatchNorm2d: (128, 0.001000, 0.100000, 1, 1)
+165         LayersBlockLayer: 
+165            LayernameIdentifier: branch7x7dbl_5
+               BlockUserBlock: 
+165               BlocknameIdentifier: BasicConv2d
+166               LayersBlockLayer: 
+166                  LayernameIdentifier: conv
+                     BlockOperatorBlock: 
+166                     Conv2d: (128, 192, 1, 7, 1, 1, 0, 3, 0)
+167               LayersBlockLayer: 
+167                  LayernameIdentifier: bn
+                     BlockOperatorBlock: 
+167                     BatchNorm2d: (192, 0.001000, 0.100000, 1, 1)
+169         LayersBlockLayer: 
+169            LayernameIdentifier: branch_pool
+               BlockUserBlock: 
+169               BlocknameIdentifier: BasicConv2d
+170               LayersBlockLayer: 
+170                  LayernameIdentifier: conv
+                     BlockOperatorBlock: 
+170                     Conv2d: (768, 192, 1, 1, 1, 1, 0, 0, 0)
+171               LayersBlockLayer: 
+171                  LayernameIdentifier: bn
+                     BlockOperatorBlock: 
+171                     BatchNorm2d: (192, 0.001000, 0.100000, 1, 1)
+174   LayersBlockLayer: 
+174      LayernameIdentifier: Mixed_6c
+         BlockUserBlock: 
+174         BlocknameIdentifier: InceptionC
+175         LayersBlockLayer: 
+175            LayernameIdentifier: branch1x1
+               BlockUserBlock: 
+175               BlocknameIdentifier: BasicConv2d
+176               LayersBlockLayer: 
+176                  LayernameIdentifier: conv
+                     BlockOperatorBlock: 
+176                     Conv2d: (768, 192, 1, 1, 1, 1, 0, 0, 0)
+177               LayersBlockLayer: 
+177                  LayernameIdentifier: bn
+                     BlockOperatorBlock: 
+177                     BatchNorm2d: (192, 0.001000, 0.100000, 1, 1)
+179         LayersBlockLayer: 
+179            LayernameIdentifier: branch7x7_1
+               BlockUserBlock: 
+179               BlocknameIdentifier: BasicConv2d
+180               LayersBlockLayer: 
+180                  LayernameIdentifier: conv
+                     BlockOperatorBlock: 
+180                     Conv2d: (768, 160, 1, 1, 1, 1, 0, 0, 0)
+181               LayersBlockLayer: 
+181                  LayernameIdentifier: bn
+                     BlockOperatorBlock: 
+181                     BatchNorm2d: (160, 0.001000, 0.100000, 1, 1)
+183         LayersBlockLayer: 
+183            LayernameIdentifier: branch7x7_2
+               BlockUserBlock: 
+183               BlocknameIdentifier: BasicConv2d
+184               LayersBlockLayer: 
+184                  LayernameIdentifier: conv
+                     BlockOperatorBlock: 
+184                     Conv2d: (160, 160, 1, 7, 1, 1, 0, 3, 0)
+185               LayersBlockLayer: 
+185                  LayernameIdentifier: bn
+                     BlockOperatorBlock: 
+185                     BatchNorm2d: (160, 0.001000, 0.100000, 1, 1)
+187         LayersBlockLayer: 
+187            LayernameIdentifier: branch7x7_3
+               BlockUserBlock: 
+187               BlocknameIdentifier: BasicConv2d
+188               LayersBlockLayer: 
+188                  LayernameIdentifier: conv
+                     BlockOperatorBlock: 
+188                     Conv2d: (160, 192, 7, 1, 1, 1, 3, 0, 0)
+189               LayersBlockLayer: 
+189                  LayernameIdentifier: bn
+                     BlockOperatorBlock: 
+189                     BatchNorm2d: (192, 0.001000, 0.100000, 1, 1)
+191         LayersBlockLayer: 
+191            LayernameIdentifier: branch7x7dbl_1
+               BlockUserBlock: 
+191               BlocknameIdentifier: BasicConv2d
+192               LayersBlockLayer: 
+192                  LayernameIdentifier: conv
+                     BlockOperatorBlock: 
+192                     Conv2d: (768, 160, 1, 1, 1, 1, 0, 0, 0)
+193               LayersBlockLayer: 
+193                  LayernameIdentifier: bn
+                     BlockOperatorBlock: 
+193                     BatchNorm2d: (160, 0.001000, 0.100000, 1, 1)
+195         LayersBlockLayer: 
+195            LayernameIdentifier: branch7x7dbl_2
+               BlockUserBlock: 
+195               BlocknameIdentifier: BasicConv2d
+196               LayersBlockLayer: 
+196                  LayernameIdentifier: conv
+                     BlockOperatorBlock: 
+196                     Conv2d: (160, 160, 7, 1, 1, 1, 3, 0, 0)
+197               LayersBlockLayer: 
+197                  LayernameIdentifier: bn
+                     BlockOperatorBlock: 
+197                     BatchNorm2d: (160, 0.001000, 0.100000, 1, 1)
+199         LayersBlockLayer: 
+199            LayernameIdentifier: branch7x7dbl_3
+               BlockUserBlock: 
+199               BlocknameIdentifier: BasicConv2d
+200               LayersBlockLayer: 
+200                  LayernameIdentifier: conv
+                     BlockOperatorBlock: 
+200                     Conv2d: (160, 160, 1, 7, 1, 1, 0, 3, 0)
+201               LayersBlockLayer: 
+201                  LayernameIdentifier: bn
+                     BlockOperatorBlock: 
+201                     BatchNorm2d: (160, 0.001000, 0.100000, 1, 1)
+203         LayersBlockLayer: 
+203            LayernameIdentifier: branch7x7dbl_4
+               BlockUserBlock: 
+203               BlocknameIdentifier: BasicConv2d
+204               LayersBlockLayer: 
+204                  LayernameIdentifier: conv
+                     BlockOperatorBlock: 
+204                     Conv2d: (160, 160, 7, 1, 1, 1, 3, 0, 0)
+205               LayersBlockLayer: 
+205                  LayernameIdentifier: bn
+                     BlockOperatorBlock: 
+205                     BatchNorm2d: (160, 0.001000, 0.100000, 1, 1)
+207         LayersBlockLayer: 
+207            LayernameIdentifier: branch7x7dbl_5
+               BlockUserBlock: 
+207               BlocknameIdentifier: BasicConv2d
+208               LayersBlockLayer: 
+208                  LayernameIdentifier: conv
+                     BlockOperatorBlock: 
+208                     Conv2d: (160, 192, 1, 7, 1, 1, 0, 3, 0)
+209               LayersBlockLayer: 
+209                  LayernameIdentifier: bn
+                     BlockOperatorBlock: 
+209                     BatchNorm2d: (192, 0.001000, 0.100000, 1, 1)
+211         LayersBlockLayer: 
+211            LayernameIdentifier: branch_pool
+               BlockUserBlock: 
+211               BlocknameIdentifier: BasicConv2d
+212               LayersBlockLayer: 
+212                  LayernameIdentifier: conv
+                     BlockOperatorBlock: 
+212                     Conv2d: (768, 192, 1, 1, 1, 1, 0, 0, 0)
+213               LayersBlockLayer: 
+213                  LayernameIdentifier: bn
+                     BlockOperatorBlock: 
+213                     BatchNorm2d: (192, 0.001000, 0.100000, 1, 1)
+216   LayersBlockLayer: 
+216      LayernameIdentifier: Mixed_6d
+         BlockUserBlock: 
+216         BlocknameIdentifier: InceptionC
+217         LayersBlockLayer: 
+217            LayernameIdentifier: branch1x1
+               BlockUserBlock: 
+217               BlocknameIdentifier: BasicConv2d
+218               LayersBlockLayer: 
+218                  LayernameIdentifier: conv
+                     BlockOperatorBlock: 
+218                     Conv2d: (768, 192, 1, 1, 1, 1, 0, 0, 0)
+219               LayersBlockLayer: 
+219                  LayernameIdentifier: bn
+                     BlockOperatorBlock: 
+219                     BatchNorm2d: (192, 0.001000, 0.100000, 1, 1)
+221         LayersBlockLayer: 
+221            LayernameIdentifier: branch7x7_1
+               BlockUserBlock: 
+221               BlocknameIdentifier: BasicConv2d
+222               LayersBlockLayer: 
+222                  LayernameIdentifier: conv
+                     BlockOperatorBlock: 
+222                     Conv2d: (768, 160, 1, 1, 1, 1, 0, 0, 0)
+223               LayersBlockLayer: 
+223                  LayernameIdentifier: bn
+                     BlockOperatorBlock: 
+223                     BatchNorm2d: (160, 0.001000, 0.100000, 1, 1)
+225         LayersBlockLayer: 
+225            LayernameIdentifier: branch7x7_2
+               BlockUserBlock: 
+225               BlocknameIdentifier: BasicConv2d
+226               LayersBlockLayer: 
+226                  LayernameIdentifier: conv
+                     BlockOperatorBlock: 
+226                     Conv2d: (160, 160, 1, 7, 1, 1, 0, 3, 0)
+227               LayersBlockLayer: 
+227                  LayernameIdentifier: bn
+                     BlockOperatorBlock: 
+227                     BatchNorm2d: (160, 0.001000, 0.100000, 1, 1)
+229         LayersBlockLayer: 
+229            LayernameIdentifier: branch7x7_3
+               BlockUserBlock: 
+229               BlocknameIdentifier: BasicConv2d
+230               LayersBlockLayer: 
+230                  LayernameIdentifier: conv
+                     BlockOperatorBlock: 
+230                     Conv2d: (160, 192, 7, 1, 1, 1, 3, 0, 0)
+231               LayersBlockLayer: 
+231                  LayernameIdentifier: bn
+                     BlockOperatorBlock: 
+231                     BatchNorm2d: (192, 0.001000, 0.100000, 1, 1)
+233         LayersBlockLayer: 
+233            LayernameIdentifier: branch7x7dbl_1
+               BlockUserBlock: 
+233               BlocknameIdentifier: BasicConv2d
+234               LayersBlockLayer: 
+234                  LayernameIdentifier: conv
+                     BlockOperatorBlock: 
+234                     Conv2d: (768, 160, 1, 1, 1, 1, 0, 0, 0)
+235               LayersBlockLayer: 
+235                  LayernameIdentifier: bn
+                     BlockOperatorBlock: 
+235                     BatchNorm2d: (160, 0.001000, 0.100000, 1, 1)
+237         LayersBlockLayer: 
+237            LayernameIdentifier: branch7x7dbl_2
+               BlockUserBlock: 
+237               BlocknameIdentifier: BasicConv2d
+238               LayersBlockLayer: 
+238                  LayernameIdentifier: conv
+                     BlockOperatorBlock: 
+238                     Conv2d: (160, 160, 7, 1, 1, 1, 3, 0, 0)
+239               LayersBlockLayer: 
+239                  LayernameIdentifier: bn
+                     BlockOperatorBlock: 
+239                     BatchNorm2d: (160, 0.001000, 0.100000, 1, 1)
+241         LayersBlockLayer: 
+241            LayernameIdentifier: branch7x7dbl_3
+               BlockUserBlock: 
+241               BlocknameIdentifier: BasicConv2d
+242               LayersBlockLayer: 
+242                  LayernameIdentifier: conv
+                     BlockOperatorBlock: 
+242                     Conv2d: (160, 160, 1, 7, 1, 1, 0, 3, 0)
+243               LayersBlockLayer: 
+243                  LayernameIdentifier: bn
+                     BlockOperatorBlock: 
+243                     BatchNorm2d: (160, 0.001000, 0.100000, 1, 1)
+245         LayersBlockLayer: 
+245            LayernameIdentifier: branch7x7dbl_4
+               BlockUserBlock: 
+245               BlocknameIdentifier: BasicConv2d
+246               LayersBlockLayer: 
+246                  LayernameIdentifier: conv
+                     BlockOperatorBlock: 
+246                     Conv2d: (160, 160, 7, 1, 1, 1, 3, 0, 0)
+247               LayersBlockLayer: 
+247                  LayernameIdentifier: bn
+                     BlockOperatorBlock: 
+247                     BatchNorm2d: (160, 0.001000, 0.100000, 1, 1)
+249         LayersBlockLayer: 
+249            LayernameIdentifier: branch7x7dbl_5
+               BlockUserBlock: 
+249               BlocknameIdentifier: BasicConv2d
+250               LayersBlockLayer: 
+250                  LayernameIdentifier: conv
+                     BlockOperatorBlock: 
+250                     Conv2d: (160, 192, 1, 7, 1, 1, 0, 3, 0)
+251               LayersBlockLayer: 
+251                  LayernameIdentifier: bn
+                     BlockOperatorBlock: 
+251                     BatchNorm2d: (192, 0.001000, 0.100000, 1, 1)
+253         LayersBlockLayer: 
+253            LayernameIdentifier: branch_pool
+               BlockUserBlock: 
+253               BlocknameIdentifier: BasicConv2d
+254               LayersBlockLayer: 
+254                  LayernameIdentifier: conv
+                     BlockOperatorBlock: 
+254                     Conv2d: (768, 192, 1, 1, 1, 1, 0, 0, 0)
+255               LayersBlockLayer: 
+255                  LayernameIdentifier: bn
+                     BlockOperatorBlock: 
+255                     BatchNorm2d: (192, 0.001000, 0.100000, 1, 1)
+258   LayersBlockLayer: 
+258      LayernameIdentifier: Mixed_6e
+         BlockUserBlock: 
+258         BlocknameIdentifier: InceptionC
+259         LayersBlockLayer: 
+259            LayernameIdentifier: branch1x1
+               BlockUserBlock: 
+259               BlocknameIdentifier: BasicConv2d
+260               LayersBlockLayer: 
+260                  LayernameIdentifier: conv
+                     BlockOperatorBlock: 
+260                     Conv2d: (768, 192, 1, 1, 1, 1, 0, 0, 0)
+261               LayersBlockLayer: 
+261                  LayernameIdentifier: bn
+                     BlockOperatorBlock: 
+261                     BatchNorm2d: (192, 0.001000, 0.100000, 1, 1)
+263         LayersBlockLayer: 
+263            LayernameIdentifier: branch7x7_1
+               BlockUserBlock: 
+263               BlocknameIdentifier: BasicConv2d
+264               LayersBlockLayer: 
+264                  LayernameIdentifier: conv
+                     BlockOperatorBlock: 
+264                     Conv2d: (768, 192, 1, 1, 1, 1, 0, 0, 0)
+265               LayersBlockLayer: 
+265                  LayernameIdentifier: bn
+                     BlockOperatorBlock: 
+265                     BatchNorm2d: (192, 0.001000, 0.100000, 1, 1)
+267         LayersBlockLayer: 
+267            LayernameIdentifier: branch7x7_2
+               BlockUserBlock: 
+267               BlocknameIdentifier: BasicConv2d
+268               LayersBlockLayer: 
+268                  LayernameIdentifier: conv
+                     BlockOperatorBlock: 
+268                     Conv2d: (192, 192, 1, 7, 1, 1, 0, 3, 0)
+269               LayersBlockLayer: 
+269                  LayernameIdentifier: bn
+                     BlockOperatorBlock: 
+269                     BatchNorm2d: (192, 0.001000, 0.100000, 1, 1)
+271         LayersBlockLayer: 
+271            LayernameIdentifier: branch7x7_3
+               BlockUserBlock: 
+271               BlocknameIdentifier: BasicConv2d
+272               LayersBlockLayer: 
+272                  LayernameIdentifier: conv
+                     BlockOperatorBlock: 
+272                     Conv2d: (192, 192, 7, 1, 1, 1, 3, 0, 0)
+273               LayersBlockLayer: 
+273                  LayernameIdentifier: bn
+                     BlockOperatorBlock: 
+273                     BatchNorm2d: (192, 0.001000, 0.100000, 1, 1)
+275         LayersBlockLayer: 
+275            LayernameIdentifier: branch7x7dbl_1
+               BlockUserBlock: 
+275               BlocknameIdentifier: BasicConv2d
+276               LayersBlockLayer: 
+276                  LayernameIdentifier: conv
+                     BlockOperatorBlock: 
+276                     Conv2d: (768, 192, 1, 1, 1, 1, 0, 0, 0)
+277               LayersBlockLayer: 
+277                  LayernameIdentifier: bn
+                     BlockOperatorBlock: 
+277                     BatchNorm2d: (192, 0.001000, 0.100000, 1, 1)
+279         LayersBlockLayer: 
+279            LayernameIdentifier: branch7x7dbl_2
+               BlockUserBlock: 
+279               BlocknameIdentifier: BasicConv2d
+280               LayersBlockLayer: 
+280                  LayernameIdentifier: conv
+                     BlockOperatorBlock: 
+280                     Conv2d: (192, 192, 7, 1, 1, 1, 3, 0, 0)
+281               LayersBlockLayer: 
+281                  LayernameIdentifier: bn
+                     BlockOperatorBlock: 
+281                     BatchNorm2d: (192, 0.001000, 0.100000, 1, 1)
+283         LayersBlockLayer: 
+283            LayernameIdentifier: branch7x7dbl_3
+               BlockUserBlock: 
+283               BlocknameIdentifier: BasicConv2d
+284               LayersBlockLayer: 
+284                  LayernameIdentifier: conv
+                     BlockOperatorBlock: 
+284                     Conv2d: (192, 192, 1, 7, 1, 1, 0, 3, 0)
+285               LayersBlockLayer: 
+285                  LayernameIdentifier: bn
+                     BlockOperatorBlock: 
+285                     BatchNorm2d: (192, 0.001000, 0.100000, 1, 1)
+287         LayersBlockLayer: 
+287            LayernameIdentifier: branch7x7dbl_4
+               BlockUserBlock: 
+287               BlocknameIdentifier: BasicConv2d
+288               LayersBlockLayer: 
+288                  LayernameIdentifier: conv
+                     BlockOperatorBlock: 
+288                     Conv2d: (192, 192, 7, 1, 1, 1, 3, 0, 0)
+289               LayersBlockLayer: 
+289                  LayernameIdentifier: bn
+                     BlockOperatorBlock: 
+289                     BatchNorm2d: (192, 0.001000, 0.100000, 1, 1)
+291         LayersBlockLayer: 
+291            LayernameIdentifier: branch7x7dbl_5
+               BlockUserBlock: 
+291               BlocknameIdentifier: BasicConv2d
+292               LayersBlockLayer: 
+292                  LayernameIdentifier: conv
+                     BlockOperatorBlock: 
+292                     Conv2d: (192, 192, 1, 7, 1, 1, 0, 3, 0)
+293               LayersBlockLayer: 
+293                  LayernameIdentifier: bn
+                     BlockOperatorBlock: 
+293                     BatchNorm2d: (192, 0.001000, 0.100000, 1, 1)
+295         LayersBlockLayer: 
+295            LayernameIdentifier: branch_pool
+               BlockUserBlock: 
+295               BlocknameIdentifier: BasicConv2d
+296               LayersBlockLayer: 
+296                  LayernameIdentifier: conv
+                     BlockOperatorBlock: 
+296                     Conv2d: (768, 192, 1, 1, 1, 1, 0, 0, 0)
+297               LayersBlockLayer: 
+297                  LayernameIdentifier: bn
+                     BlockOperatorBlock: 
+297                     BatchNorm2d: (192, 0.001000, 0.100000, 1, 1)
+300   LayersBlockLayer: 
+300      LayernameIdentifier: AuxLogits
+         BlockUserBlock: 
+300         BlocknameIdentifier: InceptionAux
+301         LayersBlockLayer: 
+301            LayernameIdentifier: conv0
+               BlockUserBlock: 
+301               BlocknameIdentifier: BasicConv2d
+302               LayersBlockLayer: 
+302                  LayernameIdentifier: conv
+                     BlockOperatorBlock: 
+302                     Conv2d: (768, 128, 1, 1, 1, 1, 0, 0, 0)
+303               LayersBlockLayer: 
+303                  LayernameIdentifier: bn
+                     BlockOperatorBlock: 
+303                     BatchNorm2d: (128, 0.001000, 0.100000, 1, 1)
+305         LayersBlockLayer: 
+305            LayernameIdentifier: conv1
+               BlockUserBlock: 
+305               BlocknameIdentifier: BasicConv2d
+306               LayersBlockLayer: 
+306                  LayernameIdentifier: conv
+                     BlockOperatorBlock: 
+306                     Conv2d: (128, 768, 5, 5, 1, 1, 0, 0, 0)
+307               LayersBlockLayer: 
+307                  LayernameIdentifier: bn
+                     BlockOperatorBlock: 
+307                     BatchNorm2d: (768, 0.001000, 0.100000, 1, 1)
+309         LayersBlockLayer: 
+309            LayernameIdentifier: fc
+               BlockOperatorBlock: 
+309               Linear: (768, 1000, 1)
+311   LayersBlockLayer: 
+311      LayernameIdentifier: Mixed_7a
+         BlockUserBlock: 
+311         BlocknameIdentifier: InceptionD
+312         LayersBlockLayer: 
+312            LayernameIdentifier: branch3x3_1
+               BlockUserBlock: 
+312               BlocknameIdentifier: BasicConv2d
+313               LayersBlockLayer: 
+313                  LayernameIdentifier: conv
+                     BlockOperatorBlock: 
+313                     Conv2d: (768, 192, 1, 1, 1, 1, 0, 0, 0)
+314               LayersBlockLayer: 
+314                  LayernameIdentifier: bn
+                     BlockOperatorBlock: 
+314                     BatchNorm2d: (192, 0.001000, 0.100000, 1, 1)
+316         LayersBlockLayer: 
+316            LayernameIdentifier: branch3x3_2
+               BlockUserBlock: 
+316               BlocknameIdentifier: BasicConv2d
+317               LayersBlockLayer: 
+317                  LayernameIdentifier: conv
+                     BlockOperatorBlock: 
+317                     Conv2d: (192, 320, 3, 3, 2, 2, 0, 0, 0)
+318               LayersBlockLayer: 
+318                  LayernameIdentifier: bn
+                     BlockOperatorBlock: 
+318                     BatchNorm2d: (320, 0.001000, 0.100000, 1, 1)
+320         LayersBlockLayer: 
+320            LayernameIdentifier: branch7x7x3_1
+               BlockUserBlock: 
+320               BlocknameIdentifier: BasicConv2d
+321               LayersBlockLayer: 
+321                  LayernameIdentifier: conv
+                     BlockOperatorBlock: 
+321                     Conv2d: (768, 192, 1, 1, 1, 1, 0, 0, 0)
+322               LayersBlockLayer: 
+322                  LayernameIdentifier: bn
+                     BlockOperatorBlock: 
+322                     BatchNorm2d: (192, 0.001000, 0.100000, 1, 1)
+324         LayersBlockLayer: 
+324            LayernameIdentifier: branch7x7x3_2
+               BlockUserBlock: 
+324               BlocknameIdentifier: BasicConv2d
+325               LayersBlockLayer: 
+325                  LayernameIdentifier: conv
+                     BlockOperatorBlock: 
+325                     Conv2d: (192, 192, 1, 7, 1, 1, 0, 3, 0)
+326               LayersBlockLayer: 
+326                  LayernameIdentifier: bn
+                     BlockOperatorBlock: 
+326                     BatchNorm2d: (192, 0.001000, 0.100000, 1, 1)
+328         LayersBlockLayer: 
+328            LayernameIdentifier: branch7x7x3_3
+               BlockUserBlock: 
+328               BlocknameIdentifier: BasicConv2d
+329               LayersBlockLayer: 
+329                  LayernameIdentifier: conv
+                     BlockOperatorBlock: 
+329                     Conv2d: (192, 192, 7, 1, 1, 1, 3, 0, 0)
+330               LayersBlockLayer: 
+330                  LayernameIdentifier: bn
+                     BlockOperatorBlock: 
+330                     BatchNorm2d: (192, 0.001000, 0.100000, 1, 1)
+332         LayersBlockLayer: 
+332            LayernameIdentifier: branch7x7x3_4
+               BlockUserBlock: 
+332               BlocknameIdentifier: BasicConv2d
+333               LayersBlockLayer: 
+333                  LayernameIdentifier: conv
+                     BlockOperatorBlock: 
+333                     Conv2d: (192, 192, 3, 3, 2, 2, 0, 0, 0)
+334               LayersBlockLayer: 
+334                  LayernameIdentifier: bn
+                     BlockOperatorBlock: 
+334                     BatchNorm2d: (192, 0.001000, 0.100000, 1, 1)
+337   LayersBlockLayer: 
+337      LayernameIdentifier: Mixed_7b
+         BlockUserBlock: 
+337         BlocknameIdentifier: InceptionE
+338         LayersBlockLayer: 
+338            LayernameIdentifier: branch1x1
+               BlockUserBlock: 
+338               BlocknameIdentifier: BasicConv2d
+339               LayersBlockLayer: 
+339                  LayernameIdentifier: conv
+                     BlockOperatorBlock: 
+339                     Conv2d: (1280, 320, 1, 1, 1, 1, 0, 0, 0)
+340               LayersBlockLayer: 
+340                  LayernameIdentifier: bn
+                     BlockOperatorBlock: 
+340                     BatchNorm2d: (320, 0.001000, 0.100000, 1, 1)
+342         LayersBlockLayer: 
+342            LayernameIdentifier: branch3x3_1
+               BlockUserBlock: 
+342               BlocknameIdentifier: BasicConv2d
+343               LayersBlockLayer: 
+343                  LayernameIdentifier: conv
+                     BlockOperatorBlock: 
+343                     Conv2d: (1280, 384, 1, 1, 1, 1, 0, 0, 0)
+344               LayersBlockLayer: 
+344                  LayernameIdentifier: bn
+                     BlockOperatorBlock: 
+344                     BatchNorm2d: (384, 0.001000, 0.100000, 1, 1)
+346         LayersBlockLayer: 
+346            LayernameIdentifier: branch3x3_2a
+               BlockUserBlock: 
+346               BlocknameIdentifier: BasicConv2d
+347               LayersBlockLayer: 
+347                  LayernameIdentifier: conv
+                     BlockOperatorBlock: 
+347                     Conv2d: (384, 384, 1, 3, 1, 1, 0, 1, 0)
+348               LayersBlockLayer: 
+348                  LayernameIdentifier: bn
+                     BlockOperatorBlock: 
+348                     BatchNorm2d: (384, 0.001000, 0.100000, 1, 1)
+350         LayersBlockLayer: 
+350            LayernameIdentifier: branch3x3_2b
+               BlockUserBlock: 
+350               BlocknameIdentifier: BasicConv2d
+351               LayersBlockLayer: 
+351                  LayernameIdentifier: conv
+                     BlockOperatorBlock: 
+351                     Conv2d: (384, 384, 3, 1, 1, 1, 1, 0, 0)
+352               LayersBlockLayer: 
+352                  LayernameIdentifier: bn
+                     BlockOperatorBlock: 
+352                     BatchNorm2d: (384, 0.001000, 0.100000, 1, 1)
+354         LayersBlockLayer: 
+354            LayernameIdentifier: branch3x3dbl_1
+               BlockUserBlock: 
+354               BlocknameIdentifier: BasicConv2d
+355               LayersBlockLayer: 
+355                  LayernameIdentifier: conv
+                     BlockOperatorBlock: 
+355                     Conv2d: (1280, 448, 1, 1, 1, 1, 0, 0, 0)
+356               LayersBlockLayer: 
+356                  LayernameIdentifier: bn
+                     BlockOperatorBlock: 
+356                     BatchNorm2d: (448, 0.001000, 0.100000, 1, 1)
+358         LayersBlockLayer: 
+358            LayernameIdentifier: branch3x3dbl_2
+               BlockUserBlock: 
+358               BlocknameIdentifier: BasicConv2d
+359               LayersBlockLayer: 
+359                  LayernameIdentifier: conv
+                     BlockOperatorBlock: 
+359                     Conv2d: (448, 384, 3, 3, 1, 1, 1, 1, 0)
+360               LayersBlockLayer: 
+360                  LayernameIdentifier: bn
+                     BlockOperatorBlock: 
+360                     BatchNorm2d: (384, 0.001000, 0.100000, 1, 1)
+362         LayersBlockLayer: 
+362            LayernameIdentifier: branch3x3dbl_3a
+               BlockUserBlock: 
+362               BlocknameIdentifier: BasicConv2d
+363               LayersBlockLayer: 
+363                  LayernameIdentifier: conv
+                     BlockOperatorBlock: 
+363                     Conv2d: (384, 384, 1, 3, 1, 1, 0, 1, 0)
+364               LayersBlockLayer: 
+364                  LayernameIdentifier: bn
+                     BlockOperatorBlock: 
+364                     BatchNorm2d: (384, 0.001000, 0.100000, 1, 1)
+366         LayersBlockLayer: 
+366            LayernameIdentifier: branch3x3dbl_3b
+               BlockUserBlock: 
+366               BlocknameIdentifier: BasicConv2d
+367               LayersBlockLayer: 
+367                  LayernameIdentifier: conv
+                     BlockOperatorBlock: 
+367                     Conv2d: (384, 384, 3, 1, 1, 1, 1, 0, 0)
+368               LayersBlockLayer: 
+368                  LayernameIdentifier: bn
+                     BlockOperatorBlock: 
+368                     BatchNorm2d: (384, 0.001000, 0.100000, 1, 1)
+370         LayersBlockLayer: 
+370            LayernameIdentifier: branch_pool
+               BlockUserBlock: 
+370               BlocknameIdentifier: BasicConv2d
+371               LayersBlockLayer: 
+371                  LayernameIdentifier: conv
+                     BlockOperatorBlock: 
+371                     Conv2d: (1280, 192, 1, 1, 1, 1, 0, 0, 0)
+372               LayersBlockLayer: 
+372                  LayernameIdentifier: bn
+                     BlockOperatorBlock: 
+372                     BatchNorm2d: (192, 0.001000, 0.100000, 1, 1)
+375   LayersBlockLayer: 
+375      LayernameIdentifier: Mixed_7c
+         BlockUserBlock: 
+375         BlocknameIdentifier: InceptionE
+376         LayersBlockLayer: 
+376            LayernameIdentifier: branch1x1
+               BlockUserBlock: 
+376               BlocknameIdentifier: BasicConv2d
+377               LayersBlockLayer: 
+377                  LayernameIdentifier: conv
+                     BlockOperatorBlock: 
+377                     Conv2d: (2048, 320, 1, 1, 1, 1, 0, 0, 0)
+378               LayersBlockLayer: 
+378                  LayernameIdentifier: bn
+                     BlockOperatorBlock: 
+378                     BatchNorm2d: (320, 0.001000, 0.100000, 1, 1)
+380         LayersBlockLayer: 
+380            LayernameIdentifier: branch3x3_1
+               BlockUserBlock: 
+380               BlocknameIdentifier: BasicConv2d
+381               LayersBlockLayer: 
+381                  LayernameIdentifier: conv
+                     BlockOperatorBlock: 
+381                     Conv2d: (2048, 384, 1, 1, 1, 1, 0, 0, 0)
+382               LayersBlockLayer: 
+382                  LayernameIdentifier: bn
+                     BlockOperatorBlock: 
+382                     BatchNorm2d: (384, 0.001000, 0.100000, 1, 1)
+384         LayersBlockLayer: 
+384            LayernameIdentifier: branch3x3_2a
+               BlockUserBlock: 
+384               BlocknameIdentifier: BasicConv2d
+385               LayersBlockLayer: 
+385                  LayernameIdentifier: conv
+                     BlockOperatorBlock: 
+385                     Conv2d: (384, 384, 1, 3, 1, 1, 0, 1, 0)
+386               LayersBlockLayer: 
+386                  LayernameIdentifier: bn
+                     BlockOperatorBlock: 
+386                     BatchNorm2d: (384, 0.001000, 0.100000, 1, 1)
+388         LayersBlockLayer: 
+388            LayernameIdentifier: branch3x3_2b
+               BlockUserBlock: 
+388               BlocknameIdentifier: BasicConv2d
+389               LayersBlockLayer: 
+389                  LayernameIdentifier: conv
+                     BlockOperatorBlock: 
+389                     Conv2d: (384, 384, 3, 1, 1, 1, 1, 0, 0)
+390               LayersBlockLayer: 
+390                  LayernameIdentifier: bn
+                     BlockOperatorBlock: 
+390                     BatchNorm2d: (384, 0.001000, 0.100000, 1, 1)
+392         LayersBlockLayer: 
+392            LayernameIdentifier: branch3x3dbl_1
+               BlockUserBlock: 
+392               BlocknameIdentifier: BasicConv2d
+393               LayersBlockLayer: 
+393                  LayernameIdentifier: conv
+                     BlockOperatorBlock: 
+393                     Conv2d: (2048, 448, 1, 1, 1, 1, 0, 0, 0)
+394               LayersBlockLayer: 
+394                  LayernameIdentifier: bn
+                     BlockOperatorBlock: 
+394                     BatchNorm2d: (448, 0.001000, 0.100000, 1, 1)
+396         LayersBlockLayer: 
+396            LayernameIdentifier: branch3x3dbl_2
+               BlockUserBlock: 
+396               BlocknameIdentifier: BasicConv2d
+397               LayersBlockLayer: 
+397                  LayernameIdentifier: conv
+                     BlockOperatorBlock: 
+397                     Conv2d: (448, 384, 3, 3, 1, 1, 1, 1, 0)
+398               LayersBlockLayer: 
+398                  LayernameIdentifier: bn
+                     BlockOperatorBlock: 
+398                     BatchNorm2d: (384, 0.001000, 0.100000, 1, 1)
+400         LayersBlockLayer: 
+400            LayernameIdentifier: branch3x3dbl_3a
+               BlockUserBlock: 
+400               BlocknameIdentifier: BasicConv2d
+401               LayersBlockLayer: 
+401                  LayernameIdentifier: conv
+                     BlockOperatorBlock: 
+401                     Conv2d: (384, 384, 1, 3, 1, 1, 0, 1, 0)
+402               LayersBlockLayer: 
+402                  LayernameIdentifier: bn
+                     BlockOperatorBlock: 
+402                     BatchNorm2d: (384, 0.001000, 0.100000, 1, 1)
+404         LayersBlockLayer: 
+404            LayernameIdentifier: branch3x3dbl_3b
+               BlockUserBlock: 
+404               BlocknameIdentifier: BasicConv2d
+405               LayersBlockLayer: 
+405                  LayernameIdentifier: conv
+                     BlockOperatorBlock: 
+405                     Conv2d: (384, 384, 3, 1, 1, 1, 1, 0, 0)
+406               LayersBlockLayer: 
+406                  LayernameIdentifier: bn
+                     BlockOperatorBlock: 
+406                     BatchNorm2d: (384, 0.001000, 0.100000, 1, 1)
+408         LayersBlockLayer: 
+408            LayernameIdentifier: branch_pool
+               BlockUserBlock: 
+408               BlocknameIdentifier: BasicConv2d
+409               LayersBlockLayer: 
+409                  LayernameIdentifier: conv
+                     BlockOperatorBlock: 
+409                     Conv2d: (2048, 192, 1, 1, 1, 1, 0, 0, 0)
+410               LayersBlockLayer: 
+410                  LayernameIdentifier: bn
+                     BlockOperatorBlock: 
+410                     BatchNorm2d: (192, 0.001000, 0.100000, 1, 1)
+413   LayersBlockLayer: 
+413      LayernameIdentifier: avgpool
+         BlockOperatorBlock: 
+413         AdaptiveAvgPool2d: (1, 1)
+414   LayersBlockLayer: 
+414      LayernameIdentifier: dropout
+         BlockOperatorBlock: 
+414         Dropout: (0.500000, 0)
+415   LayersBlockLayer: 
+415      LayernameIdentifier: fc
+         BlockOperatorBlock: 
+415         Linear: (2048, 1000, 1)

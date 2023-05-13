@@ -1,0 +1,1608 @@
+InceptionResNetV2(
+  (features): Sequential(
+    (init_block): InceptInitBlock(
+      (conv1): InceptConv(
+        (conv): Conv2d(3, 32, kernel_size=(3, 3), stride=(2, 2), bias=False)
+        (bn): BatchNorm2d(32, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+        (activ): ReLU(inplace=True)
+      )
+      (conv2): InceptConv(
+        (conv): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), bias=False)
+        (bn): BatchNorm2d(32, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+        (activ): ReLU(inplace=True)
+      )
+      (conv3): InceptConv(
+        (conv): Conv2d(32, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn): BatchNorm2d(64, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+        (activ): ReLU(inplace=True)
+      )
+      (pool1): MaxPool2d(kernel_size=3, stride=2, padding=0, dilation=1, ceil_mode=False)
+      (conv4): InceptConv(
+        (conv): Conv2d(64, 80, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn): BatchNorm2d(80, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+        (activ): ReLU(inplace=True)
+      )
+      (conv5): InceptConv(
+        (conv): Conv2d(80, 192, kernel_size=(3, 3), stride=(1, 1), bias=False)
+        (bn): BatchNorm2d(192, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+        (activ): ReLU(inplace=True)
+      )
+      (pool2): MaxPool2d(kernel_size=3, stride=2, padding=0, dilation=1, ceil_mode=False)
+      (block): InceptBlock5b(
+        (branches): Concurrent(
+          (branch1): Conv1x1Branch(
+            (conv): InceptConv(
+              (conv): Conv2d(192, 96, kernel_size=(1, 1), stride=(1, 1), bias=False)
+              (bn): BatchNorm2d(96, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+              (activ): ReLU(inplace=True)
+            )
+          )
+          (branch2): ConvSeqBranch(
+            (conv_list): Sequential(
+              (conv1): InceptConv(
+                (conv): Conv2d(192, 48, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                (bn): BatchNorm2d(48, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+                (activ): ReLU(inplace=True)
+              )
+              (conv2): InceptConv(
+                (conv): Conv2d(48, 64, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2), bias=False)
+                (bn): BatchNorm2d(64, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+                (activ): ReLU(inplace=True)
+              )
+            )
+          )
+          (branch3): ConvSeqBranch(
+            (conv_list): Sequential(
+              (conv1): InceptConv(
+                (conv): Conv2d(192, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                (bn): BatchNorm2d(64, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+                (activ): ReLU(inplace=True)
+              )
+              (conv2): InceptConv(
+                (conv): Conv2d(64, 96, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+                (bn): BatchNorm2d(96, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+                (activ): ReLU(inplace=True)
+              )
+              (conv3): InceptConv(
+                (conv): Conv2d(96, 96, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+                (bn): BatchNorm2d(96, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+                (activ): ReLU(inplace=True)
+              )
+            )
+          )
+          (branch4): AvgPoolBranch(
+            (pool): AvgPool2d(kernel_size=3, stride=1, padding=1)
+            (conv): InceptConv(
+              (conv): Conv2d(192, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+              (bn): BatchNorm2d(64, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+              (activ): ReLU(inplace=True)
+            )
+          )
+        )
+      )
+    )
+    (stage1): Sequential(
+      (unit1): InceptionAUnit(
+        (branches): Concurrent(
+          (branch1): Conv1x1Branch(
+            (conv): InceptConv(
+              (conv): Conv2d(320, 32, kernel_size=(1, 1), stride=(1, 1), bias=False)
+              (bn): BatchNorm2d(32, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+              (activ): ReLU(inplace=True)
+            )
+          )
+          (branch2): ConvSeqBranch(
+            (conv_list): Sequential(
+              (conv1): InceptConv(
+                (conv): Conv2d(320, 32, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                (bn): BatchNorm2d(32, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+                (activ): ReLU(inplace=True)
+              )
+              (conv2): InceptConv(
+                (conv): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+                (bn): BatchNorm2d(32, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+                (activ): ReLU(inplace=True)
+              )
+            )
+          )
+          (branch3): ConvSeqBranch(
+            (conv_list): Sequential(
+              (conv1): InceptConv(
+                (conv): Conv2d(320, 32, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                (bn): BatchNorm2d(32, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+                (activ): ReLU(inplace=True)
+              )
+              (conv2): InceptConv(
+                (conv): Conv2d(32, 48, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+                (bn): BatchNorm2d(48, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+                (activ): ReLU(inplace=True)
+              )
+              (conv3): InceptConv(
+                (conv): Conv2d(48, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+                (bn): BatchNorm2d(64, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+                (activ): ReLU(inplace=True)
+              )
+            )
+          )
+        )
+        (conv): Conv2d(128, 320, kernel_size=(1, 1), stride=(1, 1))
+        (activ): ReLU(inplace=True)
+      )
+      (unit2): InceptionAUnit(
+        (branches): Concurrent(
+          (branch1): Conv1x1Branch(
+            (conv): InceptConv(
+              (conv): Conv2d(320, 32, kernel_size=(1, 1), stride=(1, 1), bias=False)
+              (bn): BatchNorm2d(32, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+              (activ): ReLU(inplace=True)
+            )
+          )
+          (branch2): ConvSeqBranch(
+            (conv_list): Sequential(
+              (conv1): InceptConv(
+                (conv): Conv2d(320, 32, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                (bn): BatchNorm2d(32, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+                (activ): ReLU(inplace=True)
+              )
+              (conv2): InceptConv(
+                (conv): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+                (bn): BatchNorm2d(32, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+                (activ): ReLU(inplace=True)
+              )
+            )
+          )
+          (branch3): ConvSeqBranch(
+            (conv_list): Sequential(
+              (conv1): InceptConv(
+                (conv): Conv2d(320, 32, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                (bn): BatchNorm2d(32, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+                (activ): ReLU(inplace=True)
+              )
+              (conv2): InceptConv(
+                (conv): Conv2d(32, 48, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+                (bn): BatchNorm2d(48, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+                (activ): ReLU(inplace=True)
+              )
+              (conv3): InceptConv(
+                (conv): Conv2d(48, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+                (bn): BatchNorm2d(64, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+                (activ): ReLU(inplace=True)
+              )
+            )
+          )
+        )
+        (conv): Conv2d(128, 320, kernel_size=(1, 1), stride=(1, 1))
+        (activ): ReLU(inplace=True)
+      )
+      (unit3): InceptionAUnit(
+        (branches): Concurrent(
+          (branch1): Conv1x1Branch(
+            (conv): InceptConv(
+              (conv): Conv2d(320, 32, kernel_size=(1, 1), stride=(1, 1), bias=False)
+              (bn): BatchNorm2d(32, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+              (activ): ReLU(inplace=True)
+            )
+          )
+          (branch2): ConvSeqBranch(
+            (conv_list): Sequential(
+              (conv1): InceptConv(
+                (conv): Conv2d(320, 32, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                (bn): BatchNorm2d(32, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+                (activ): ReLU(inplace=True)
+              )
+              (conv2): InceptConv(
+                (conv): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+                (bn): BatchNorm2d(32, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+                (activ): ReLU(inplace=True)
+              )
+            )
+          )
+          (branch3): ConvSeqBranch(
+            (conv_list): Sequential(
+              (conv1): InceptConv(
+                (conv): Conv2d(320, 32, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                (bn): BatchNorm2d(32, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+                (activ): ReLU(inplace=True)
+              )
+              (conv2): InceptConv(
+                (conv): Conv2d(32, 48, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+                (bn): BatchNorm2d(48, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+                (activ): ReLU(inplace=True)
+              )
+              (conv3): InceptConv(
+                (conv): Conv2d(48, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+                (bn): BatchNorm2d(64, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+                (activ): ReLU(inplace=True)
+              )
+            )
+          )
+        )
+        (conv): Conv2d(128, 320, kernel_size=(1, 1), stride=(1, 1))
+        (activ): ReLU(inplace=True)
+      )
+      (unit4): InceptionAUnit(
+        (branches): Concurrent(
+          (branch1): Conv1x1Branch(
+            (conv): InceptConv(
+              (conv): Conv2d(320, 32, kernel_size=(1, 1), stride=(1, 1), bias=False)
+              (bn): BatchNorm2d(32, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+              (activ): ReLU(inplace=True)
+            )
+          )
+          (branch2): ConvSeqBranch(
+            (conv_list): Sequential(
+              (conv1): InceptConv(
+                (conv): Conv2d(320, 32, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                (bn): BatchNorm2d(32, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+                (activ): ReLU(inplace=True)
+              )
+              (conv2): InceptConv(
+                (conv): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+                (bn): BatchNorm2d(32, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+                (activ): ReLU(inplace=True)
+              )
+            )
+          )
+          (branch3): ConvSeqBranch(
+            (conv_list): Sequential(
+              (conv1): InceptConv(
+                (conv): Conv2d(320, 32, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                (bn): BatchNorm2d(32, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+                (activ): ReLU(inplace=True)
+              )
+              (conv2): InceptConv(
+                (conv): Conv2d(32, 48, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+                (bn): BatchNorm2d(48, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+                (activ): ReLU(inplace=True)
+              )
+              (conv3): InceptConv(
+                (conv): Conv2d(48, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+                (bn): BatchNorm2d(64, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+                (activ): ReLU(inplace=True)
+              )
+            )
+          )
+        )
+        (conv): Conv2d(128, 320, kernel_size=(1, 1), stride=(1, 1))
+        (activ): ReLU(inplace=True)
+      )
+      (unit5): InceptionAUnit(
+        (branches): Concurrent(
+          (branch1): Conv1x1Branch(
+            (conv): InceptConv(
+              (conv): Conv2d(320, 32, kernel_size=(1, 1), stride=(1, 1), bias=False)
+              (bn): BatchNorm2d(32, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+              (activ): ReLU(inplace=True)
+            )
+          )
+          (branch2): ConvSeqBranch(
+            (conv_list): Sequential(
+              (conv1): InceptConv(
+                (conv): Conv2d(320, 32, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                (bn): BatchNorm2d(32, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+                (activ): ReLU(inplace=True)
+              )
+              (conv2): InceptConv(
+                (conv): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+                (bn): BatchNorm2d(32, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+                (activ): ReLU(inplace=True)
+              )
+            )
+          )
+          (branch3): ConvSeqBranch(
+            (conv_list): Sequential(
+              (conv1): InceptConv(
+                (conv): Conv2d(320, 32, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                (bn): BatchNorm2d(32, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+                (activ): ReLU(inplace=True)
+              )
+              (conv2): InceptConv(
+                (conv): Conv2d(32, 48, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+                (bn): BatchNorm2d(48, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+                (activ): ReLU(inplace=True)
+              )
+              (conv3): InceptConv(
+                (conv): Conv2d(48, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+                (bn): BatchNorm2d(64, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+                (activ): ReLU(inplace=True)
+              )
+            )
+          )
+        )
+        (conv): Conv2d(128, 320, kernel_size=(1, 1), stride=(1, 1))
+        (activ): ReLU(inplace=True)
+      )
+      (unit6): InceptionAUnit(
+        (branches): Concurrent(
+          (branch1): Conv1x1Branch(
+            (conv): InceptConv(
+              (conv): Conv2d(320, 32, kernel_size=(1, 1), stride=(1, 1), bias=False)
+              (bn): BatchNorm2d(32, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+              (activ): ReLU(inplace=True)
+            )
+          )
+          (branch2): ConvSeqBranch(
+            (conv_list): Sequential(
+              (conv1): InceptConv(
+                (conv): Conv2d(320, 32, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                (bn): BatchNorm2d(32, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+                (activ): ReLU(inplace=True)
+              )
+              (conv2): InceptConv(
+                (conv): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+                (bn): BatchNorm2d(32, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+                (activ): ReLU(inplace=True)
+              )
+            )
+          )
+          (branch3): ConvSeqBranch(
+            (conv_list): Sequential(
+              (conv1): InceptConv(
+                (conv): Conv2d(320, 32, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                (bn): BatchNorm2d(32, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+                (activ): ReLU(inplace=True)
+              )
+              (conv2): InceptConv(
+                (conv): Conv2d(32, 48, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+                (bn): BatchNorm2d(48, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+                (activ): ReLU(inplace=True)
+              )
+              (conv3): InceptConv(
+                (conv): Conv2d(48, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+                (bn): BatchNorm2d(64, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+                (activ): ReLU(inplace=True)
+              )
+            )
+          )
+        )
+        (conv): Conv2d(128, 320, kernel_size=(1, 1), stride=(1, 1))
+        (activ): ReLU(inplace=True)
+      )
+      (unit7): InceptionAUnit(
+        (branches): Concurrent(
+          (branch1): Conv1x1Branch(
+            (conv): InceptConv(
+              (conv): Conv2d(320, 32, kernel_size=(1, 1), stride=(1, 1), bias=False)
+              (bn): BatchNorm2d(32, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+              (activ): ReLU(inplace=True)
+            )
+          )
+          (branch2): ConvSeqBranch(
+            (conv_list): Sequential(
+              (conv1): InceptConv(
+                (conv): Conv2d(320, 32, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                (bn): BatchNorm2d(32, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+                (activ): ReLU(inplace=True)
+              )
+              (conv2): InceptConv(
+                (conv): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+                (bn): BatchNorm2d(32, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+                (activ): ReLU(inplace=True)
+              )
+            )
+          )
+          (branch3): ConvSeqBranch(
+            (conv_list): Sequential(
+              (conv1): InceptConv(
+                (conv): Conv2d(320, 32, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                (bn): BatchNorm2d(32, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+                (activ): ReLU(inplace=True)
+              )
+              (conv2): InceptConv(
+                (conv): Conv2d(32, 48, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+                (bn): BatchNorm2d(48, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+                (activ): ReLU(inplace=True)
+              )
+              (conv3): InceptConv(
+                (conv): Conv2d(48, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+                (bn): BatchNorm2d(64, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+                (activ): ReLU(inplace=True)
+              )
+            )
+          )
+        )
+        (conv): Conv2d(128, 320, kernel_size=(1, 1), stride=(1, 1))
+        (activ): ReLU(inplace=True)
+      )
+      (unit8): InceptionAUnit(
+        (branches): Concurrent(
+          (branch1): Conv1x1Branch(
+            (conv): InceptConv(
+              (conv): Conv2d(320, 32, kernel_size=(1, 1), stride=(1, 1), bias=False)
+              (bn): BatchNorm2d(32, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+              (activ): ReLU(inplace=True)
+            )
+          )
+          (branch2): ConvSeqBranch(
+            (conv_list): Sequential(
+              (conv1): InceptConv(
+                (conv): Conv2d(320, 32, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                (bn): BatchNorm2d(32, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+                (activ): ReLU(inplace=True)
+              )
+              (conv2): InceptConv(
+                (conv): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+                (bn): BatchNorm2d(32, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+                (activ): ReLU(inplace=True)
+              )
+            )
+          )
+          (branch3): ConvSeqBranch(
+            (conv_list): Sequential(
+              (conv1): InceptConv(
+                (conv): Conv2d(320, 32, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                (bn): BatchNorm2d(32, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+                (activ): ReLU(inplace=True)
+              )
+              (conv2): InceptConv(
+                (conv): Conv2d(32, 48, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+                (bn): BatchNorm2d(48, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+                (activ): ReLU(inplace=True)
+              )
+              (conv3): InceptConv(
+                (conv): Conv2d(48, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+                (bn): BatchNorm2d(64, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+                (activ): ReLU(inplace=True)
+              )
+            )
+          )
+        )
+        (conv): Conv2d(128, 320, kernel_size=(1, 1), stride=(1, 1))
+        (activ): ReLU(inplace=True)
+      )
+      (unit9): InceptionAUnit(
+        (branches): Concurrent(
+          (branch1): Conv1x1Branch(
+            (conv): InceptConv(
+              (conv): Conv2d(320, 32, kernel_size=(1, 1), stride=(1, 1), bias=False)
+              (bn): BatchNorm2d(32, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+              (activ): ReLU(inplace=True)
+            )
+          )
+          (branch2): ConvSeqBranch(
+            (conv_list): Sequential(
+              (conv1): InceptConv(
+                (conv): Conv2d(320, 32, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                (bn): BatchNorm2d(32, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+                (activ): ReLU(inplace=True)
+              )
+              (conv2): InceptConv(
+                (conv): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+                (bn): BatchNorm2d(32, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+                (activ): ReLU(inplace=True)
+              )
+            )
+          )
+          (branch3): ConvSeqBranch(
+            (conv_list): Sequential(
+              (conv1): InceptConv(
+                (conv): Conv2d(320, 32, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                (bn): BatchNorm2d(32, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+                (activ): ReLU(inplace=True)
+              )
+              (conv2): InceptConv(
+                (conv): Conv2d(32, 48, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+                (bn): BatchNorm2d(48, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+                (activ): ReLU(inplace=True)
+              )
+              (conv3): InceptConv(
+                (conv): Conv2d(48, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+                (bn): BatchNorm2d(64, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+                (activ): ReLU(inplace=True)
+              )
+            )
+          )
+        )
+        (conv): Conv2d(128, 320, kernel_size=(1, 1), stride=(1, 1))
+        (activ): ReLU(inplace=True)
+      )
+      (unit10): InceptionAUnit(
+        (branches): Concurrent(
+          (branch1): Conv1x1Branch(
+            (conv): InceptConv(
+              (conv): Conv2d(320, 32, kernel_size=(1, 1), stride=(1, 1), bias=False)
+              (bn): BatchNorm2d(32, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+              (activ): ReLU(inplace=True)
+            )
+          )
+          (branch2): ConvSeqBranch(
+            (conv_list): Sequential(
+              (conv1): InceptConv(
+                (conv): Conv2d(320, 32, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                (bn): BatchNorm2d(32, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+                (activ): ReLU(inplace=True)
+              )
+              (conv2): InceptConv(
+                (conv): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+                (bn): BatchNorm2d(32, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+                (activ): ReLU(inplace=True)
+              )
+            )
+          )
+          (branch3): ConvSeqBranch(
+            (conv_list): Sequential(
+              (conv1): InceptConv(
+                (conv): Conv2d(320, 32, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                (bn): BatchNorm2d(32, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+                (activ): ReLU(inplace=True)
+              )
+              (conv2): InceptConv(
+                (conv): Conv2d(32, 48, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+                (bn): BatchNorm2d(48, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+                (activ): ReLU(inplace=True)
+              )
+              (conv3): InceptConv(
+                (conv): Conv2d(48, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+                (bn): BatchNorm2d(64, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+                (activ): ReLU(inplace=True)
+              )
+            )
+          )
+        )
+        (conv): Conv2d(128, 320, kernel_size=(1, 1), stride=(1, 1))
+        (activ): ReLU(inplace=True)
+      )
+    )
+    (stage2): Sequential(
+      (unit1): ReductionAUnit(
+        (branches): Concurrent(
+          (branch1): ConvSeqBranch(
+            (conv_list): Sequential(
+              (conv1): InceptConv(
+                (conv): Conv2d(320, 384, kernel_size=(3, 3), stride=(2, 2), bias=False)
+                (bn): BatchNorm2d(384, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+                (activ): ReLU(inplace=True)
+              )
+            )
+          )
+          (branch2): ConvSeqBranch(
+            (conv_list): Sequential(
+              (conv1): InceptConv(
+                (conv): Conv2d(320, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                (bn): BatchNorm2d(256, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+                (activ): ReLU(inplace=True)
+              )
+              (conv2): InceptConv(
+                (conv): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+                (bn): BatchNorm2d(256, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+                (activ): ReLU(inplace=True)
+              )
+              (conv3): InceptConv(
+                (conv): Conv2d(256, 384, kernel_size=(3, 3), stride=(2, 2), bias=False)
+                (bn): BatchNorm2d(384, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+                (activ): ReLU(inplace=True)
+              )
+            )
+          )
+          (branch3): MaxPoolBranch(
+            (pool): MaxPool2d(kernel_size=3, stride=2, padding=0, dilation=1, ceil_mode=False)
+          )
+        )
+      )
+      (unit2): InceptionBUnit(
+        (branches): Concurrent(
+          (branch1): Conv1x1Branch(
+            (conv): InceptConv(
+              (conv): Conv2d(1088, 192, kernel_size=(1, 1), stride=(1, 1), bias=False)
+              (bn): BatchNorm2d(192, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+              (activ): ReLU(inplace=True)
+            )
+          )
+          (branch2): ConvSeqBranch(
+            (conv_list): Sequential(
+              (conv1): InceptConv(
+                (conv): Conv2d(1088, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                (bn): BatchNorm2d(128, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+                (activ): ReLU(inplace=True)
+              )
+              (conv2): InceptConv(
+                (conv): Conv2d(128, 160, kernel_size=(1, 7), stride=(1, 1), padding=(0, 3), bias=False)
+                (bn): BatchNorm2d(160, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+                (activ): ReLU(inplace=True)
+              )
+              (conv3): InceptConv(
+                (conv): Conv2d(160, 192, kernel_size=(7, 1), stride=(1, 1), padding=(3, 0), bias=False)
+                (bn): BatchNorm2d(192, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+                (activ): ReLU(inplace=True)
+              )
+            )
+          )
+        )
+        (conv): Conv2d(384, 1088, kernel_size=(1, 1), stride=(1, 1))
+        (activ): ReLU(inplace=True)
+      )
+      (unit3): InceptionBUnit(
+        (branches): Concurrent(
+          (branch1): Conv1x1Branch(
+            (conv): InceptConv(
+              (conv): Conv2d(1088, 192, kernel_size=(1, 1), stride=(1, 1), bias=False)
+              (bn): BatchNorm2d(192, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+              (activ): ReLU(inplace=True)
+            )
+          )
+          (branch2): ConvSeqBranch(
+            (conv_list): Sequential(
+              (conv1): InceptConv(
+                (conv): Conv2d(1088, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                (bn): BatchNorm2d(128, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+                (activ): ReLU(inplace=True)
+              )
+              (conv2): InceptConv(
+                (conv): Conv2d(128, 160, kernel_size=(1, 7), stride=(1, 1), padding=(0, 3), bias=False)
+                (bn): BatchNorm2d(160, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+                (activ): ReLU(inplace=True)
+              )
+              (conv3): InceptConv(
+                (conv): Conv2d(160, 192, kernel_size=(7, 1), stride=(1, 1), padding=(3, 0), bias=False)
+                (bn): BatchNorm2d(192, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+                (activ): ReLU(inplace=True)
+              )
+            )
+          )
+        )
+        (conv): Conv2d(384, 1088, kernel_size=(1, 1), stride=(1, 1))
+        (activ): ReLU(inplace=True)
+      )
+      (unit4): InceptionBUnit(
+        (branches): Concurrent(
+          (branch1): Conv1x1Branch(
+            (conv): InceptConv(
+              (conv): Conv2d(1088, 192, kernel_size=(1, 1), stride=(1, 1), bias=False)
+              (bn): BatchNorm2d(192, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+              (activ): ReLU(inplace=True)
+            )
+          )
+          (branch2): ConvSeqBranch(
+            (conv_list): Sequential(
+              (conv1): InceptConv(
+                (conv): Conv2d(1088, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                (bn): BatchNorm2d(128, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+                (activ): ReLU(inplace=True)
+              )
+              (conv2): InceptConv(
+                (conv): Conv2d(128, 160, kernel_size=(1, 7), stride=(1, 1), padding=(0, 3), bias=False)
+                (bn): BatchNorm2d(160, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+                (activ): ReLU(inplace=True)
+              )
+              (conv3): InceptConv(
+                (conv): Conv2d(160, 192, kernel_size=(7, 1), stride=(1, 1), padding=(3, 0), bias=False)
+                (bn): BatchNorm2d(192, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+                (activ): ReLU(inplace=True)
+              )
+            )
+          )
+        )
+        (conv): Conv2d(384, 1088, kernel_size=(1, 1), stride=(1, 1))
+        (activ): ReLU(inplace=True)
+      )
+      (unit5): InceptionBUnit(
+        (branches): Concurrent(
+          (branch1): Conv1x1Branch(
+            (conv): InceptConv(
+              (conv): Conv2d(1088, 192, kernel_size=(1, 1), stride=(1, 1), bias=False)
+              (bn): BatchNorm2d(192, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+              (activ): ReLU(inplace=True)
+            )
+          )
+          (branch2): ConvSeqBranch(
+            (conv_list): Sequential(
+              (conv1): InceptConv(
+                (conv): Conv2d(1088, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                (bn): BatchNorm2d(128, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+                (activ): ReLU(inplace=True)
+              )
+              (conv2): InceptConv(
+                (conv): Conv2d(128, 160, kernel_size=(1, 7), stride=(1, 1), padding=(0, 3), bias=False)
+                (bn): BatchNorm2d(160, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+                (activ): ReLU(inplace=True)
+              )
+              (conv3): InceptConv(
+                (conv): Conv2d(160, 192, kernel_size=(7, 1), stride=(1, 1), padding=(3, 0), bias=False)
+                (bn): BatchNorm2d(192, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+                (activ): ReLU(inplace=True)
+              )
+            )
+          )
+        )
+        (conv): Conv2d(384, 1088, kernel_size=(1, 1), stride=(1, 1))
+        (activ): ReLU(inplace=True)
+      )
+      (unit6): InceptionBUnit(
+        (branches): Concurrent(
+          (branch1): Conv1x1Branch(
+            (conv): InceptConv(
+              (conv): Conv2d(1088, 192, kernel_size=(1, 1), stride=(1, 1), bias=False)
+              (bn): BatchNorm2d(192, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+              (activ): ReLU(inplace=True)
+            )
+          )
+          (branch2): ConvSeqBranch(
+            (conv_list): Sequential(
+              (conv1): InceptConv(
+                (conv): Conv2d(1088, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                (bn): BatchNorm2d(128, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+                (activ): ReLU(inplace=True)
+              )
+              (conv2): InceptConv(
+                (conv): Conv2d(128, 160, kernel_size=(1, 7), stride=(1, 1), padding=(0, 3), bias=False)
+                (bn): BatchNorm2d(160, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+                (activ): ReLU(inplace=True)
+              )
+              (conv3): InceptConv(
+                (conv): Conv2d(160, 192, kernel_size=(7, 1), stride=(1, 1), padding=(3, 0), bias=False)
+                (bn): BatchNorm2d(192, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+                (activ): ReLU(inplace=True)
+              )
+            )
+          )
+        )
+        (conv): Conv2d(384, 1088, kernel_size=(1, 1), stride=(1, 1))
+        (activ): ReLU(inplace=True)
+      )
+      (unit7): InceptionBUnit(
+        (branches): Concurrent(
+          (branch1): Conv1x1Branch(
+            (conv): InceptConv(
+              (conv): Conv2d(1088, 192, kernel_size=(1, 1), stride=(1, 1), bias=False)
+              (bn): BatchNorm2d(192, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+              (activ): ReLU(inplace=True)
+            )
+          )
+          (branch2): ConvSeqBranch(
+            (conv_list): Sequential(
+              (conv1): InceptConv(
+                (conv): Conv2d(1088, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                (bn): BatchNorm2d(128, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+                (activ): ReLU(inplace=True)
+              )
+              (conv2): InceptConv(
+                (conv): Conv2d(128, 160, kernel_size=(1, 7), stride=(1, 1), padding=(0, 3), bias=False)
+                (bn): BatchNorm2d(160, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+                (activ): ReLU(inplace=True)
+              )
+              (conv3): InceptConv(
+                (conv): Conv2d(160, 192, kernel_size=(7, 1), stride=(1, 1), padding=(3, 0), bias=False)
+                (bn): BatchNorm2d(192, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+                (activ): ReLU(inplace=True)
+              )
+            )
+          )
+        )
+        (conv): Conv2d(384, 1088, kernel_size=(1, 1), stride=(1, 1))
+        (activ): ReLU(inplace=True)
+      )
+      (unit8): InceptionBUnit(
+        (branches): Concurrent(
+          (branch1): Conv1x1Branch(
+            (conv): InceptConv(
+              (conv): Conv2d(1088, 192, kernel_size=(1, 1), stride=(1, 1), bias=False)
+              (bn): BatchNorm2d(192, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+              (activ): ReLU(inplace=True)
+            )
+          )
+          (branch2): ConvSeqBranch(
+            (conv_list): Sequential(
+              (conv1): InceptConv(
+                (conv): Conv2d(1088, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                (bn): BatchNorm2d(128, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+                (activ): ReLU(inplace=True)
+              )
+              (conv2): InceptConv(
+                (conv): Conv2d(128, 160, kernel_size=(1, 7), stride=(1, 1), padding=(0, 3), bias=False)
+                (bn): BatchNorm2d(160, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+                (activ): ReLU(inplace=True)
+              )
+              (conv3): InceptConv(
+                (conv): Conv2d(160, 192, kernel_size=(7, 1), stride=(1, 1), padding=(3, 0), bias=False)
+                (bn): BatchNorm2d(192, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+                (activ): ReLU(inplace=True)
+              )
+            )
+          )
+        )
+        (conv): Conv2d(384, 1088, kernel_size=(1, 1), stride=(1, 1))
+        (activ): ReLU(inplace=True)
+      )
+      (unit9): InceptionBUnit(
+        (branches): Concurrent(
+          (branch1): Conv1x1Branch(
+            (conv): InceptConv(
+              (conv): Conv2d(1088, 192, kernel_size=(1, 1), stride=(1, 1), bias=False)
+              (bn): BatchNorm2d(192, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+              (activ): ReLU(inplace=True)
+            )
+          )
+          (branch2): ConvSeqBranch(
+            (conv_list): Sequential(
+              (conv1): InceptConv(
+                (conv): Conv2d(1088, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                (bn): BatchNorm2d(128, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+                (activ): ReLU(inplace=True)
+              )
+              (conv2): InceptConv(
+                (conv): Conv2d(128, 160, kernel_size=(1, 7), stride=(1, 1), padding=(0, 3), bias=False)
+                (bn): BatchNorm2d(160, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+                (activ): ReLU(inplace=True)
+              )
+              (conv3): InceptConv(
+                (conv): Conv2d(160, 192, kernel_size=(7, 1), stride=(1, 1), padding=(3, 0), bias=False)
+                (bn): BatchNorm2d(192, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+                (activ): ReLU(inplace=True)
+              )
+            )
+          )
+        )
+        (conv): Conv2d(384, 1088, kernel_size=(1, 1), stride=(1, 1))
+        (activ): ReLU(inplace=True)
+      )
+      (unit10): InceptionBUnit(
+        (branches): Concurrent(
+          (branch1): Conv1x1Branch(
+            (conv): InceptConv(
+              (conv): Conv2d(1088, 192, kernel_size=(1, 1), stride=(1, 1), bias=False)
+              (bn): BatchNorm2d(192, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+              (activ): ReLU(inplace=True)
+            )
+          )
+          (branch2): ConvSeqBranch(
+            (conv_list): Sequential(
+              (conv1): InceptConv(
+                (conv): Conv2d(1088, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                (bn): BatchNorm2d(128, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+                (activ): ReLU(inplace=True)
+              )
+              (conv2): InceptConv(
+                (conv): Conv2d(128, 160, kernel_size=(1, 7), stride=(1, 1), padding=(0, 3), bias=False)
+                (bn): BatchNorm2d(160, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+                (activ): ReLU(inplace=True)
+              )
+              (conv3): InceptConv(
+                (conv): Conv2d(160, 192, kernel_size=(7, 1), stride=(1, 1), padding=(3, 0), bias=False)
+                (bn): BatchNorm2d(192, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+                (activ): ReLU(inplace=True)
+              )
+            )
+          )
+        )
+        (conv): Conv2d(384, 1088, kernel_size=(1, 1), stride=(1, 1))
+        (activ): ReLU(inplace=True)
+      )
+      (unit11): InceptionBUnit(
+        (branches): Concurrent(
+          (branch1): Conv1x1Branch(
+            (conv): InceptConv(
+              (conv): Conv2d(1088, 192, kernel_size=(1, 1), stride=(1, 1), bias=False)
+              (bn): BatchNorm2d(192, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+              (activ): ReLU(inplace=True)
+            )
+          )
+          (branch2): ConvSeqBranch(
+            (conv_list): Sequential(
+              (conv1): InceptConv(
+                (conv): Conv2d(1088, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                (bn): BatchNorm2d(128, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+                (activ): ReLU(inplace=True)
+              )
+              (conv2): InceptConv(
+                (conv): Conv2d(128, 160, kernel_size=(1, 7), stride=(1, 1), padding=(0, 3), bias=False)
+                (bn): BatchNorm2d(160, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+                (activ): ReLU(inplace=True)
+              )
+              (conv3): InceptConv(
+                (conv): Conv2d(160, 192, kernel_size=(7, 1), stride=(1, 1), padding=(3, 0), bias=False)
+                (bn): BatchNorm2d(192, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+                (activ): ReLU(inplace=True)
+              )
+            )
+          )
+        )
+        (conv): Conv2d(384, 1088, kernel_size=(1, 1), stride=(1, 1))
+        (activ): ReLU(inplace=True)
+      )
+      (unit12): InceptionBUnit(
+        (branches): Concurrent(
+          (branch1): Conv1x1Branch(
+            (conv): InceptConv(
+              (conv): Conv2d(1088, 192, kernel_size=(1, 1), stride=(1, 1), bias=False)
+              (bn): BatchNorm2d(192, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+              (activ): ReLU(inplace=True)
+            )
+          )
+          (branch2): ConvSeqBranch(
+            (conv_list): Sequential(
+              (conv1): InceptConv(
+                (conv): Conv2d(1088, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                (bn): BatchNorm2d(128, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+                (activ): ReLU(inplace=True)
+              )
+              (conv2): InceptConv(
+                (conv): Conv2d(128, 160, kernel_size=(1, 7), stride=(1, 1), padding=(0, 3), bias=False)
+                (bn): BatchNorm2d(160, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+                (activ): ReLU(inplace=True)
+              )
+              (conv3): InceptConv(
+                (conv): Conv2d(160, 192, kernel_size=(7, 1), stride=(1, 1), padding=(3, 0), bias=False)
+                (bn): BatchNorm2d(192, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+                (activ): ReLU(inplace=True)
+              )
+            )
+          )
+        )
+        (conv): Conv2d(384, 1088, kernel_size=(1, 1), stride=(1, 1))
+        (activ): ReLU(inplace=True)
+      )
+      (unit13): InceptionBUnit(
+        (branches): Concurrent(
+          (branch1): Conv1x1Branch(
+            (conv): InceptConv(
+              (conv): Conv2d(1088, 192, kernel_size=(1, 1), stride=(1, 1), bias=False)
+              (bn): BatchNorm2d(192, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+              (activ): ReLU(inplace=True)
+            )
+          )
+          (branch2): ConvSeqBranch(
+            (conv_list): Sequential(
+              (conv1): InceptConv(
+                (conv): Conv2d(1088, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                (bn): BatchNorm2d(128, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+                (activ): ReLU(inplace=True)
+              )
+              (conv2): InceptConv(
+                (conv): Conv2d(128, 160, kernel_size=(1, 7), stride=(1, 1), padding=(0, 3), bias=False)
+                (bn): BatchNorm2d(160, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+                (activ): ReLU(inplace=True)
+              )
+              (conv3): InceptConv(
+                (conv): Conv2d(160, 192, kernel_size=(7, 1), stride=(1, 1), padding=(3, 0), bias=False)
+                (bn): BatchNorm2d(192, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+                (activ): ReLU(inplace=True)
+              )
+            )
+          )
+        )
+        (conv): Conv2d(384, 1088, kernel_size=(1, 1), stride=(1, 1))
+        (activ): ReLU(inplace=True)
+      )
+      (unit14): InceptionBUnit(
+        (branches): Concurrent(
+          (branch1): Conv1x1Branch(
+            (conv): InceptConv(
+              (conv): Conv2d(1088, 192, kernel_size=(1, 1), stride=(1, 1), bias=False)
+              (bn): BatchNorm2d(192, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+              (activ): ReLU(inplace=True)
+            )
+          )
+          (branch2): ConvSeqBranch(
+            (conv_list): Sequential(
+              (conv1): InceptConv(
+                (conv): Conv2d(1088, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                (bn): BatchNorm2d(128, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+                (activ): ReLU(inplace=True)
+              )
+              (conv2): InceptConv(
+                (conv): Conv2d(128, 160, kernel_size=(1, 7), stride=(1, 1), padding=(0, 3), bias=False)
+                (bn): BatchNorm2d(160, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+                (activ): ReLU(inplace=True)
+              )
+              (conv3): InceptConv(
+                (conv): Conv2d(160, 192, kernel_size=(7, 1), stride=(1, 1), padding=(3, 0), bias=False)
+                (bn): BatchNorm2d(192, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+                (activ): ReLU(inplace=True)
+              )
+            )
+          )
+        )
+        (conv): Conv2d(384, 1088, kernel_size=(1, 1), stride=(1, 1))
+        (activ): ReLU(inplace=True)
+      )
+      (unit15): InceptionBUnit(
+        (branches): Concurrent(
+          (branch1): Conv1x1Branch(
+            (conv): InceptConv(
+              (conv): Conv2d(1088, 192, kernel_size=(1, 1), stride=(1, 1), bias=False)
+              (bn): BatchNorm2d(192, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+              (activ): ReLU(inplace=True)
+            )
+          )
+          (branch2): ConvSeqBranch(
+            (conv_list): Sequential(
+              (conv1): InceptConv(
+                (conv): Conv2d(1088, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                (bn): BatchNorm2d(128, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+                (activ): ReLU(inplace=True)
+              )
+              (conv2): InceptConv(
+                (conv): Conv2d(128, 160, kernel_size=(1, 7), stride=(1, 1), padding=(0, 3), bias=False)
+                (bn): BatchNorm2d(160, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+                (activ): ReLU(inplace=True)
+              )
+              (conv3): InceptConv(
+                (conv): Conv2d(160, 192, kernel_size=(7, 1), stride=(1, 1), padding=(3, 0), bias=False)
+                (bn): BatchNorm2d(192, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+                (activ): ReLU(inplace=True)
+              )
+            )
+          )
+        )
+        (conv): Conv2d(384, 1088, kernel_size=(1, 1), stride=(1, 1))
+        (activ): ReLU(inplace=True)
+      )
+      (unit16): InceptionBUnit(
+        (branches): Concurrent(
+          (branch1): Conv1x1Branch(
+            (conv): InceptConv(
+              (conv): Conv2d(1088, 192, kernel_size=(1, 1), stride=(1, 1), bias=False)
+              (bn): BatchNorm2d(192, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+              (activ): ReLU(inplace=True)
+            )
+          )
+          (branch2): ConvSeqBranch(
+            (conv_list): Sequential(
+              (conv1): InceptConv(
+                (conv): Conv2d(1088, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                (bn): BatchNorm2d(128, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+                (activ): ReLU(inplace=True)
+              )
+              (conv2): InceptConv(
+                (conv): Conv2d(128, 160, kernel_size=(1, 7), stride=(1, 1), padding=(0, 3), bias=False)
+                (bn): BatchNorm2d(160, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+                (activ): ReLU(inplace=True)
+              )
+              (conv3): InceptConv(
+                (conv): Conv2d(160, 192, kernel_size=(7, 1), stride=(1, 1), padding=(3, 0), bias=False)
+                (bn): BatchNorm2d(192, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+                (activ): ReLU(inplace=True)
+              )
+            )
+          )
+        )
+        (conv): Conv2d(384, 1088, kernel_size=(1, 1), stride=(1, 1))
+        (activ): ReLU(inplace=True)
+      )
+      (unit17): InceptionBUnit(
+        (branches): Concurrent(
+          (branch1): Conv1x1Branch(
+            (conv): InceptConv(
+              (conv): Conv2d(1088, 192, kernel_size=(1, 1), stride=(1, 1), bias=False)
+              (bn): BatchNorm2d(192, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+              (activ): ReLU(inplace=True)
+            )
+          )
+          (branch2): ConvSeqBranch(
+            (conv_list): Sequential(
+              (conv1): InceptConv(
+                (conv): Conv2d(1088, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                (bn): BatchNorm2d(128, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+                (activ): ReLU(inplace=True)
+              )
+              (conv2): InceptConv(
+                (conv): Conv2d(128, 160, kernel_size=(1, 7), stride=(1, 1), padding=(0, 3), bias=False)
+                (bn): BatchNorm2d(160, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+                (activ): ReLU(inplace=True)
+              )
+              (conv3): InceptConv(
+                (conv): Conv2d(160, 192, kernel_size=(7, 1), stride=(1, 1), padding=(3, 0), bias=False)
+                (bn): BatchNorm2d(192, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+                (activ): ReLU(inplace=True)
+              )
+            )
+          )
+        )
+        (conv): Conv2d(384, 1088, kernel_size=(1, 1), stride=(1, 1))
+        (activ): ReLU(inplace=True)
+      )
+      (unit18): InceptionBUnit(
+        (branches): Concurrent(
+          (branch1): Conv1x1Branch(
+            (conv): InceptConv(
+              (conv): Conv2d(1088, 192, kernel_size=(1, 1), stride=(1, 1), bias=False)
+              (bn): BatchNorm2d(192, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+              (activ): ReLU(inplace=True)
+            )
+          )
+          (branch2): ConvSeqBranch(
+            (conv_list): Sequential(
+              (conv1): InceptConv(
+                (conv): Conv2d(1088, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                (bn): BatchNorm2d(128, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+                (activ): ReLU(inplace=True)
+              )
+              (conv2): InceptConv(
+                (conv): Conv2d(128, 160, kernel_size=(1, 7), stride=(1, 1), padding=(0, 3), bias=False)
+                (bn): BatchNorm2d(160, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+                (activ): ReLU(inplace=True)
+              )
+              (conv3): InceptConv(
+                (conv): Conv2d(160, 192, kernel_size=(7, 1), stride=(1, 1), padding=(3, 0), bias=False)
+                (bn): BatchNorm2d(192, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+                (activ): ReLU(inplace=True)
+              )
+            )
+          )
+        )
+        (conv): Conv2d(384, 1088, kernel_size=(1, 1), stride=(1, 1))
+        (activ): ReLU(inplace=True)
+      )
+      (unit19): InceptionBUnit(
+        (branches): Concurrent(
+          (branch1): Conv1x1Branch(
+            (conv): InceptConv(
+              (conv): Conv2d(1088, 192, kernel_size=(1, 1), stride=(1, 1), bias=False)
+              (bn): BatchNorm2d(192, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+              (activ): ReLU(inplace=True)
+            )
+          )
+          (branch2): ConvSeqBranch(
+            (conv_list): Sequential(
+              (conv1): InceptConv(
+                (conv): Conv2d(1088, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                (bn): BatchNorm2d(128, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+                (activ): ReLU(inplace=True)
+              )
+              (conv2): InceptConv(
+                (conv): Conv2d(128, 160, kernel_size=(1, 7), stride=(1, 1), padding=(0, 3), bias=False)
+                (bn): BatchNorm2d(160, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+                (activ): ReLU(inplace=True)
+              )
+              (conv3): InceptConv(
+                (conv): Conv2d(160, 192, kernel_size=(7, 1), stride=(1, 1), padding=(3, 0), bias=False)
+                (bn): BatchNorm2d(192, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+                (activ): ReLU(inplace=True)
+              )
+            )
+          )
+        )
+        (conv): Conv2d(384, 1088, kernel_size=(1, 1), stride=(1, 1))
+        (activ): ReLU(inplace=True)
+      )
+      (unit20): InceptionBUnit(
+        (branches): Concurrent(
+          (branch1): Conv1x1Branch(
+            (conv): InceptConv(
+              (conv): Conv2d(1088, 192, kernel_size=(1, 1), stride=(1, 1), bias=False)
+              (bn): BatchNorm2d(192, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+              (activ): ReLU(inplace=True)
+            )
+          )
+          (branch2): ConvSeqBranch(
+            (conv_list): Sequential(
+              (conv1): InceptConv(
+                (conv): Conv2d(1088, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                (bn): BatchNorm2d(128, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+                (activ): ReLU(inplace=True)
+              )
+              (conv2): InceptConv(
+                (conv): Conv2d(128, 160, kernel_size=(1, 7), stride=(1, 1), padding=(0, 3), bias=False)
+                (bn): BatchNorm2d(160, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+                (activ): ReLU(inplace=True)
+              )
+              (conv3): InceptConv(
+                (conv): Conv2d(160, 192, kernel_size=(7, 1), stride=(1, 1), padding=(3, 0), bias=False)
+                (bn): BatchNorm2d(192, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+                (activ): ReLU(inplace=True)
+              )
+            )
+          )
+        )
+        (conv): Conv2d(384, 1088, kernel_size=(1, 1), stride=(1, 1))
+        (activ): ReLU(inplace=True)
+      )
+      (unit21): InceptionBUnit(
+        (branches): Concurrent(
+          (branch1): Conv1x1Branch(
+            (conv): InceptConv(
+              (conv): Conv2d(1088, 192, kernel_size=(1, 1), stride=(1, 1), bias=False)
+              (bn): BatchNorm2d(192, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+              (activ): ReLU(inplace=True)
+            )
+          )
+          (branch2): ConvSeqBranch(
+            (conv_list): Sequential(
+              (conv1): InceptConv(
+                (conv): Conv2d(1088, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                (bn): BatchNorm2d(128, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+                (activ): ReLU(inplace=True)
+              )
+              (conv2): InceptConv(
+                (conv): Conv2d(128, 160, kernel_size=(1, 7), stride=(1, 1), padding=(0, 3), bias=False)
+                (bn): BatchNorm2d(160, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+                (activ): ReLU(inplace=True)
+              )
+              (conv3): InceptConv(
+                (conv): Conv2d(160, 192, kernel_size=(7, 1), stride=(1, 1), padding=(3, 0), bias=False)
+                (bn): BatchNorm2d(192, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+                (activ): ReLU(inplace=True)
+              )
+            )
+          )
+        )
+        (conv): Conv2d(384, 1088, kernel_size=(1, 1), stride=(1, 1))
+        (activ): ReLU(inplace=True)
+      )
+    )
+    (stage3): Sequential(
+      (unit1): ReductionBUnit(
+        (branches): Concurrent(
+          (branch1): ConvSeqBranch(
+            (conv_list): Sequential(
+              (conv1): InceptConv(
+                (conv): Conv2d(1088, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                (bn): BatchNorm2d(256, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+                (activ): ReLU(inplace=True)
+              )
+              (conv2): InceptConv(
+                (conv): Conv2d(256, 384, kernel_size=(3, 3), stride=(2, 2), bias=False)
+                (bn): BatchNorm2d(384, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+                (activ): ReLU(inplace=True)
+              )
+            )
+          )
+          (branch2): ConvSeqBranch(
+            (conv_list): Sequential(
+              (conv1): InceptConv(
+                (conv): Conv2d(1088, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                (bn): BatchNorm2d(256, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+                (activ): ReLU(inplace=True)
+              )
+              (conv2): InceptConv(
+                (conv): Conv2d(256, 288, kernel_size=(3, 3), stride=(2, 2), bias=False)
+                (bn): BatchNorm2d(288, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+                (activ): ReLU(inplace=True)
+              )
+            )
+          )
+          (branch3): ConvSeqBranch(
+            (conv_list): Sequential(
+              (conv1): InceptConv(
+                (conv): Conv2d(1088, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                (bn): BatchNorm2d(256, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+                (activ): ReLU(inplace=True)
+              )
+              (conv2): InceptConv(
+                (conv): Conv2d(256, 288, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+                (bn): BatchNorm2d(288, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+                (activ): ReLU(inplace=True)
+              )
+              (conv3): InceptConv(
+                (conv): Conv2d(288, 320, kernel_size=(3, 3), stride=(2, 2), bias=False)
+                (bn): BatchNorm2d(320, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+                (activ): ReLU(inplace=True)
+              )
+            )
+          )
+          (branch4): MaxPoolBranch(
+            (pool): MaxPool2d(kernel_size=3, stride=2, padding=0, dilation=1, ceil_mode=False)
+          )
+        )
+      )
+      (unit2): InceptionCUnit(
+        (branches): Concurrent(
+          (branch1): Conv1x1Branch(
+            (conv): InceptConv(
+              (conv): Conv2d(2080, 192, kernel_size=(1, 1), stride=(1, 1), bias=False)
+              (bn): BatchNorm2d(192, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+              (activ): ReLU(inplace=True)
+            )
+          )
+          (branch2): ConvSeqBranch(
+            (conv_list): Sequential(
+              (conv1): InceptConv(
+                (conv): Conv2d(2080, 192, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                (bn): BatchNorm2d(192, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+                (activ): ReLU(inplace=True)
+              )
+              (conv2): InceptConv(
+                (conv): Conv2d(192, 224, kernel_size=(1, 3), stride=(1, 1), padding=(0, 1), bias=False)
+                (bn): BatchNorm2d(224, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+                (activ): ReLU(inplace=True)
+              )
+              (conv3): InceptConv(
+                (conv): Conv2d(224, 256, kernel_size=(3, 1), stride=(1, 1), padding=(1, 0), bias=False)
+                (bn): BatchNorm2d(256, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+                (activ): ReLU(inplace=True)
+              )
+            )
+          )
+        )
+        (conv): Conv2d(448, 2080, kernel_size=(1, 1), stride=(1, 1))
+        (activ): ReLU(inplace=True)
+      )
+      (unit3): InceptionCUnit(
+        (branches): Concurrent(
+          (branch1): Conv1x1Branch(
+            (conv): InceptConv(
+              (conv): Conv2d(2080, 192, kernel_size=(1, 1), stride=(1, 1), bias=False)
+              (bn): BatchNorm2d(192, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+              (activ): ReLU(inplace=True)
+            )
+          )
+          (branch2): ConvSeqBranch(
+            (conv_list): Sequential(
+              (conv1): InceptConv(
+                (conv): Conv2d(2080, 192, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                (bn): BatchNorm2d(192, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+                (activ): ReLU(inplace=True)
+              )
+              (conv2): InceptConv(
+                (conv): Conv2d(192, 224, kernel_size=(1, 3), stride=(1, 1), padding=(0, 1), bias=False)
+                (bn): BatchNorm2d(224, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+                (activ): ReLU(inplace=True)
+              )
+              (conv3): InceptConv(
+                (conv): Conv2d(224, 256, kernel_size=(3, 1), stride=(1, 1), padding=(1, 0), bias=False)
+                (bn): BatchNorm2d(256, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+                (activ): ReLU(inplace=True)
+              )
+            )
+          )
+        )
+        (conv): Conv2d(448, 2080, kernel_size=(1, 1), stride=(1, 1))
+        (activ): ReLU(inplace=True)
+      )
+      (unit4): InceptionCUnit(
+        (branches): Concurrent(
+          (branch1): Conv1x1Branch(
+            (conv): InceptConv(
+              (conv): Conv2d(2080, 192, kernel_size=(1, 1), stride=(1, 1), bias=False)
+              (bn): BatchNorm2d(192, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+              (activ): ReLU(inplace=True)
+            )
+          )
+          (branch2): ConvSeqBranch(
+            (conv_list): Sequential(
+              (conv1): InceptConv(
+                (conv): Conv2d(2080, 192, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                (bn): BatchNorm2d(192, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+                (activ): ReLU(inplace=True)
+              )
+              (conv2): InceptConv(
+                (conv): Conv2d(192, 224, kernel_size=(1, 3), stride=(1, 1), padding=(0, 1), bias=False)
+                (bn): BatchNorm2d(224, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+                (activ): ReLU(inplace=True)
+              )
+              (conv3): InceptConv(
+                (conv): Conv2d(224, 256, kernel_size=(3, 1), stride=(1, 1), padding=(1, 0), bias=False)
+                (bn): BatchNorm2d(256, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+                (activ): ReLU(inplace=True)
+              )
+            )
+          )
+        )
+        (conv): Conv2d(448, 2080, kernel_size=(1, 1), stride=(1, 1))
+        (activ): ReLU(inplace=True)
+      )
+      (unit5): InceptionCUnit(
+        (branches): Concurrent(
+          (branch1): Conv1x1Branch(
+            (conv): InceptConv(
+              (conv): Conv2d(2080, 192, kernel_size=(1, 1), stride=(1, 1), bias=False)
+              (bn): BatchNorm2d(192, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+              (activ): ReLU(inplace=True)
+            )
+          )
+          (branch2): ConvSeqBranch(
+            (conv_list): Sequential(
+              (conv1): InceptConv(
+                (conv): Conv2d(2080, 192, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                (bn): BatchNorm2d(192, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+                (activ): ReLU(inplace=True)
+              )
+              (conv2): InceptConv(
+                (conv): Conv2d(192, 224, kernel_size=(1, 3), stride=(1, 1), padding=(0, 1), bias=False)
+                (bn): BatchNorm2d(224, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+                (activ): ReLU(inplace=True)
+              )
+              (conv3): InceptConv(
+                (conv): Conv2d(224, 256, kernel_size=(3, 1), stride=(1, 1), padding=(1, 0), bias=False)
+                (bn): BatchNorm2d(256, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+                (activ): ReLU(inplace=True)
+              )
+            )
+          )
+        )
+        (conv): Conv2d(448, 2080, kernel_size=(1, 1), stride=(1, 1))
+        (activ): ReLU(inplace=True)
+      )
+      (unit6): InceptionCUnit(
+        (branches): Concurrent(
+          (branch1): Conv1x1Branch(
+            (conv): InceptConv(
+              (conv): Conv2d(2080, 192, kernel_size=(1, 1), stride=(1, 1), bias=False)
+              (bn): BatchNorm2d(192, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+              (activ): ReLU(inplace=True)
+            )
+          )
+          (branch2): ConvSeqBranch(
+            (conv_list): Sequential(
+              (conv1): InceptConv(
+                (conv): Conv2d(2080, 192, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                (bn): BatchNorm2d(192, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+                (activ): ReLU(inplace=True)
+              )
+              (conv2): InceptConv(
+                (conv): Conv2d(192, 224, kernel_size=(1, 3), stride=(1, 1), padding=(0, 1), bias=False)
+                (bn): BatchNorm2d(224, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+                (activ): ReLU(inplace=True)
+              )
+              (conv3): InceptConv(
+                (conv): Conv2d(224, 256, kernel_size=(3, 1), stride=(1, 1), padding=(1, 0), bias=False)
+                (bn): BatchNorm2d(256, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+                (activ): ReLU(inplace=True)
+              )
+            )
+          )
+        )
+        (conv): Conv2d(448, 2080, kernel_size=(1, 1), stride=(1, 1))
+        (activ): ReLU(inplace=True)
+      )
+      (unit7): InceptionCUnit(
+        (branches): Concurrent(
+          (branch1): Conv1x1Branch(
+            (conv): InceptConv(
+              (conv): Conv2d(2080, 192, kernel_size=(1, 1), stride=(1, 1), bias=False)
+              (bn): BatchNorm2d(192, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+              (activ): ReLU(inplace=True)
+            )
+          )
+          (branch2): ConvSeqBranch(
+            (conv_list): Sequential(
+              (conv1): InceptConv(
+                (conv): Conv2d(2080, 192, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                (bn): BatchNorm2d(192, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+                (activ): ReLU(inplace=True)
+              )
+              (conv2): InceptConv(
+                (conv): Conv2d(192, 224, kernel_size=(1, 3), stride=(1, 1), padding=(0, 1), bias=False)
+                (bn): BatchNorm2d(224, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+                (activ): ReLU(inplace=True)
+              )
+              (conv3): InceptConv(
+                (conv): Conv2d(224, 256, kernel_size=(3, 1), stride=(1, 1), padding=(1, 0), bias=False)
+                (bn): BatchNorm2d(256, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+                (activ): ReLU(inplace=True)
+              )
+            )
+          )
+        )
+        (conv): Conv2d(448, 2080, kernel_size=(1, 1), stride=(1, 1))
+        (activ): ReLU(inplace=True)
+      )
+      (unit8): InceptionCUnit(
+        (branches): Concurrent(
+          (branch1): Conv1x1Branch(
+            (conv): InceptConv(
+              (conv): Conv2d(2080, 192, kernel_size=(1, 1), stride=(1, 1), bias=False)
+              (bn): BatchNorm2d(192, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+              (activ): ReLU(inplace=True)
+            )
+          )
+          (branch2): ConvSeqBranch(
+            (conv_list): Sequential(
+              (conv1): InceptConv(
+                (conv): Conv2d(2080, 192, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                (bn): BatchNorm2d(192, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+                (activ): ReLU(inplace=True)
+              )
+              (conv2): InceptConv(
+                (conv): Conv2d(192, 224, kernel_size=(1, 3), stride=(1, 1), padding=(0, 1), bias=False)
+                (bn): BatchNorm2d(224, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+                (activ): ReLU(inplace=True)
+              )
+              (conv3): InceptConv(
+                (conv): Conv2d(224, 256, kernel_size=(3, 1), stride=(1, 1), padding=(1, 0), bias=False)
+                (bn): BatchNorm2d(256, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+                (activ): ReLU(inplace=True)
+              )
+            )
+          )
+        )
+        (conv): Conv2d(448, 2080, kernel_size=(1, 1), stride=(1, 1))
+        (activ): ReLU(inplace=True)
+      )
+      (unit9): InceptionCUnit(
+        (branches): Concurrent(
+          (branch1): Conv1x1Branch(
+            (conv): InceptConv(
+              (conv): Conv2d(2080, 192, kernel_size=(1, 1), stride=(1, 1), bias=False)
+              (bn): BatchNorm2d(192, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+              (activ): ReLU(inplace=True)
+            )
+          )
+          (branch2): ConvSeqBranch(
+            (conv_list): Sequential(
+              (conv1): InceptConv(
+                (conv): Conv2d(2080, 192, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                (bn): BatchNorm2d(192, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+                (activ): ReLU(inplace=True)
+              )
+              (conv2): InceptConv(
+                (conv): Conv2d(192, 224, kernel_size=(1, 3), stride=(1, 1), padding=(0, 1), bias=False)
+                (bn): BatchNorm2d(224, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+                (activ): ReLU(inplace=True)
+              )
+              (conv3): InceptConv(
+                (conv): Conv2d(224, 256, kernel_size=(3, 1), stride=(1, 1), padding=(1, 0), bias=False)
+                (bn): BatchNorm2d(256, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+                (activ): ReLU(inplace=True)
+              )
+            )
+          )
+        )
+        (conv): Conv2d(448, 2080, kernel_size=(1, 1), stride=(1, 1))
+        (activ): ReLU(inplace=True)
+      )
+      (unit10): InceptionCUnit(
+        (branches): Concurrent(
+          (branch1): Conv1x1Branch(
+            (conv): InceptConv(
+              (conv): Conv2d(2080, 192, kernel_size=(1, 1), stride=(1, 1), bias=False)
+              (bn): BatchNorm2d(192, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+              (activ): ReLU(inplace=True)
+            )
+          )
+          (branch2): ConvSeqBranch(
+            (conv_list): Sequential(
+              (conv1): InceptConv(
+                (conv): Conv2d(2080, 192, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                (bn): BatchNorm2d(192, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+                (activ): ReLU(inplace=True)
+              )
+              (conv2): InceptConv(
+                (conv): Conv2d(192, 224, kernel_size=(1, 3), stride=(1, 1), padding=(0, 1), bias=False)
+                (bn): BatchNorm2d(224, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+                (activ): ReLU(inplace=True)
+              )
+              (conv3): InceptConv(
+                (conv): Conv2d(224, 256, kernel_size=(3, 1), stride=(1, 1), padding=(1, 0), bias=False)
+                (bn): BatchNorm2d(256, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+                (activ): ReLU(inplace=True)
+              )
+            )
+          )
+        )
+        (conv): Conv2d(448, 2080, kernel_size=(1, 1), stride=(1, 1))
+        (activ): ReLU(inplace=True)
+      )
+      (unit11): InceptionCUnit(
+        (branches): Concurrent(
+          (branch1): Conv1x1Branch(
+            (conv): InceptConv(
+              (conv): Conv2d(2080, 192, kernel_size=(1, 1), stride=(1, 1), bias=False)
+              (bn): BatchNorm2d(192, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+              (activ): ReLU(inplace=True)
+            )
+          )
+          (branch2): ConvSeqBranch(
+            (conv_list): Sequential(
+              (conv1): InceptConv(
+                (conv): Conv2d(2080, 192, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                (bn): BatchNorm2d(192, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+                (activ): ReLU(inplace=True)
+              )
+              (conv2): InceptConv(
+                (conv): Conv2d(192, 224, kernel_size=(1, 3), stride=(1, 1), padding=(0, 1), bias=False)
+                (bn): BatchNorm2d(224, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+                (activ): ReLU(inplace=True)
+              )
+              (conv3): InceptConv(
+                (conv): Conv2d(224, 256, kernel_size=(3, 1), stride=(1, 1), padding=(1, 0), bias=False)
+                (bn): BatchNorm2d(256, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+                (activ): ReLU(inplace=True)
+              )
+            )
+          )
+        )
+        (conv): Conv2d(448, 2080, kernel_size=(1, 1), stride=(1, 1))
+      )
+    )
+    (final_conv): InceptConv(
+      (conv): Conv2d(2080, 1536, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn): BatchNorm2d(1536, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+      (activ): ReLU(inplace=True)
+    )
+    (final_pool): AvgPool2d(kernel_size=8, stride=1, padding=0)
+  )
+  (output): Sequential(
+    (fc): Linear(in_features=1536, out_features=1000, bias=True)
+  )
+)

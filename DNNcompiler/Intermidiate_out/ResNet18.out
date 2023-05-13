@@ -1,0 +1,1472 @@
+ResNet       line 1 cols 1-6 is T_Identifier 
+(            line 1 cols 7-7 is '(' 
+(            line 2 cols 3-3 is '(' 
+conv1        line 2 cols 4-8 is T_Identifier 
+)            line 2 cols 9-9 is ')' 
+:            line 2 cols 10-10 is ':' 
+Conv2d       line 2 cols 12-17 is T_Conv2d 
+(            line 2 cols 18-18 is '(' 
+3            line 2 cols 19-19 is T_IntConstant (value = 3)
+,            line 2 cols 20-20 is ',' 
+64           line 2 cols 22-23 is T_IntConstant (value = 64)
+,            line 2 cols 24-24 is ',' 
+kernel_size  line 2 cols 26-36 is T_kernel_size 
+=            line 2 cols 37-37 is '=' 
+(            line 2 cols 38-38 is '(' 
+7            line 2 cols 39-39 is T_IntConstant (value = 7)
+,            line 2 cols 40-40 is ',' 
+7            line 2 cols 42-42 is T_IntConstant (value = 7)
+)            line 2 cols 43-43 is ')' 
+,            line 2 cols 44-44 is ',' 
+stride       line 2 cols 46-51 is T_stride 
+=            line 2 cols 52-52 is '=' 
+(            line 2 cols 53-53 is '(' 
+2            line 2 cols 54-54 is T_IntConstant (value = 2)
+,            line 2 cols 55-55 is ',' 
+2            line 2 cols 57-57 is T_IntConstant (value = 2)
+)            line 2 cols 58-58 is ')' 
+,            line 2 cols 59-59 is ',' 
+padding      line 2 cols 61-67 is T_padding 
+=            line 2 cols 68-68 is '=' 
+(            line 2 cols 69-69 is '(' 
+3            line 2 cols 70-70 is T_IntConstant (value = 3)
+,            line 2 cols 71-71 is ',' 
+3            line 2 cols 73-73 is T_IntConstant (value = 3)
+)            line 2 cols 74-74 is ')' 
+,            line 2 cols 75-75 is ',' 
+bias         line 2 cols 77-80 is T_bias 
+=            line 2 cols 81-81 is '=' 
+False        line 2 cols 82-86 is T_BoolConstant (value = false)
+)            line 2 cols 87-87 is ')' 
+(            line 3 cols 3-3 is '(' 
+bn1          line 3 cols 4-6 is T_Identifier 
+)            line 3 cols 7-7 is ')' 
+:            line 3 cols 8-8 is ':' 
+BatchNorm2d  line 3 cols 10-20 is T_BatchNorm2d 
+(            line 3 cols 21-21 is '(' 
+64           line 3 cols 22-23 is T_IntConstant (value = 64)
+,            line 3 cols 24-24 is ',' 
+eps          line 3 cols 26-28 is T_eps 
+=            line 3 cols 29-29 is '=' 
+1e-05        line 3 cols 30-34 is T_DoubleConstant (value = 1e-05)
+,            line 3 cols 35-35 is ',' 
+momentum     line 3 cols 37-44 is T_momentum 
+=            line 3 cols 45-45 is '=' 
+0.1          line 3 cols 46-48 is T_DoubleConstant (value = 0.1)
+,            line 3 cols 49-49 is ',' 
+affine       line 3 cols 51-56 is T_Identifier 
+=            line 3 cols 57-57 is '=' 
+True         line 3 cols 58-61 is T_BoolConstant (value = true)
+,            line 3 cols 62-62 is ',' 
+track_running_stats line 3 cols 64-82 is T_track_running_stats 
+=            line 3 cols 83-83 is '=' 
+True         line 3 cols 84-87 is T_BoolConstant (value = true)
+)            line 3 cols 88-88 is ')' 
+(            line 4 cols 3-3 is '(' 
+relu         line 4 cols 4-7 is T_Identifier 
+)            line 4 cols 8-8 is ')' 
+:            line 4 cols 9-9 is ':' 
+ReLU         line 4 cols 11-14 is T_ReLU 
+(            line 4 cols 15-15 is '(' 
+inplace      line 4 cols 16-22 is T_inplace 
+=            line 4 cols 23-23 is '=' 
+True         line 4 cols 24-27 is T_BoolConstant (value = true)
+)            line 4 cols 28-28 is ')' 
+(            line 5 cols 3-3 is '(' 
+maxpool      line 5 cols 4-10 is T_Identifier 
+)            line 5 cols 11-11 is ')' 
+:            line 5 cols 12-12 is ':' 
+MaxPool2d    line 5 cols 14-22 is T_MaxPool2d 
+(            line 5 cols 23-23 is '(' 
+kernel_size  line 5 cols 24-34 is T_kernel_size 
+=            line 5 cols 35-35 is '=' 
+3            line 5 cols 36-36 is T_IntConstant (value = 3)
+,            line 5 cols 37-37 is ',' 
+stride       line 5 cols 39-44 is T_stride 
+=            line 5 cols 45-45 is '=' 
+2            line 5 cols 46-46 is T_IntConstant (value = 2)
+,            line 5 cols 47-47 is ',' 
+padding      line 5 cols 49-55 is T_padding 
+=            line 5 cols 56-56 is '=' 
+1            line 5 cols 57-57 is T_IntConstant (value = 1)
+,            line 5 cols 58-58 is ',' 
+dilation     line 5 cols 60-67 is T_dilation 
+=            line 5 cols 68-68 is '=' 
+1            line 5 cols 69-69 is T_IntConstant (value = 1)
+,            line 5 cols 70-70 is ',' 
+ceil_mode    line 5 cols 72-80 is T_ceil_mode 
+=            line 5 cols 81-81 is '=' 
+False        line 5 cols 82-86 is T_BoolConstant (value = false)
+)            line 5 cols 87-87 is ')' 
+(            line 6 cols 3-3 is '(' 
+layer1       line 6 cols 4-9 is T_Identifier 
+)            line 6 cols 10-10 is ')' 
+:            line 6 cols 11-11 is ':' 
+Sequential   line 6 cols 13-22 is T_Sequential 
+(            line 6 cols 23-23 is '(' 
+(            line 7 cols 5-5 is '(' 
+0            line 7 cols 6-6 is T_IntConstant (value = 0)
+)            line 7 cols 7-7 is ')' 
+:            line 7 cols 8-8 is ':' 
+BasicBlock   line 7 cols 10-19 is T_Identifier 
+(            line 7 cols 20-20 is '(' 
+(            line 8 cols 7-7 is '(' 
+conv1        line 8 cols 8-12 is T_Identifier 
+)            line 8 cols 13-13 is ')' 
+:            line 8 cols 14-14 is ':' 
+Conv2d       line 8 cols 16-21 is T_Conv2d 
+(            line 8 cols 22-22 is '(' 
+64           line 8 cols 23-24 is T_IntConstant (value = 64)
+,            line 8 cols 25-25 is ',' 
+64           line 8 cols 27-28 is T_IntConstant (value = 64)
+,            line 8 cols 29-29 is ',' 
+kernel_size  line 8 cols 31-41 is T_kernel_size 
+=            line 8 cols 42-42 is '=' 
+(            line 8 cols 43-43 is '(' 
+3            line 8 cols 44-44 is T_IntConstant (value = 3)
+,            line 8 cols 45-45 is ',' 
+3            line 8 cols 47-47 is T_IntConstant (value = 3)
+)            line 8 cols 48-48 is ')' 
+,            line 8 cols 49-49 is ',' 
+stride       line 8 cols 51-56 is T_stride 
+=            line 8 cols 57-57 is '=' 
+(            line 8 cols 58-58 is '(' 
+1            line 8 cols 59-59 is T_IntConstant (value = 1)
+,            line 8 cols 60-60 is ',' 
+1            line 8 cols 62-62 is T_IntConstant (value = 1)
+)            line 8 cols 63-63 is ')' 
+,            line 8 cols 64-64 is ',' 
+padding      line 8 cols 66-72 is T_padding 
+=            line 8 cols 73-73 is '=' 
+(            line 8 cols 74-74 is '(' 
+1            line 8 cols 75-75 is T_IntConstant (value = 1)
+,            line 8 cols 76-76 is ',' 
+1            line 8 cols 78-78 is T_IntConstant (value = 1)
+)            line 8 cols 79-79 is ')' 
+,            line 8 cols 80-80 is ',' 
+bias         line 8 cols 82-85 is T_bias 
+=            line 8 cols 86-86 is '=' 
+False        line 8 cols 87-91 is T_BoolConstant (value = false)
+)            line 8 cols 92-92 is ')' 
+(            line 9 cols 7-7 is '(' 
+bn1          line 9 cols 8-10 is T_Identifier 
+)            line 9 cols 11-11 is ')' 
+:            line 9 cols 12-12 is ':' 
+BatchNorm2d  line 9 cols 14-24 is T_BatchNorm2d 
+(            line 9 cols 25-25 is '(' 
+64           line 9 cols 26-27 is T_IntConstant (value = 64)
+,            line 9 cols 28-28 is ',' 
+eps          line 9 cols 30-32 is T_eps 
+=            line 9 cols 33-33 is '=' 
+1e-05        line 9 cols 34-38 is T_DoubleConstant (value = 1e-05)
+,            line 9 cols 39-39 is ',' 
+momentum     line 9 cols 41-48 is T_momentum 
+=            line 9 cols 49-49 is '=' 
+0.1          line 9 cols 50-52 is T_DoubleConstant (value = 0.1)
+,            line 9 cols 53-53 is ',' 
+affine       line 9 cols 55-60 is T_Identifier 
+=            line 9 cols 61-61 is '=' 
+True         line 9 cols 62-65 is T_BoolConstant (value = true)
+,            line 9 cols 66-66 is ',' 
+track_running_stats line 9 cols 68-86 is T_track_running_stats 
+=            line 9 cols 87-87 is '=' 
+True         line 9 cols 88-91 is T_BoolConstant (value = true)
+)            line 9 cols 92-92 is ')' 
+(            line 10 cols 7-7 is '(' 
+relu         line 10 cols 8-11 is T_Identifier 
+)            line 10 cols 12-12 is ')' 
+:            line 10 cols 13-13 is ':' 
+ReLU         line 10 cols 15-18 is T_ReLU 
+(            line 10 cols 19-19 is '(' 
+inplace      line 10 cols 20-26 is T_inplace 
+=            line 10 cols 27-27 is '=' 
+True         line 10 cols 28-31 is T_BoolConstant (value = true)
+)            line 10 cols 32-32 is ')' 
+(            line 11 cols 7-7 is '(' 
+conv2        line 11 cols 8-12 is T_Identifier 
+)            line 11 cols 13-13 is ')' 
+:            line 11 cols 14-14 is ':' 
+Conv2d       line 11 cols 16-21 is T_Conv2d 
+(            line 11 cols 22-22 is '(' 
+64           line 11 cols 23-24 is T_IntConstant (value = 64)
+,            line 11 cols 25-25 is ',' 
+64           line 11 cols 27-28 is T_IntConstant (value = 64)
+,            line 11 cols 29-29 is ',' 
+kernel_size  line 11 cols 31-41 is T_kernel_size 
+=            line 11 cols 42-42 is '=' 
+(            line 11 cols 43-43 is '(' 
+3            line 11 cols 44-44 is T_IntConstant (value = 3)
+,            line 11 cols 45-45 is ',' 
+3            line 11 cols 47-47 is T_IntConstant (value = 3)
+)            line 11 cols 48-48 is ')' 
+,            line 11 cols 49-49 is ',' 
+stride       line 11 cols 51-56 is T_stride 
+=            line 11 cols 57-57 is '=' 
+(            line 11 cols 58-58 is '(' 
+1            line 11 cols 59-59 is T_IntConstant (value = 1)
+,            line 11 cols 60-60 is ',' 
+1            line 11 cols 62-62 is T_IntConstant (value = 1)
+)            line 11 cols 63-63 is ')' 
+,            line 11 cols 64-64 is ',' 
+padding      line 11 cols 66-72 is T_padding 
+=            line 11 cols 73-73 is '=' 
+(            line 11 cols 74-74 is '(' 
+1            line 11 cols 75-75 is T_IntConstant (value = 1)
+,            line 11 cols 76-76 is ',' 
+1            line 11 cols 78-78 is T_IntConstant (value = 1)
+)            line 11 cols 79-79 is ')' 
+,            line 11 cols 80-80 is ',' 
+bias         line 11 cols 82-85 is T_bias 
+=            line 11 cols 86-86 is '=' 
+False        line 11 cols 87-91 is T_BoolConstant (value = false)
+)            line 11 cols 92-92 is ')' 
+(            line 12 cols 7-7 is '(' 
+bn2          line 12 cols 8-10 is T_Identifier 
+)            line 12 cols 11-11 is ')' 
+:            line 12 cols 12-12 is ':' 
+BatchNorm2d  line 12 cols 14-24 is T_BatchNorm2d 
+(            line 12 cols 25-25 is '(' 
+64           line 12 cols 26-27 is T_IntConstant (value = 64)
+,            line 12 cols 28-28 is ',' 
+eps          line 12 cols 30-32 is T_eps 
+=            line 12 cols 33-33 is '=' 
+1e-05        line 12 cols 34-38 is T_DoubleConstant (value = 1e-05)
+,            line 12 cols 39-39 is ',' 
+momentum     line 12 cols 41-48 is T_momentum 
+=            line 12 cols 49-49 is '=' 
+0.1          line 12 cols 50-52 is T_DoubleConstant (value = 0.1)
+,            line 12 cols 53-53 is ',' 
+affine       line 12 cols 55-60 is T_Identifier 
+=            line 12 cols 61-61 is '=' 
+True         line 12 cols 62-65 is T_BoolConstant (value = true)
+,            line 12 cols 66-66 is ',' 
+track_running_stats line 12 cols 68-86 is T_track_running_stats 
+=            line 12 cols 87-87 is '=' 
+True         line 12 cols 88-91 is T_BoolConstant (value = true)
+)            line 12 cols 92-92 is ')' 
+)            line 13 cols 5-5 is ')' 
+(            line 14 cols 5-5 is '(' 
+1            line 14 cols 6-6 is T_IntConstant (value = 1)
+)            line 14 cols 7-7 is ')' 
+:            line 14 cols 8-8 is ':' 
+BasicBlock   line 14 cols 10-19 is T_Identifier 
+(            line 14 cols 20-20 is '(' 
+(            line 15 cols 7-7 is '(' 
+conv1        line 15 cols 8-12 is T_Identifier 
+)            line 15 cols 13-13 is ')' 
+:            line 15 cols 14-14 is ':' 
+Conv2d       line 15 cols 16-21 is T_Conv2d 
+(            line 15 cols 22-22 is '(' 
+64           line 15 cols 23-24 is T_IntConstant (value = 64)
+,            line 15 cols 25-25 is ',' 
+64           line 15 cols 27-28 is T_IntConstant (value = 64)
+,            line 15 cols 29-29 is ',' 
+kernel_size  line 15 cols 31-41 is T_kernel_size 
+=            line 15 cols 42-42 is '=' 
+(            line 15 cols 43-43 is '(' 
+3            line 15 cols 44-44 is T_IntConstant (value = 3)
+,            line 15 cols 45-45 is ',' 
+3            line 15 cols 47-47 is T_IntConstant (value = 3)
+)            line 15 cols 48-48 is ')' 
+,            line 15 cols 49-49 is ',' 
+stride       line 15 cols 51-56 is T_stride 
+=            line 15 cols 57-57 is '=' 
+(            line 15 cols 58-58 is '(' 
+1            line 15 cols 59-59 is T_IntConstant (value = 1)
+,            line 15 cols 60-60 is ',' 
+1            line 15 cols 62-62 is T_IntConstant (value = 1)
+)            line 15 cols 63-63 is ')' 
+,            line 15 cols 64-64 is ',' 
+padding      line 15 cols 66-72 is T_padding 
+=            line 15 cols 73-73 is '=' 
+(            line 15 cols 74-74 is '(' 
+1            line 15 cols 75-75 is T_IntConstant (value = 1)
+,            line 15 cols 76-76 is ',' 
+1            line 15 cols 78-78 is T_IntConstant (value = 1)
+)            line 15 cols 79-79 is ')' 
+,            line 15 cols 80-80 is ',' 
+bias         line 15 cols 82-85 is T_bias 
+=            line 15 cols 86-86 is '=' 
+False        line 15 cols 87-91 is T_BoolConstant (value = false)
+)            line 15 cols 92-92 is ')' 
+(            line 16 cols 7-7 is '(' 
+bn1          line 16 cols 8-10 is T_Identifier 
+)            line 16 cols 11-11 is ')' 
+:            line 16 cols 12-12 is ':' 
+BatchNorm2d  line 16 cols 14-24 is T_BatchNorm2d 
+(            line 16 cols 25-25 is '(' 
+64           line 16 cols 26-27 is T_IntConstant (value = 64)
+,            line 16 cols 28-28 is ',' 
+eps          line 16 cols 30-32 is T_eps 
+=            line 16 cols 33-33 is '=' 
+1e-05        line 16 cols 34-38 is T_DoubleConstant (value = 1e-05)
+,            line 16 cols 39-39 is ',' 
+momentum     line 16 cols 41-48 is T_momentum 
+=            line 16 cols 49-49 is '=' 
+0.1          line 16 cols 50-52 is T_DoubleConstant (value = 0.1)
+,            line 16 cols 53-53 is ',' 
+affine       line 16 cols 55-60 is T_Identifier 
+=            line 16 cols 61-61 is '=' 
+True         line 16 cols 62-65 is T_BoolConstant (value = true)
+,            line 16 cols 66-66 is ',' 
+track_running_stats line 16 cols 68-86 is T_track_running_stats 
+=            line 16 cols 87-87 is '=' 
+True         line 16 cols 88-91 is T_BoolConstant (value = true)
+)            line 16 cols 92-92 is ')' 
+(            line 17 cols 7-7 is '(' 
+relu         line 17 cols 8-11 is T_Identifier 
+)            line 17 cols 12-12 is ')' 
+:            line 17 cols 13-13 is ':' 
+ReLU         line 17 cols 15-18 is T_ReLU 
+(            line 17 cols 19-19 is '(' 
+inplace      line 17 cols 20-26 is T_inplace 
+=            line 17 cols 27-27 is '=' 
+True         line 17 cols 28-31 is T_BoolConstant (value = true)
+)            line 17 cols 32-32 is ')' 
+(            line 18 cols 7-7 is '(' 
+conv2        line 18 cols 8-12 is T_Identifier 
+)            line 18 cols 13-13 is ')' 
+:            line 18 cols 14-14 is ':' 
+Conv2d       line 18 cols 16-21 is T_Conv2d 
+(            line 18 cols 22-22 is '(' 
+64           line 18 cols 23-24 is T_IntConstant (value = 64)
+,            line 18 cols 25-25 is ',' 
+64           line 18 cols 27-28 is T_IntConstant (value = 64)
+,            line 18 cols 29-29 is ',' 
+kernel_size  line 18 cols 31-41 is T_kernel_size 
+=            line 18 cols 42-42 is '=' 
+(            line 18 cols 43-43 is '(' 
+3            line 18 cols 44-44 is T_IntConstant (value = 3)
+,            line 18 cols 45-45 is ',' 
+3            line 18 cols 47-47 is T_IntConstant (value = 3)
+)            line 18 cols 48-48 is ')' 
+,            line 18 cols 49-49 is ',' 
+stride       line 18 cols 51-56 is T_stride 
+=            line 18 cols 57-57 is '=' 
+(            line 18 cols 58-58 is '(' 
+1            line 18 cols 59-59 is T_IntConstant (value = 1)
+,            line 18 cols 60-60 is ',' 
+1            line 18 cols 62-62 is T_IntConstant (value = 1)
+)            line 18 cols 63-63 is ')' 
+,            line 18 cols 64-64 is ',' 
+padding      line 18 cols 66-72 is T_padding 
+=            line 18 cols 73-73 is '=' 
+(            line 18 cols 74-74 is '(' 
+1            line 18 cols 75-75 is T_IntConstant (value = 1)
+,            line 18 cols 76-76 is ',' 
+1            line 18 cols 78-78 is T_IntConstant (value = 1)
+)            line 18 cols 79-79 is ')' 
+,            line 18 cols 80-80 is ',' 
+bias         line 18 cols 82-85 is T_bias 
+=            line 18 cols 86-86 is '=' 
+False        line 18 cols 87-91 is T_BoolConstant (value = false)
+)            line 18 cols 92-92 is ')' 
+(            line 19 cols 7-7 is '(' 
+bn2          line 19 cols 8-10 is T_Identifier 
+)            line 19 cols 11-11 is ')' 
+:            line 19 cols 12-12 is ':' 
+BatchNorm2d  line 19 cols 14-24 is T_BatchNorm2d 
+(            line 19 cols 25-25 is '(' 
+64           line 19 cols 26-27 is T_IntConstant (value = 64)
+,            line 19 cols 28-28 is ',' 
+eps          line 19 cols 30-32 is T_eps 
+=            line 19 cols 33-33 is '=' 
+1e-05        line 19 cols 34-38 is T_DoubleConstant (value = 1e-05)
+,            line 19 cols 39-39 is ',' 
+momentum     line 19 cols 41-48 is T_momentum 
+=            line 19 cols 49-49 is '=' 
+0.1          line 19 cols 50-52 is T_DoubleConstant (value = 0.1)
+,            line 19 cols 53-53 is ',' 
+affine       line 19 cols 55-60 is T_Identifier 
+=            line 19 cols 61-61 is '=' 
+True         line 19 cols 62-65 is T_BoolConstant (value = true)
+,            line 19 cols 66-66 is ',' 
+track_running_stats line 19 cols 68-86 is T_track_running_stats 
+=            line 19 cols 87-87 is '=' 
+True         line 19 cols 88-91 is T_BoolConstant (value = true)
+)            line 19 cols 92-92 is ')' 
+)            line 20 cols 5-5 is ')' 
+)            line 21 cols 3-3 is ')' 
+(            line 22 cols 3-3 is '(' 
+layer2       line 22 cols 4-9 is T_Identifier 
+)            line 22 cols 10-10 is ')' 
+:            line 22 cols 11-11 is ':' 
+Sequential   line 22 cols 13-22 is T_Sequential 
+(            line 22 cols 23-23 is '(' 
+(            line 23 cols 5-5 is '(' 
+0            line 23 cols 6-6 is T_IntConstant (value = 0)
+)            line 23 cols 7-7 is ')' 
+:            line 23 cols 8-8 is ':' 
+BasicBlock   line 23 cols 10-19 is T_Identifier 
+(            line 23 cols 20-20 is '(' 
+(            line 24 cols 7-7 is '(' 
+conv1        line 24 cols 8-12 is T_Identifier 
+)            line 24 cols 13-13 is ')' 
+:            line 24 cols 14-14 is ':' 
+Conv2d       line 24 cols 16-21 is T_Conv2d 
+(            line 24 cols 22-22 is '(' 
+64           line 24 cols 23-24 is T_IntConstant (value = 64)
+,            line 24 cols 25-25 is ',' 
+128          line 24 cols 27-29 is T_IntConstant (value = 128)
+,            line 24 cols 30-30 is ',' 
+kernel_size  line 24 cols 32-42 is T_kernel_size 
+=            line 24 cols 43-43 is '=' 
+(            line 24 cols 44-44 is '(' 
+3            line 24 cols 45-45 is T_IntConstant (value = 3)
+,            line 24 cols 46-46 is ',' 
+3            line 24 cols 48-48 is T_IntConstant (value = 3)
+)            line 24 cols 49-49 is ')' 
+,            line 24 cols 50-50 is ',' 
+stride       line 24 cols 52-57 is T_stride 
+=            line 24 cols 58-58 is '=' 
+(            line 24 cols 59-59 is '(' 
+2            line 24 cols 60-60 is T_IntConstant (value = 2)
+,            line 24 cols 61-61 is ',' 
+2            line 24 cols 63-63 is T_IntConstant (value = 2)
+)            line 24 cols 64-64 is ')' 
+,            line 24 cols 65-65 is ',' 
+padding      line 24 cols 67-73 is T_padding 
+=            line 24 cols 74-74 is '=' 
+(            line 24 cols 75-75 is '(' 
+1            line 24 cols 76-76 is T_IntConstant (value = 1)
+,            line 24 cols 77-77 is ',' 
+1            line 24 cols 79-79 is T_IntConstant (value = 1)
+)            line 24 cols 80-80 is ')' 
+,            line 24 cols 81-81 is ',' 
+bias         line 24 cols 83-86 is T_bias 
+=            line 24 cols 87-87 is '=' 
+False        line 24 cols 88-92 is T_BoolConstant (value = false)
+)            line 24 cols 93-93 is ')' 
+(            line 25 cols 7-7 is '(' 
+bn1          line 25 cols 8-10 is T_Identifier 
+)            line 25 cols 11-11 is ')' 
+:            line 25 cols 12-12 is ':' 
+BatchNorm2d  line 25 cols 14-24 is T_BatchNorm2d 
+(            line 25 cols 25-25 is '(' 
+128          line 25 cols 26-28 is T_IntConstant (value = 128)
+,            line 25 cols 29-29 is ',' 
+eps          line 25 cols 31-33 is T_eps 
+=            line 25 cols 34-34 is '=' 
+1e-05        line 25 cols 35-39 is T_DoubleConstant (value = 1e-05)
+,            line 25 cols 40-40 is ',' 
+momentum     line 25 cols 42-49 is T_momentum 
+=            line 25 cols 50-50 is '=' 
+0.1          line 25 cols 51-53 is T_DoubleConstant (value = 0.1)
+,            line 25 cols 54-54 is ',' 
+affine       line 25 cols 56-61 is T_Identifier 
+=            line 25 cols 62-62 is '=' 
+True         line 25 cols 63-66 is T_BoolConstant (value = true)
+,            line 25 cols 67-67 is ',' 
+track_running_stats line 25 cols 69-87 is T_track_running_stats 
+=            line 25 cols 88-88 is '=' 
+True         line 25 cols 89-92 is T_BoolConstant (value = true)
+)            line 25 cols 93-93 is ')' 
+(            line 26 cols 7-7 is '(' 
+relu         line 26 cols 8-11 is T_Identifier 
+)            line 26 cols 12-12 is ')' 
+:            line 26 cols 13-13 is ':' 
+ReLU         line 26 cols 15-18 is T_ReLU 
+(            line 26 cols 19-19 is '(' 
+inplace      line 26 cols 20-26 is T_inplace 
+=            line 26 cols 27-27 is '=' 
+True         line 26 cols 28-31 is T_BoolConstant (value = true)
+)            line 26 cols 32-32 is ')' 
+(            line 27 cols 7-7 is '(' 
+conv2        line 27 cols 8-12 is T_Identifier 
+)            line 27 cols 13-13 is ')' 
+:            line 27 cols 14-14 is ':' 
+Conv2d       line 27 cols 16-21 is T_Conv2d 
+(            line 27 cols 22-22 is '(' 
+128          line 27 cols 23-25 is T_IntConstant (value = 128)
+,            line 27 cols 26-26 is ',' 
+128          line 27 cols 28-30 is T_IntConstant (value = 128)
+,            line 27 cols 31-31 is ',' 
+kernel_size  line 27 cols 33-43 is T_kernel_size 
+=            line 27 cols 44-44 is '=' 
+(            line 27 cols 45-45 is '(' 
+3            line 27 cols 46-46 is T_IntConstant (value = 3)
+,            line 27 cols 47-47 is ',' 
+3            line 27 cols 49-49 is T_IntConstant (value = 3)
+)            line 27 cols 50-50 is ')' 
+,            line 27 cols 51-51 is ',' 
+stride       line 27 cols 53-58 is T_stride 
+=            line 27 cols 59-59 is '=' 
+(            line 27 cols 60-60 is '(' 
+1            line 27 cols 61-61 is T_IntConstant (value = 1)
+,            line 27 cols 62-62 is ',' 
+1            line 27 cols 64-64 is T_IntConstant (value = 1)
+)            line 27 cols 65-65 is ')' 
+,            line 27 cols 66-66 is ',' 
+padding      line 27 cols 68-74 is T_padding 
+=            line 27 cols 75-75 is '=' 
+(            line 27 cols 76-76 is '(' 
+1            line 27 cols 77-77 is T_IntConstant (value = 1)
+,            line 27 cols 78-78 is ',' 
+1            line 27 cols 80-80 is T_IntConstant (value = 1)
+)            line 27 cols 81-81 is ')' 
+,            line 27 cols 82-82 is ',' 
+bias         line 27 cols 84-87 is T_bias 
+=            line 27 cols 88-88 is '=' 
+False        line 27 cols 89-93 is T_BoolConstant (value = false)
+)            line 27 cols 94-94 is ')' 
+(            line 28 cols 7-7 is '(' 
+bn2          line 28 cols 8-10 is T_Identifier 
+)            line 28 cols 11-11 is ')' 
+:            line 28 cols 12-12 is ':' 
+BatchNorm2d  line 28 cols 14-24 is T_BatchNorm2d 
+(            line 28 cols 25-25 is '(' 
+128          line 28 cols 26-28 is T_IntConstant (value = 128)
+,            line 28 cols 29-29 is ',' 
+eps          line 28 cols 31-33 is T_eps 
+=            line 28 cols 34-34 is '=' 
+1e-05        line 28 cols 35-39 is T_DoubleConstant (value = 1e-05)
+,            line 28 cols 40-40 is ',' 
+momentum     line 28 cols 42-49 is T_momentum 
+=            line 28 cols 50-50 is '=' 
+0.1          line 28 cols 51-53 is T_DoubleConstant (value = 0.1)
+,            line 28 cols 54-54 is ',' 
+affine       line 28 cols 56-61 is T_Identifier 
+=            line 28 cols 62-62 is '=' 
+True         line 28 cols 63-66 is T_BoolConstant (value = true)
+,            line 28 cols 67-67 is ',' 
+track_running_stats line 28 cols 69-87 is T_track_running_stats 
+=            line 28 cols 88-88 is '=' 
+True         line 28 cols 89-92 is T_BoolConstant (value = true)
+)            line 28 cols 93-93 is ')' 
+(            line 29 cols 7-7 is '(' 
+downsample   line 29 cols 8-17 is T_Identifier 
+)            line 29 cols 18-18 is ')' 
+:            line 29 cols 19-19 is ':' 
+Sequential   line 29 cols 21-30 is T_Sequential 
+(            line 29 cols 31-31 is '(' 
+(            line 30 cols 9-9 is '(' 
+0            line 30 cols 10-10 is T_IntConstant (value = 0)
+)            line 30 cols 11-11 is ')' 
+:            line 30 cols 12-12 is ':' 
+Conv2d       line 30 cols 14-19 is T_Conv2d 
+(            line 30 cols 20-20 is '(' 
+64           line 30 cols 21-22 is T_IntConstant (value = 64)
+,            line 30 cols 23-23 is ',' 
+128          line 30 cols 25-27 is T_IntConstant (value = 128)
+,            line 30 cols 28-28 is ',' 
+kernel_size  line 30 cols 30-40 is T_kernel_size 
+=            line 30 cols 41-41 is '=' 
+(            line 30 cols 42-42 is '(' 
+1            line 30 cols 43-43 is T_IntConstant (value = 1)
+,            line 30 cols 44-44 is ',' 
+1            line 30 cols 46-46 is T_IntConstant (value = 1)
+)            line 30 cols 47-47 is ')' 
+,            line 30 cols 48-48 is ',' 
+stride       line 30 cols 50-55 is T_stride 
+=            line 30 cols 56-56 is '=' 
+(            line 30 cols 57-57 is '(' 
+2            line 30 cols 58-58 is T_IntConstant (value = 2)
+,            line 30 cols 59-59 is ',' 
+2            line 30 cols 61-61 is T_IntConstant (value = 2)
+)            line 30 cols 62-62 is ')' 
+,            line 30 cols 63-63 is ',' 
+bias         line 30 cols 65-68 is T_bias 
+=            line 30 cols 69-69 is '=' 
+False        line 30 cols 70-74 is T_BoolConstant (value = false)
+)            line 30 cols 75-75 is ')' 
+(            line 31 cols 9-9 is '(' 
+1            line 31 cols 10-10 is T_IntConstant (value = 1)
+)            line 31 cols 11-11 is ')' 
+:            line 31 cols 12-12 is ':' 
+BatchNorm2d  line 31 cols 14-24 is T_BatchNorm2d 
+(            line 31 cols 25-25 is '(' 
+128          line 31 cols 26-28 is T_IntConstant (value = 128)
+,            line 31 cols 29-29 is ',' 
+eps          line 31 cols 31-33 is T_eps 
+=            line 31 cols 34-34 is '=' 
+1e-05        line 31 cols 35-39 is T_DoubleConstant (value = 1e-05)
+,            line 31 cols 40-40 is ',' 
+momentum     line 31 cols 42-49 is T_momentum 
+=            line 31 cols 50-50 is '=' 
+0.1          line 31 cols 51-53 is T_DoubleConstant (value = 0.1)
+,            line 31 cols 54-54 is ',' 
+affine       line 31 cols 56-61 is T_Identifier 
+=            line 31 cols 62-62 is '=' 
+True         line 31 cols 63-66 is T_BoolConstant (value = true)
+,            line 31 cols 67-67 is ',' 
+track_running_stats line 31 cols 69-87 is T_track_running_stats 
+=            line 31 cols 88-88 is '=' 
+True         line 31 cols 89-92 is T_BoolConstant (value = true)
+)            line 31 cols 93-93 is ')' 
+)            line 32 cols 7-7 is ')' 
+)            line 33 cols 5-5 is ')' 
+(            line 34 cols 5-5 is '(' 
+1            line 34 cols 6-6 is T_IntConstant (value = 1)
+)            line 34 cols 7-7 is ')' 
+:            line 34 cols 8-8 is ':' 
+BasicBlock   line 34 cols 10-19 is T_Identifier 
+(            line 34 cols 20-20 is '(' 
+(            line 35 cols 7-7 is '(' 
+conv1        line 35 cols 8-12 is T_Identifier 
+)            line 35 cols 13-13 is ')' 
+:            line 35 cols 14-14 is ':' 
+Conv2d       line 35 cols 16-21 is T_Conv2d 
+(            line 35 cols 22-22 is '(' 
+128          line 35 cols 23-25 is T_IntConstant (value = 128)
+,            line 35 cols 26-26 is ',' 
+128          line 35 cols 28-30 is T_IntConstant (value = 128)
+,            line 35 cols 31-31 is ',' 
+kernel_size  line 35 cols 33-43 is T_kernel_size 
+=            line 35 cols 44-44 is '=' 
+(            line 35 cols 45-45 is '(' 
+3            line 35 cols 46-46 is T_IntConstant (value = 3)
+,            line 35 cols 47-47 is ',' 
+3            line 35 cols 49-49 is T_IntConstant (value = 3)
+)            line 35 cols 50-50 is ')' 
+,            line 35 cols 51-51 is ',' 
+stride       line 35 cols 53-58 is T_stride 
+=            line 35 cols 59-59 is '=' 
+(            line 35 cols 60-60 is '(' 
+1            line 35 cols 61-61 is T_IntConstant (value = 1)
+,            line 35 cols 62-62 is ',' 
+1            line 35 cols 64-64 is T_IntConstant (value = 1)
+)            line 35 cols 65-65 is ')' 
+,            line 35 cols 66-66 is ',' 
+padding      line 35 cols 68-74 is T_padding 
+=            line 35 cols 75-75 is '=' 
+(            line 35 cols 76-76 is '(' 
+1            line 35 cols 77-77 is T_IntConstant (value = 1)
+,            line 35 cols 78-78 is ',' 
+1            line 35 cols 80-80 is T_IntConstant (value = 1)
+)            line 35 cols 81-81 is ')' 
+,            line 35 cols 82-82 is ',' 
+bias         line 35 cols 84-87 is T_bias 
+=            line 35 cols 88-88 is '=' 
+False        line 35 cols 89-93 is T_BoolConstant (value = false)
+)            line 35 cols 94-94 is ')' 
+(            line 36 cols 7-7 is '(' 
+bn1          line 36 cols 8-10 is T_Identifier 
+)            line 36 cols 11-11 is ')' 
+:            line 36 cols 12-12 is ':' 
+BatchNorm2d  line 36 cols 14-24 is T_BatchNorm2d 
+(            line 36 cols 25-25 is '(' 
+128          line 36 cols 26-28 is T_IntConstant (value = 128)
+,            line 36 cols 29-29 is ',' 
+eps          line 36 cols 31-33 is T_eps 
+=            line 36 cols 34-34 is '=' 
+1e-05        line 36 cols 35-39 is T_DoubleConstant (value = 1e-05)
+,            line 36 cols 40-40 is ',' 
+momentum     line 36 cols 42-49 is T_momentum 
+=            line 36 cols 50-50 is '=' 
+0.1          line 36 cols 51-53 is T_DoubleConstant (value = 0.1)
+,            line 36 cols 54-54 is ',' 
+affine       line 36 cols 56-61 is T_Identifier 
+=            line 36 cols 62-62 is '=' 
+True         line 36 cols 63-66 is T_BoolConstant (value = true)
+,            line 36 cols 67-67 is ',' 
+track_running_stats line 36 cols 69-87 is T_track_running_stats 
+=            line 36 cols 88-88 is '=' 
+True         line 36 cols 89-92 is T_BoolConstant (value = true)
+)            line 36 cols 93-93 is ')' 
+(            line 37 cols 7-7 is '(' 
+relu         line 37 cols 8-11 is T_Identifier 
+)            line 37 cols 12-12 is ')' 
+:            line 37 cols 13-13 is ':' 
+ReLU         line 37 cols 15-18 is T_ReLU 
+(            line 37 cols 19-19 is '(' 
+inplace      line 37 cols 20-26 is T_inplace 
+=            line 37 cols 27-27 is '=' 
+True         line 37 cols 28-31 is T_BoolConstant (value = true)
+)            line 37 cols 32-32 is ')' 
+(            line 38 cols 7-7 is '(' 
+conv2        line 38 cols 8-12 is T_Identifier 
+)            line 38 cols 13-13 is ')' 
+:            line 38 cols 14-14 is ':' 
+Conv2d       line 38 cols 16-21 is T_Conv2d 
+(            line 38 cols 22-22 is '(' 
+128          line 38 cols 23-25 is T_IntConstant (value = 128)
+,            line 38 cols 26-26 is ',' 
+128          line 38 cols 28-30 is T_IntConstant (value = 128)
+,            line 38 cols 31-31 is ',' 
+kernel_size  line 38 cols 33-43 is T_kernel_size 
+=            line 38 cols 44-44 is '=' 
+(            line 38 cols 45-45 is '(' 
+3            line 38 cols 46-46 is T_IntConstant (value = 3)
+,            line 38 cols 47-47 is ',' 
+3            line 38 cols 49-49 is T_IntConstant (value = 3)
+)            line 38 cols 50-50 is ')' 
+,            line 38 cols 51-51 is ',' 
+stride       line 38 cols 53-58 is T_stride 
+=            line 38 cols 59-59 is '=' 
+(            line 38 cols 60-60 is '(' 
+1            line 38 cols 61-61 is T_IntConstant (value = 1)
+,            line 38 cols 62-62 is ',' 
+1            line 38 cols 64-64 is T_IntConstant (value = 1)
+)            line 38 cols 65-65 is ')' 
+,            line 38 cols 66-66 is ',' 
+padding      line 38 cols 68-74 is T_padding 
+=            line 38 cols 75-75 is '=' 
+(            line 38 cols 76-76 is '(' 
+1            line 38 cols 77-77 is T_IntConstant (value = 1)
+,            line 38 cols 78-78 is ',' 
+1            line 38 cols 80-80 is T_IntConstant (value = 1)
+)            line 38 cols 81-81 is ')' 
+,            line 38 cols 82-82 is ',' 
+bias         line 38 cols 84-87 is T_bias 
+=            line 38 cols 88-88 is '=' 
+False        line 38 cols 89-93 is T_BoolConstant (value = false)
+)            line 38 cols 94-94 is ')' 
+(            line 39 cols 7-7 is '(' 
+bn2          line 39 cols 8-10 is T_Identifier 
+)            line 39 cols 11-11 is ')' 
+:            line 39 cols 12-12 is ':' 
+BatchNorm2d  line 39 cols 14-24 is T_BatchNorm2d 
+(            line 39 cols 25-25 is '(' 
+128          line 39 cols 26-28 is T_IntConstant (value = 128)
+,            line 39 cols 29-29 is ',' 
+eps          line 39 cols 31-33 is T_eps 
+=            line 39 cols 34-34 is '=' 
+1e-05        line 39 cols 35-39 is T_DoubleConstant (value = 1e-05)
+,            line 39 cols 40-40 is ',' 
+momentum     line 39 cols 42-49 is T_momentum 
+=            line 39 cols 50-50 is '=' 
+0.1          line 39 cols 51-53 is T_DoubleConstant (value = 0.1)
+,            line 39 cols 54-54 is ',' 
+affine       line 39 cols 56-61 is T_Identifier 
+=            line 39 cols 62-62 is '=' 
+True         line 39 cols 63-66 is T_BoolConstant (value = true)
+,            line 39 cols 67-67 is ',' 
+track_running_stats line 39 cols 69-87 is T_track_running_stats 
+=            line 39 cols 88-88 is '=' 
+True         line 39 cols 89-92 is T_BoolConstant (value = true)
+)            line 39 cols 93-93 is ')' 
+)            line 40 cols 5-5 is ')' 
+)            line 41 cols 3-3 is ')' 
+(            line 42 cols 3-3 is '(' 
+layer3       line 42 cols 4-9 is T_Identifier 
+)            line 42 cols 10-10 is ')' 
+:            line 42 cols 11-11 is ':' 
+Sequential   line 42 cols 13-22 is T_Sequential 
+(            line 42 cols 23-23 is '(' 
+(            line 43 cols 5-5 is '(' 
+0            line 43 cols 6-6 is T_IntConstant (value = 0)
+)            line 43 cols 7-7 is ')' 
+:            line 43 cols 8-8 is ':' 
+BasicBlock   line 43 cols 10-19 is T_Identifier 
+(            line 43 cols 20-20 is '(' 
+(            line 44 cols 7-7 is '(' 
+conv1        line 44 cols 8-12 is T_Identifier 
+)            line 44 cols 13-13 is ')' 
+:            line 44 cols 14-14 is ':' 
+Conv2d       line 44 cols 16-21 is T_Conv2d 
+(            line 44 cols 22-22 is '(' 
+128          line 44 cols 23-25 is T_IntConstant (value = 128)
+,            line 44 cols 26-26 is ',' 
+256          line 44 cols 28-30 is T_IntConstant (value = 256)
+,            line 44 cols 31-31 is ',' 
+kernel_size  line 44 cols 33-43 is T_kernel_size 
+=            line 44 cols 44-44 is '=' 
+(            line 44 cols 45-45 is '(' 
+3            line 44 cols 46-46 is T_IntConstant (value = 3)
+,            line 44 cols 47-47 is ',' 
+3            line 44 cols 49-49 is T_IntConstant (value = 3)
+)            line 44 cols 50-50 is ')' 
+,            line 44 cols 51-51 is ',' 
+stride       line 44 cols 53-58 is T_stride 
+=            line 44 cols 59-59 is '=' 
+(            line 44 cols 60-60 is '(' 
+2            line 44 cols 61-61 is T_IntConstant (value = 2)
+,            line 44 cols 62-62 is ',' 
+2            line 44 cols 64-64 is T_IntConstant (value = 2)
+)            line 44 cols 65-65 is ')' 
+,            line 44 cols 66-66 is ',' 
+padding      line 44 cols 68-74 is T_padding 
+=            line 44 cols 75-75 is '=' 
+(            line 44 cols 76-76 is '(' 
+1            line 44 cols 77-77 is T_IntConstant (value = 1)
+,            line 44 cols 78-78 is ',' 
+1            line 44 cols 80-80 is T_IntConstant (value = 1)
+)            line 44 cols 81-81 is ')' 
+,            line 44 cols 82-82 is ',' 
+bias         line 44 cols 84-87 is T_bias 
+=            line 44 cols 88-88 is '=' 
+False        line 44 cols 89-93 is T_BoolConstant (value = false)
+)            line 44 cols 94-94 is ')' 
+(            line 45 cols 7-7 is '(' 
+bn1          line 45 cols 8-10 is T_Identifier 
+)            line 45 cols 11-11 is ')' 
+:            line 45 cols 12-12 is ':' 
+BatchNorm2d  line 45 cols 14-24 is T_BatchNorm2d 
+(            line 45 cols 25-25 is '(' 
+256          line 45 cols 26-28 is T_IntConstant (value = 256)
+,            line 45 cols 29-29 is ',' 
+eps          line 45 cols 31-33 is T_eps 
+=            line 45 cols 34-34 is '=' 
+1e-05        line 45 cols 35-39 is T_DoubleConstant (value = 1e-05)
+,            line 45 cols 40-40 is ',' 
+momentum     line 45 cols 42-49 is T_momentum 
+=            line 45 cols 50-50 is '=' 
+0.1          line 45 cols 51-53 is T_DoubleConstant (value = 0.1)
+,            line 45 cols 54-54 is ',' 
+affine       line 45 cols 56-61 is T_Identifier 
+=            line 45 cols 62-62 is '=' 
+True         line 45 cols 63-66 is T_BoolConstant (value = true)
+,            line 45 cols 67-67 is ',' 
+track_running_stats line 45 cols 69-87 is T_track_running_stats 
+=            line 45 cols 88-88 is '=' 
+True         line 45 cols 89-92 is T_BoolConstant (value = true)
+)            line 45 cols 93-93 is ')' 
+(            line 46 cols 7-7 is '(' 
+relu         line 46 cols 8-11 is T_Identifier 
+)            line 46 cols 12-12 is ')' 
+:            line 46 cols 13-13 is ':' 
+ReLU         line 46 cols 15-18 is T_ReLU 
+(            line 46 cols 19-19 is '(' 
+inplace      line 46 cols 20-26 is T_inplace 
+=            line 46 cols 27-27 is '=' 
+True         line 46 cols 28-31 is T_BoolConstant (value = true)
+)            line 46 cols 32-32 is ')' 
+(            line 47 cols 7-7 is '(' 
+conv2        line 47 cols 8-12 is T_Identifier 
+)            line 47 cols 13-13 is ')' 
+:            line 47 cols 14-14 is ':' 
+Conv2d       line 47 cols 16-21 is T_Conv2d 
+(            line 47 cols 22-22 is '(' 
+256          line 47 cols 23-25 is T_IntConstant (value = 256)
+,            line 47 cols 26-26 is ',' 
+256          line 47 cols 28-30 is T_IntConstant (value = 256)
+,            line 47 cols 31-31 is ',' 
+kernel_size  line 47 cols 33-43 is T_kernel_size 
+=            line 47 cols 44-44 is '=' 
+(            line 47 cols 45-45 is '(' 
+3            line 47 cols 46-46 is T_IntConstant (value = 3)
+,            line 47 cols 47-47 is ',' 
+3            line 47 cols 49-49 is T_IntConstant (value = 3)
+)            line 47 cols 50-50 is ')' 
+,            line 47 cols 51-51 is ',' 
+stride       line 47 cols 53-58 is T_stride 
+=            line 47 cols 59-59 is '=' 
+(            line 47 cols 60-60 is '(' 
+1            line 47 cols 61-61 is T_IntConstant (value = 1)
+,            line 47 cols 62-62 is ',' 
+1            line 47 cols 64-64 is T_IntConstant (value = 1)
+)            line 47 cols 65-65 is ')' 
+,            line 47 cols 66-66 is ',' 
+padding      line 47 cols 68-74 is T_padding 
+=            line 47 cols 75-75 is '=' 
+(            line 47 cols 76-76 is '(' 
+1            line 47 cols 77-77 is T_IntConstant (value = 1)
+,            line 47 cols 78-78 is ',' 
+1            line 47 cols 80-80 is T_IntConstant (value = 1)
+)            line 47 cols 81-81 is ')' 
+,            line 47 cols 82-82 is ',' 
+bias         line 47 cols 84-87 is T_bias 
+=            line 47 cols 88-88 is '=' 
+False        line 47 cols 89-93 is T_BoolConstant (value = false)
+)            line 47 cols 94-94 is ')' 
+(            line 48 cols 7-7 is '(' 
+bn2          line 48 cols 8-10 is T_Identifier 
+)            line 48 cols 11-11 is ')' 
+:            line 48 cols 12-12 is ':' 
+BatchNorm2d  line 48 cols 14-24 is T_BatchNorm2d 
+(            line 48 cols 25-25 is '(' 
+256          line 48 cols 26-28 is T_IntConstant (value = 256)
+,            line 48 cols 29-29 is ',' 
+eps          line 48 cols 31-33 is T_eps 
+=            line 48 cols 34-34 is '=' 
+1e-05        line 48 cols 35-39 is T_DoubleConstant (value = 1e-05)
+,            line 48 cols 40-40 is ',' 
+momentum     line 48 cols 42-49 is T_momentum 
+=            line 48 cols 50-50 is '=' 
+0.1          line 48 cols 51-53 is T_DoubleConstant (value = 0.1)
+,            line 48 cols 54-54 is ',' 
+affine       line 48 cols 56-61 is T_Identifier 
+=            line 48 cols 62-62 is '=' 
+True         line 48 cols 63-66 is T_BoolConstant (value = true)
+,            line 48 cols 67-67 is ',' 
+track_running_stats line 48 cols 69-87 is T_track_running_stats 
+=            line 48 cols 88-88 is '=' 
+True         line 48 cols 89-92 is T_BoolConstant (value = true)
+)            line 48 cols 93-93 is ')' 
+(            line 49 cols 7-7 is '(' 
+downsample   line 49 cols 8-17 is T_Identifier 
+)            line 49 cols 18-18 is ')' 
+:            line 49 cols 19-19 is ':' 
+Sequential   line 49 cols 21-30 is T_Sequential 
+(            line 49 cols 31-31 is '(' 
+(            line 50 cols 9-9 is '(' 
+0            line 50 cols 10-10 is T_IntConstant (value = 0)
+)            line 50 cols 11-11 is ')' 
+:            line 50 cols 12-12 is ':' 
+Conv2d       line 50 cols 14-19 is T_Conv2d 
+(            line 50 cols 20-20 is '(' 
+128          line 50 cols 21-23 is T_IntConstant (value = 128)
+,            line 50 cols 24-24 is ',' 
+256          line 50 cols 26-28 is T_IntConstant (value = 256)
+,            line 50 cols 29-29 is ',' 
+kernel_size  line 50 cols 31-41 is T_kernel_size 
+=            line 50 cols 42-42 is '=' 
+(            line 50 cols 43-43 is '(' 
+1            line 50 cols 44-44 is T_IntConstant (value = 1)
+,            line 50 cols 45-45 is ',' 
+1            line 50 cols 47-47 is T_IntConstant (value = 1)
+)            line 50 cols 48-48 is ')' 
+,            line 50 cols 49-49 is ',' 
+stride       line 50 cols 51-56 is T_stride 
+=            line 50 cols 57-57 is '=' 
+(            line 50 cols 58-58 is '(' 
+2            line 50 cols 59-59 is T_IntConstant (value = 2)
+,            line 50 cols 60-60 is ',' 
+2            line 50 cols 62-62 is T_IntConstant (value = 2)
+)            line 50 cols 63-63 is ')' 
+,            line 50 cols 64-64 is ',' 
+bias         line 50 cols 66-69 is T_bias 
+=            line 50 cols 70-70 is '=' 
+False        line 50 cols 71-75 is T_BoolConstant (value = false)
+)            line 50 cols 76-76 is ')' 
+(            line 51 cols 9-9 is '(' 
+1            line 51 cols 10-10 is T_IntConstant (value = 1)
+)            line 51 cols 11-11 is ')' 
+:            line 51 cols 12-12 is ':' 
+BatchNorm2d  line 51 cols 14-24 is T_BatchNorm2d 
+(            line 51 cols 25-25 is '(' 
+256          line 51 cols 26-28 is T_IntConstant (value = 256)
+,            line 51 cols 29-29 is ',' 
+eps          line 51 cols 31-33 is T_eps 
+=            line 51 cols 34-34 is '=' 
+1e-05        line 51 cols 35-39 is T_DoubleConstant (value = 1e-05)
+,            line 51 cols 40-40 is ',' 
+momentum     line 51 cols 42-49 is T_momentum 
+=            line 51 cols 50-50 is '=' 
+0.1          line 51 cols 51-53 is T_DoubleConstant (value = 0.1)
+,            line 51 cols 54-54 is ',' 
+affine       line 51 cols 56-61 is T_Identifier 
+=            line 51 cols 62-62 is '=' 
+True         line 51 cols 63-66 is T_BoolConstant (value = true)
+,            line 51 cols 67-67 is ',' 
+track_running_stats line 51 cols 69-87 is T_track_running_stats 
+=            line 51 cols 88-88 is '=' 
+True         line 51 cols 89-92 is T_BoolConstant (value = true)
+)            line 51 cols 93-93 is ')' 
+)            line 52 cols 7-7 is ')' 
+)            line 53 cols 5-5 is ')' 
+(            line 54 cols 5-5 is '(' 
+1            line 54 cols 6-6 is T_IntConstant (value = 1)
+)            line 54 cols 7-7 is ')' 
+:            line 54 cols 8-8 is ':' 
+BasicBlock   line 54 cols 10-19 is T_Identifier 
+(            line 54 cols 20-20 is '(' 
+(            line 55 cols 7-7 is '(' 
+conv1        line 55 cols 8-12 is T_Identifier 
+)            line 55 cols 13-13 is ')' 
+:            line 55 cols 14-14 is ':' 
+Conv2d       line 55 cols 16-21 is T_Conv2d 
+(            line 55 cols 22-22 is '(' 
+256          line 55 cols 23-25 is T_IntConstant (value = 256)
+,            line 55 cols 26-26 is ',' 
+256          line 55 cols 28-30 is T_IntConstant (value = 256)
+,            line 55 cols 31-31 is ',' 
+kernel_size  line 55 cols 33-43 is T_kernel_size 
+=            line 55 cols 44-44 is '=' 
+(            line 55 cols 45-45 is '(' 
+3            line 55 cols 46-46 is T_IntConstant (value = 3)
+,            line 55 cols 47-47 is ',' 
+3            line 55 cols 49-49 is T_IntConstant (value = 3)
+)            line 55 cols 50-50 is ')' 
+,            line 55 cols 51-51 is ',' 
+stride       line 55 cols 53-58 is T_stride 
+=            line 55 cols 59-59 is '=' 
+(            line 55 cols 60-60 is '(' 
+1            line 55 cols 61-61 is T_IntConstant (value = 1)
+,            line 55 cols 62-62 is ',' 
+1            line 55 cols 64-64 is T_IntConstant (value = 1)
+)            line 55 cols 65-65 is ')' 
+,            line 55 cols 66-66 is ',' 
+padding      line 55 cols 68-74 is T_padding 
+=            line 55 cols 75-75 is '=' 
+(            line 55 cols 76-76 is '(' 
+1            line 55 cols 77-77 is T_IntConstant (value = 1)
+,            line 55 cols 78-78 is ',' 
+1            line 55 cols 80-80 is T_IntConstant (value = 1)
+)            line 55 cols 81-81 is ')' 
+,            line 55 cols 82-82 is ',' 
+bias         line 55 cols 84-87 is T_bias 
+=            line 55 cols 88-88 is '=' 
+False        line 55 cols 89-93 is T_BoolConstant (value = false)
+)            line 55 cols 94-94 is ')' 
+(            line 56 cols 7-7 is '(' 
+bn1          line 56 cols 8-10 is T_Identifier 
+)            line 56 cols 11-11 is ')' 
+:            line 56 cols 12-12 is ':' 
+BatchNorm2d  line 56 cols 14-24 is T_BatchNorm2d 
+(            line 56 cols 25-25 is '(' 
+256          line 56 cols 26-28 is T_IntConstant (value = 256)
+,            line 56 cols 29-29 is ',' 
+eps          line 56 cols 31-33 is T_eps 
+=            line 56 cols 34-34 is '=' 
+1e-05        line 56 cols 35-39 is T_DoubleConstant (value = 1e-05)
+,            line 56 cols 40-40 is ',' 
+momentum     line 56 cols 42-49 is T_momentum 
+=            line 56 cols 50-50 is '=' 
+0.1          line 56 cols 51-53 is T_DoubleConstant (value = 0.1)
+,            line 56 cols 54-54 is ',' 
+affine       line 56 cols 56-61 is T_Identifier 
+=            line 56 cols 62-62 is '=' 
+True         line 56 cols 63-66 is T_BoolConstant (value = true)
+,            line 56 cols 67-67 is ',' 
+track_running_stats line 56 cols 69-87 is T_track_running_stats 
+=            line 56 cols 88-88 is '=' 
+True         line 56 cols 89-92 is T_BoolConstant (value = true)
+)            line 56 cols 93-93 is ')' 
+(            line 57 cols 7-7 is '(' 
+relu         line 57 cols 8-11 is T_Identifier 
+)            line 57 cols 12-12 is ')' 
+:            line 57 cols 13-13 is ':' 
+ReLU         line 57 cols 15-18 is T_ReLU 
+(            line 57 cols 19-19 is '(' 
+inplace      line 57 cols 20-26 is T_inplace 
+=            line 57 cols 27-27 is '=' 
+True         line 57 cols 28-31 is T_BoolConstant (value = true)
+)            line 57 cols 32-32 is ')' 
+(            line 58 cols 7-7 is '(' 
+conv2        line 58 cols 8-12 is T_Identifier 
+)            line 58 cols 13-13 is ')' 
+:            line 58 cols 14-14 is ':' 
+Conv2d       line 58 cols 16-21 is T_Conv2d 
+(            line 58 cols 22-22 is '(' 
+256          line 58 cols 23-25 is T_IntConstant (value = 256)
+,            line 58 cols 26-26 is ',' 
+256          line 58 cols 28-30 is T_IntConstant (value = 256)
+,            line 58 cols 31-31 is ',' 
+kernel_size  line 58 cols 33-43 is T_kernel_size 
+=            line 58 cols 44-44 is '=' 
+(            line 58 cols 45-45 is '(' 
+3            line 58 cols 46-46 is T_IntConstant (value = 3)
+,            line 58 cols 47-47 is ',' 
+3            line 58 cols 49-49 is T_IntConstant (value = 3)
+)            line 58 cols 50-50 is ')' 
+,            line 58 cols 51-51 is ',' 
+stride       line 58 cols 53-58 is T_stride 
+=            line 58 cols 59-59 is '=' 
+(            line 58 cols 60-60 is '(' 
+1            line 58 cols 61-61 is T_IntConstant (value = 1)
+,            line 58 cols 62-62 is ',' 
+1            line 58 cols 64-64 is T_IntConstant (value = 1)
+)            line 58 cols 65-65 is ')' 
+,            line 58 cols 66-66 is ',' 
+padding      line 58 cols 68-74 is T_padding 
+=            line 58 cols 75-75 is '=' 
+(            line 58 cols 76-76 is '(' 
+1            line 58 cols 77-77 is T_IntConstant (value = 1)
+,            line 58 cols 78-78 is ',' 
+1            line 58 cols 80-80 is T_IntConstant (value = 1)
+)            line 58 cols 81-81 is ')' 
+,            line 58 cols 82-82 is ',' 
+bias         line 58 cols 84-87 is T_bias 
+=            line 58 cols 88-88 is '=' 
+False        line 58 cols 89-93 is T_BoolConstant (value = false)
+)            line 58 cols 94-94 is ')' 
+(            line 59 cols 7-7 is '(' 
+bn2          line 59 cols 8-10 is T_Identifier 
+)            line 59 cols 11-11 is ')' 
+:            line 59 cols 12-12 is ':' 
+BatchNorm2d  line 59 cols 14-24 is T_BatchNorm2d 
+(            line 59 cols 25-25 is '(' 
+256          line 59 cols 26-28 is T_IntConstant (value = 256)
+,            line 59 cols 29-29 is ',' 
+eps          line 59 cols 31-33 is T_eps 
+=            line 59 cols 34-34 is '=' 
+1e-05        line 59 cols 35-39 is T_DoubleConstant (value = 1e-05)
+,            line 59 cols 40-40 is ',' 
+momentum     line 59 cols 42-49 is T_momentum 
+=            line 59 cols 50-50 is '=' 
+0.1          line 59 cols 51-53 is T_DoubleConstant (value = 0.1)
+,            line 59 cols 54-54 is ',' 
+affine       line 59 cols 56-61 is T_Identifier 
+=            line 59 cols 62-62 is '=' 
+True         line 59 cols 63-66 is T_BoolConstant (value = true)
+,            line 59 cols 67-67 is ',' 
+track_running_stats line 59 cols 69-87 is T_track_running_stats 
+=            line 59 cols 88-88 is '=' 
+True         line 59 cols 89-92 is T_BoolConstant (value = true)
+)            line 59 cols 93-93 is ')' 
+)            line 60 cols 5-5 is ')' 
+)            line 61 cols 3-3 is ')' 
+(            line 62 cols 3-3 is '(' 
+layer4       line 62 cols 4-9 is T_Identifier 
+)            line 62 cols 10-10 is ')' 
+:            line 62 cols 11-11 is ':' 
+Sequential   line 62 cols 13-22 is T_Sequential 
+(            line 62 cols 23-23 is '(' 
+(            line 63 cols 5-5 is '(' 
+0            line 63 cols 6-6 is T_IntConstant (value = 0)
+)            line 63 cols 7-7 is ')' 
+:            line 63 cols 8-8 is ':' 
+BasicBlock   line 63 cols 10-19 is T_Identifier 
+(            line 63 cols 20-20 is '(' 
+(            line 64 cols 7-7 is '(' 
+conv1        line 64 cols 8-12 is T_Identifier 
+)            line 64 cols 13-13 is ')' 
+:            line 64 cols 14-14 is ':' 
+Conv2d       line 64 cols 16-21 is T_Conv2d 
+(            line 64 cols 22-22 is '(' 
+256          line 64 cols 23-25 is T_IntConstant (value = 256)
+,            line 64 cols 26-26 is ',' 
+512          line 64 cols 28-30 is T_IntConstant (value = 512)
+,            line 64 cols 31-31 is ',' 
+kernel_size  line 64 cols 33-43 is T_kernel_size 
+=            line 64 cols 44-44 is '=' 
+(            line 64 cols 45-45 is '(' 
+3            line 64 cols 46-46 is T_IntConstant (value = 3)
+,            line 64 cols 47-47 is ',' 
+3            line 64 cols 49-49 is T_IntConstant (value = 3)
+)            line 64 cols 50-50 is ')' 
+,            line 64 cols 51-51 is ',' 
+stride       line 64 cols 53-58 is T_stride 
+=            line 64 cols 59-59 is '=' 
+(            line 64 cols 60-60 is '(' 
+2            line 64 cols 61-61 is T_IntConstant (value = 2)
+,            line 64 cols 62-62 is ',' 
+2            line 64 cols 64-64 is T_IntConstant (value = 2)
+)            line 64 cols 65-65 is ')' 
+,            line 64 cols 66-66 is ',' 
+padding      line 64 cols 68-74 is T_padding 
+=            line 64 cols 75-75 is '=' 
+(            line 64 cols 76-76 is '(' 
+1            line 64 cols 77-77 is T_IntConstant (value = 1)
+,            line 64 cols 78-78 is ',' 
+1            line 64 cols 80-80 is T_IntConstant (value = 1)
+)            line 64 cols 81-81 is ')' 
+,            line 64 cols 82-82 is ',' 
+bias         line 64 cols 84-87 is T_bias 
+=            line 64 cols 88-88 is '=' 
+False        line 64 cols 89-93 is T_BoolConstant (value = false)
+)            line 64 cols 94-94 is ')' 
+(            line 65 cols 7-7 is '(' 
+bn1          line 65 cols 8-10 is T_Identifier 
+)            line 65 cols 11-11 is ')' 
+:            line 65 cols 12-12 is ':' 
+BatchNorm2d  line 65 cols 14-24 is T_BatchNorm2d 
+(            line 65 cols 25-25 is '(' 
+512          line 65 cols 26-28 is T_IntConstant (value = 512)
+,            line 65 cols 29-29 is ',' 
+eps          line 65 cols 31-33 is T_eps 
+=            line 65 cols 34-34 is '=' 
+1e-05        line 65 cols 35-39 is T_DoubleConstant (value = 1e-05)
+,            line 65 cols 40-40 is ',' 
+momentum     line 65 cols 42-49 is T_momentum 
+=            line 65 cols 50-50 is '=' 
+0.1          line 65 cols 51-53 is T_DoubleConstant (value = 0.1)
+,            line 65 cols 54-54 is ',' 
+affine       line 65 cols 56-61 is T_Identifier 
+=            line 65 cols 62-62 is '=' 
+True         line 65 cols 63-66 is T_BoolConstant (value = true)
+,            line 65 cols 67-67 is ',' 
+track_running_stats line 65 cols 69-87 is T_track_running_stats 
+=            line 65 cols 88-88 is '=' 
+True         line 65 cols 89-92 is T_BoolConstant (value = true)
+)            line 65 cols 93-93 is ')' 
+(            line 66 cols 7-7 is '(' 
+relu         line 66 cols 8-11 is T_Identifier 
+)            line 66 cols 12-12 is ')' 
+:            line 66 cols 13-13 is ':' 
+ReLU         line 66 cols 15-18 is T_ReLU 
+(            line 66 cols 19-19 is '(' 
+inplace      line 66 cols 20-26 is T_inplace 
+=            line 66 cols 27-27 is '=' 
+True         line 66 cols 28-31 is T_BoolConstant (value = true)
+)            line 66 cols 32-32 is ')' 
+(            line 67 cols 7-7 is '(' 
+conv2        line 67 cols 8-12 is T_Identifier 
+)            line 67 cols 13-13 is ')' 
+:            line 67 cols 14-14 is ':' 
+Conv2d       line 67 cols 16-21 is T_Conv2d 
+(            line 67 cols 22-22 is '(' 
+512          line 67 cols 23-25 is T_IntConstant (value = 512)
+,            line 67 cols 26-26 is ',' 
+512          line 67 cols 28-30 is T_IntConstant (value = 512)
+,            line 67 cols 31-31 is ',' 
+kernel_size  line 67 cols 33-43 is T_kernel_size 
+=            line 67 cols 44-44 is '=' 
+(            line 67 cols 45-45 is '(' 
+3            line 67 cols 46-46 is T_IntConstant (value = 3)
+,            line 67 cols 47-47 is ',' 
+3            line 67 cols 49-49 is T_IntConstant (value = 3)
+)            line 67 cols 50-50 is ')' 
+,            line 67 cols 51-51 is ',' 
+stride       line 67 cols 53-58 is T_stride 
+=            line 67 cols 59-59 is '=' 
+(            line 67 cols 60-60 is '(' 
+1            line 67 cols 61-61 is T_IntConstant (value = 1)
+,            line 67 cols 62-62 is ',' 
+1            line 67 cols 64-64 is T_IntConstant (value = 1)
+)            line 67 cols 65-65 is ')' 
+,            line 67 cols 66-66 is ',' 
+padding      line 67 cols 68-74 is T_padding 
+=            line 67 cols 75-75 is '=' 
+(            line 67 cols 76-76 is '(' 
+1            line 67 cols 77-77 is T_IntConstant (value = 1)
+,            line 67 cols 78-78 is ',' 
+1            line 67 cols 80-80 is T_IntConstant (value = 1)
+)            line 67 cols 81-81 is ')' 
+,            line 67 cols 82-82 is ',' 
+bias         line 67 cols 84-87 is T_bias 
+=            line 67 cols 88-88 is '=' 
+False        line 67 cols 89-93 is T_BoolConstant (value = false)
+)            line 67 cols 94-94 is ')' 
+(            line 68 cols 7-7 is '(' 
+bn2          line 68 cols 8-10 is T_Identifier 
+)            line 68 cols 11-11 is ')' 
+:            line 68 cols 12-12 is ':' 
+BatchNorm2d  line 68 cols 14-24 is T_BatchNorm2d 
+(            line 68 cols 25-25 is '(' 
+512          line 68 cols 26-28 is T_IntConstant (value = 512)
+,            line 68 cols 29-29 is ',' 
+eps          line 68 cols 31-33 is T_eps 
+=            line 68 cols 34-34 is '=' 
+1e-05        line 68 cols 35-39 is T_DoubleConstant (value = 1e-05)
+,            line 68 cols 40-40 is ',' 
+momentum     line 68 cols 42-49 is T_momentum 
+=            line 68 cols 50-50 is '=' 
+0.1          line 68 cols 51-53 is T_DoubleConstant (value = 0.1)
+,            line 68 cols 54-54 is ',' 
+affine       line 68 cols 56-61 is T_Identifier 
+=            line 68 cols 62-62 is '=' 
+True         line 68 cols 63-66 is T_BoolConstant (value = true)
+,            line 68 cols 67-67 is ',' 
+track_running_stats line 68 cols 69-87 is T_track_running_stats 
+=            line 68 cols 88-88 is '=' 
+True         line 68 cols 89-92 is T_BoolConstant (value = true)
+)            line 68 cols 93-93 is ')' 
+(            line 69 cols 7-7 is '(' 
+downsample   line 69 cols 8-17 is T_Identifier 
+)            line 69 cols 18-18 is ')' 
+:            line 69 cols 19-19 is ':' 
+Sequential   line 69 cols 21-30 is T_Sequential 
+(            line 69 cols 31-31 is '(' 
+(            line 70 cols 9-9 is '(' 
+0            line 70 cols 10-10 is T_IntConstant (value = 0)
+)            line 70 cols 11-11 is ')' 
+:            line 70 cols 12-12 is ':' 
+Conv2d       line 70 cols 14-19 is T_Conv2d 
+(            line 70 cols 20-20 is '(' 
+256          line 70 cols 21-23 is T_IntConstant (value = 256)
+,            line 70 cols 24-24 is ',' 
+512          line 70 cols 26-28 is T_IntConstant (value = 512)
+,            line 70 cols 29-29 is ',' 
+kernel_size  line 70 cols 31-41 is T_kernel_size 
+=            line 70 cols 42-42 is '=' 
+(            line 70 cols 43-43 is '(' 
+1            line 70 cols 44-44 is T_IntConstant (value = 1)
+,            line 70 cols 45-45 is ',' 
+1            line 70 cols 47-47 is T_IntConstant (value = 1)
+)            line 70 cols 48-48 is ')' 
+,            line 70 cols 49-49 is ',' 
+stride       line 70 cols 51-56 is T_stride 
+=            line 70 cols 57-57 is '=' 
+(            line 70 cols 58-58 is '(' 
+2            line 70 cols 59-59 is T_IntConstant (value = 2)
+,            line 70 cols 60-60 is ',' 
+2            line 70 cols 62-62 is T_IntConstant (value = 2)
+)            line 70 cols 63-63 is ')' 
+,            line 70 cols 64-64 is ',' 
+bias         line 70 cols 66-69 is T_bias 
+=            line 70 cols 70-70 is '=' 
+False        line 70 cols 71-75 is T_BoolConstant (value = false)
+)            line 70 cols 76-76 is ')' 
+(            line 71 cols 9-9 is '(' 
+1            line 71 cols 10-10 is T_IntConstant (value = 1)
+)            line 71 cols 11-11 is ')' 
+:            line 71 cols 12-12 is ':' 
+BatchNorm2d  line 71 cols 14-24 is T_BatchNorm2d 
+(            line 71 cols 25-25 is '(' 
+512          line 71 cols 26-28 is T_IntConstant (value = 512)
+,            line 71 cols 29-29 is ',' 
+eps          line 71 cols 31-33 is T_eps 
+=            line 71 cols 34-34 is '=' 
+1e-05        line 71 cols 35-39 is T_DoubleConstant (value = 1e-05)
+,            line 71 cols 40-40 is ',' 
+momentum     line 71 cols 42-49 is T_momentum 
+=            line 71 cols 50-50 is '=' 
+0.1          line 71 cols 51-53 is T_DoubleConstant (value = 0.1)
+,            line 71 cols 54-54 is ',' 
+affine       line 71 cols 56-61 is T_Identifier 
+=            line 71 cols 62-62 is '=' 
+True         line 71 cols 63-66 is T_BoolConstant (value = true)
+,            line 71 cols 67-67 is ',' 
+track_running_stats line 71 cols 69-87 is T_track_running_stats 
+=            line 71 cols 88-88 is '=' 
+True         line 71 cols 89-92 is T_BoolConstant (value = true)
+)            line 71 cols 93-93 is ')' 
+)            line 72 cols 7-7 is ')' 
+)            line 73 cols 5-5 is ')' 
+(            line 74 cols 5-5 is '(' 
+1            line 74 cols 6-6 is T_IntConstant (value = 1)
+)            line 74 cols 7-7 is ')' 
+:            line 74 cols 8-8 is ':' 
+BasicBlock   line 74 cols 10-19 is T_Identifier 
+(            line 74 cols 20-20 is '(' 
+(            line 75 cols 7-7 is '(' 
+conv1        line 75 cols 8-12 is T_Identifier 
+)            line 75 cols 13-13 is ')' 
+:            line 75 cols 14-14 is ':' 
+Conv2d       line 75 cols 16-21 is T_Conv2d 
+(            line 75 cols 22-22 is '(' 
+512          line 75 cols 23-25 is T_IntConstant (value = 512)
+,            line 75 cols 26-26 is ',' 
+512          line 75 cols 28-30 is T_IntConstant (value = 512)
+,            line 75 cols 31-31 is ',' 
+kernel_size  line 75 cols 33-43 is T_kernel_size 
+=            line 75 cols 44-44 is '=' 
+(            line 75 cols 45-45 is '(' 
+3            line 75 cols 46-46 is T_IntConstant (value = 3)
+,            line 75 cols 47-47 is ',' 
+3            line 75 cols 49-49 is T_IntConstant (value = 3)
+)            line 75 cols 50-50 is ')' 
+,            line 75 cols 51-51 is ',' 
+stride       line 75 cols 53-58 is T_stride 
+=            line 75 cols 59-59 is '=' 
+(            line 75 cols 60-60 is '(' 
+1            line 75 cols 61-61 is T_IntConstant (value = 1)
+,            line 75 cols 62-62 is ',' 
+1            line 75 cols 64-64 is T_IntConstant (value = 1)
+)            line 75 cols 65-65 is ')' 
+,            line 75 cols 66-66 is ',' 
+padding      line 75 cols 68-74 is T_padding 
+=            line 75 cols 75-75 is '=' 
+(            line 75 cols 76-76 is '(' 
+1            line 75 cols 77-77 is T_IntConstant (value = 1)
+,            line 75 cols 78-78 is ',' 
+1            line 75 cols 80-80 is T_IntConstant (value = 1)
+)            line 75 cols 81-81 is ')' 
+,            line 75 cols 82-82 is ',' 
+bias         line 75 cols 84-87 is T_bias 
+=            line 75 cols 88-88 is '=' 
+False        line 75 cols 89-93 is T_BoolConstant (value = false)
+)            line 75 cols 94-94 is ')' 
+(            line 76 cols 7-7 is '(' 
+bn1          line 76 cols 8-10 is T_Identifier 
+)            line 76 cols 11-11 is ')' 
+:            line 76 cols 12-12 is ':' 
+BatchNorm2d  line 76 cols 14-24 is T_BatchNorm2d 
+(            line 76 cols 25-25 is '(' 
+512          line 76 cols 26-28 is T_IntConstant (value = 512)
+,            line 76 cols 29-29 is ',' 
+eps          line 76 cols 31-33 is T_eps 
+=            line 76 cols 34-34 is '=' 
+1e-05        line 76 cols 35-39 is T_DoubleConstant (value = 1e-05)
+,            line 76 cols 40-40 is ',' 
+momentum     line 76 cols 42-49 is T_momentum 
+=            line 76 cols 50-50 is '=' 
+0.1          line 76 cols 51-53 is T_DoubleConstant (value = 0.1)
+,            line 76 cols 54-54 is ',' 
+affine       line 76 cols 56-61 is T_Identifier 
+=            line 76 cols 62-62 is '=' 
+True         line 76 cols 63-66 is T_BoolConstant (value = true)
+,            line 76 cols 67-67 is ',' 
+track_running_stats line 76 cols 69-87 is T_track_running_stats 
+=            line 76 cols 88-88 is '=' 
+True         line 76 cols 89-92 is T_BoolConstant (value = true)
+)            line 76 cols 93-93 is ')' 
+(            line 77 cols 7-7 is '(' 
+relu         line 77 cols 8-11 is T_Identifier 
+)            line 77 cols 12-12 is ')' 
+:            line 77 cols 13-13 is ':' 
+ReLU         line 77 cols 15-18 is T_ReLU 
+(            line 77 cols 19-19 is '(' 
+inplace      line 77 cols 20-26 is T_inplace 
+=            line 77 cols 27-27 is '=' 
+True         line 77 cols 28-31 is T_BoolConstant (value = true)
+)            line 77 cols 32-32 is ')' 
+(            line 78 cols 7-7 is '(' 
+conv2        line 78 cols 8-12 is T_Identifier 
+)            line 78 cols 13-13 is ')' 
+:            line 78 cols 14-14 is ':' 
+Conv2d       line 78 cols 16-21 is T_Conv2d 
+(            line 78 cols 22-22 is '(' 
+512          line 78 cols 23-25 is T_IntConstant (value = 512)
+,            line 78 cols 26-26 is ',' 
+512          line 78 cols 28-30 is T_IntConstant (value = 512)
+,            line 78 cols 31-31 is ',' 
+kernel_size  line 78 cols 33-43 is T_kernel_size 
+=            line 78 cols 44-44 is '=' 
+(            line 78 cols 45-45 is '(' 
+3            line 78 cols 46-46 is T_IntConstant (value = 3)
+,            line 78 cols 47-47 is ',' 
+3            line 78 cols 49-49 is T_IntConstant (value = 3)
+)            line 78 cols 50-50 is ')' 
+,            line 78 cols 51-51 is ',' 
+stride       line 78 cols 53-58 is T_stride 
+=            line 78 cols 59-59 is '=' 
+(            line 78 cols 60-60 is '(' 
+1            line 78 cols 61-61 is T_IntConstant (value = 1)
+,            line 78 cols 62-62 is ',' 
+1            line 78 cols 64-64 is T_IntConstant (value = 1)
+)            line 78 cols 65-65 is ')' 
+,            line 78 cols 66-66 is ',' 
+padding      line 78 cols 68-74 is T_padding 
+=            line 78 cols 75-75 is '=' 
+(            line 78 cols 76-76 is '(' 
+1            line 78 cols 77-77 is T_IntConstant (value = 1)
+,            line 78 cols 78-78 is ',' 
+1            line 78 cols 80-80 is T_IntConstant (value = 1)
+)            line 78 cols 81-81 is ')' 
+,            line 78 cols 82-82 is ',' 
+bias         line 78 cols 84-87 is T_bias 
+=            line 78 cols 88-88 is '=' 
+False        line 78 cols 89-93 is T_BoolConstant (value = false)
+)            line 78 cols 94-94 is ')' 
+(            line 79 cols 7-7 is '(' 
+bn2          line 79 cols 8-10 is T_Identifier 
+)            line 79 cols 11-11 is ')' 
+:            line 79 cols 12-12 is ':' 
+BatchNorm2d  line 79 cols 14-24 is T_BatchNorm2d 
+(            line 79 cols 25-25 is '(' 
+512          line 79 cols 26-28 is T_IntConstant (value = 512)
+,            line 79 cols 29-29 is ',' 
+eps          line 79 cols 31-33 is T_eps 
+=            line 79 cols 34-34 is '=' 
+1e-05        line 79 cols 35-39 is T_DoubleConstant (value = 1e-05)
+,            line 79 cols 40-40 is ',' 
+momentum     line 79 cols 42-49 is T_momentum 
+=            line 79 cols 50-50 is '=' 
+0.1          line 79 cols 51-53 is T_DoubleConstant (value = 0.1)
+,            line 79 cols 54-54 is ',' 
+affine       line 79 cols 56-61 is T_Identifier 
+=            line 79 cols 62-62 is '=' 
+True         line 79 cols 63-66 is T_BoolConstant (value = true)
+,            line 79 cols 67-67 is ',' 
+track_running_stats line 79 cols 69-87 is T_track_running_stats 
+=            line 79 cols 88-88 is '=' 
+True         line 79 cols 89-92 is T_BoolConstant (value = true)
+)            line 79 cols 93-93 is ')' 
+)            line 80 cols 5-5 is ')' 
+)            line 81 cols 3-3 is ')' 
+(            line 82 cols 3-3 is '(' 
+avgpool      line 82 cols 4-10 is T_Identifier 
+)            line 82 cols 11-11 is ')' 
+:            line 82 cols 12-12 is ':' 
+AdaptiveAvgPool2d line 82 cols 14-30 is T_AdaptiveAvgPool2d 
+(            line 82 cols 31-31 is '(' 
+output_size  line 82 cols 32-42 is T_output_size 
+=            line 82 cols 43-43 is '=' 
+(            line 82 cols 44-44 is '(' 
+1            line 82 cols 45-45 is T_IntConstant (value = 1)
+,            line 82 cols 46-46 is ',' 
+1            line 82 cols 48-48 is T_IntConstant (value = 1)
+)            line 82 cols 49-49 is ')' 
+)            line 82 cols 50-50 is ')' 
+(            line 83 cols 3-3 is '(' 
+fc           line 83 cols 4-5 is T_Identifier 
+)            line 83 cols 6-6 is ')' 
+:            line 83 cols 7-7 is ':' 
+Linear       line 83 cols 9-14 is T_Linear 
+(            line 83 cols 15-15 is '(' 
+in_features  line 83 cols 16-26 is T_in_features 
+=            line 83 cols 27-27 is '=' 
+512          line 83 cols 28-30 is T_IntConstant (value = 512)
+,            line 83 cols 31-31 is ',' 
+out_features line 83 cols 33-44 is T_out_features 
+=            line 83 cols 45-45 is '=' 
+1000         line 83 cols 46-49 is T_IntConstant (value = 1000)
+,            line 83 cols 50-50 is ',' 
+bias         line 83 cols 52-55 is T_bias 
+=            line 83 cols 56-56 is '=' 
+True         line 83 cols 57-60 is T_BoolConstant (value = true)
+)            line 83 cols 61-61 is ')' 
+)            line 84 cols 1-1 is ')' 

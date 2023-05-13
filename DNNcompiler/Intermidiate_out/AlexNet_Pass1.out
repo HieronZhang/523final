@@ -1,0 +1,242 @@
+
+   Model: 
+  1   ModelnameIdentifier: AlexNet
+  2   LayersSeqBlockLayer: 
+  2      LayernameIdentifier: features
+         SeqBlocksSeqBlock: 
+            OperatorBlock: 
+  3            Conv2d: (3, 64, 11, 11, 4, 4, 2, 2, 1)
+         SeqBlocksSeqBlock: 
+            OperatorBlock: 
+  4            ReLU: (1)
+         SeqBlocksSeqBlock: 
+            OperatorBlock: 
+  5            MaxPool2d: (3, 2, 0, 1, 0)
+         SeqBlocksSeqBlock: 
+            OperatorBlock: 
+  6            Conv2d: (64, 192, 5, 5, 1, 1, 2, 2, 1)
+         SeqBlocksSeqBlock: 
+            OperatorBlock: 
+  7            ReLU: (1)
+         SeqBlocksSeqBlock: 
+            OperatorBlock: 
+  8            MaxPool2d: (3, 2, 0, 1, 0)
+         SeqBlocksSeqBlock: 
+            OperatorBlock: 
+  9            Conv2d: (192, 384, 3, 3, 1, 1, 1, 1, 1)
+         SeqBlocksSeqBlock: 
+            OperatorBlock: 
+ 10            ReLU: (1)
+         SeqBlocksSeqBlock: 
+            OperatorBlock: 
+ 11            Conv2d: (384, 256, 3, 3, 1, 1, 1, 1, 1)
+         SeqBlocksSeqBlock: 
+            OperatorBlock: 
+ 12            ReLU: (1)
+         SeqBlocksSeqBlock: 
+            OperatorBlock: 
+ 13            Conv2d: (256, 256, 3, 3, 1, 1, 1, 1, 1)
+         SeqBlocksSeqBlock: 
+            OperatorBlock: 
+ 14            ReLU: (1)
+         SeqBlocksSeqBlock: 
+            OperatorBlock: 
+ 15            MaxPool2d: (3, 2, 0, 1, 0)
+ 17   LayersBlockLayer: 
+ 17      LayernameIdentifier: avgpool
+         BlockOperatorBlock: 
+ 17         AdaptiveAvgPool2d: (6, 6)
+ 18   LayersSeqBlockLayer: 
+ 18      LayernameIdentifier: classifier
+         SeqBlocksSeqBlock: 
+            OperatorBlock: 
+ 19            Dropout: (0.500000, 0)
+         SeqBlocksSeqBlock: 
+            OperatorBlock: 
+ 20            Linear: (9216, 4096, 1)
+         SeqBlocksSeqBlock: 
+            OperatorBlock: 
+ 21            ReLU: (1)
+         SeqBlocksSeqBlock: 
+            OperatorBlock: 
+ 22            Dropout: (0.500000, 0)
+         SeqBlocksSeqBlock: 
+            OperatorBlock: 
+ 23            Linear: (4096, 4096, 1)
+         SeqBlocksSeqBlock: 
+            OperatorBlock: 
+ 24            ReLU: (1)
+         SeqBlocksSeqBlock: 
+            OperatorBlock: 
+ 25            Linear: (4096, 1000, 1)
+Layer ID:0; Name:Conv2d
+(1,3,224,224)
+Input Tensor: Base Address: 0, Size in byte: 1204224, Range:0--1204224
+Output Tensor: Base Address: 1204224, Size in byte: 1548800, Range:1204224--2756608
+d_Input Tensor: Base Address: 3133440, Size in byte: 1204224, Range:3133440--4337664
+d_Output Tensor: Base Address: 5890048, Size in byte: 1548800, Range:5890048--7442432
+Weight Tensor: Base Address: 2756608, Size in byte: 185856, Range:2756608--2945024
+d_Weight Tensor: Base Address: 2945024, Size in byte: 185856, Range:2945024--3133440
+______________________________________________________________________________
+Layer ID:1; Name:ReLU
+(1,64,55,55)
+Input Tensor: Base Address: 1204224, Size in byte: 1548800, Range:1204224--2756608
+Output Tensor: Base Address: 4337664, Size in byte: 1548800, Range:4337664--5890048
+d_Input Tensor: Base Address: 5890048, Size in byte: 1548800, Range:5890048--7442432
+d_Output Tensor: Base Address: 7819264, Size in byte: 1548800, Range:7819264--9371648
+______________________________________________________________________________
+Layer ID:2; Name:MaxPool2d
+(1,64,55,55)
+Input Tensor: Base Address: 4337664, Size in byte: 1548800, Range:4337664--5890048
+Output Tensor: Base Address: 7442432, Size in byte: 373248, Range:7442432--7819264
+d_Input Tensor: Base Address: 7819264, Size in byte: 1548800, Range:7819264--9371648
+d_Output Tensor: Base Address: 15409152, Size in byte: 373248, Range:15409152--15785984
+______________________________________________________________________________
+Layer ID:3; Name:Conv2d
+(1,64,27,27)
+Input Tensor: Base Address: 7442432, Size in byte: 373248, Range:7442432--7819264
+Output Tensor: Base Address: 9371648, Size in byte: 1119744, Range:9371648--10493952
+d_Input Tensor: Base Address: 15409152, Size in byte: 373248, Range:15409152--15785984
+d_Output Tensor: Base Address: 16908288, Size in byte: 1119744, Range:16908288--18030592
+Weight Tensor: Base Address: 10493952, Size in byte: 2457600, Range:10493952--12951552
+d_Weight Tensor: Base Address: 12951552, Size in byte: 2457600, Range:12951552--15409152
+______________________________________________________________________________
+Layer ID:4; Name:ReLU
+(1,192,27,27)
+Input Tensor: Base Address: 9371648, Size in byte: 1119744, Range:9371648--10493952
+Output Tensor: Base Address: 15785984, Size in byte: 1119744, Range:15785984--16908288
+d_Input Tensor: Base Address: 16908288, Size in byte: 1119744, Range:16908288--18030592
+d_Output Tensor: Base Address: 18292736, Size in byte: 1119744, Range:18292736--19415040
+______________________________________________________________________________
+Layer ID:5; Name:MaxPool2d
+(1,192,27,27)
+Input Tensor: Base Address: 15785984, Size in byte: 1119744, Range:15785984--16908288
+Output Tensor: Base Address: 18030592, Size in byte: 259584, Range:18030592--18292736
+d_Input Tensor: Base Address: 18292736, Size in byte: 1119744, Range:18292736--19415040
+d_Output Tensor: Base Address: 30552064, Size in byte: 259584, Range:30552064--30814208
+______________________________________________________________________________
+Layer ID:6; Name:Conv2d
+(1,192,13,13)
+Input Tensor: Base Address: 18030592, Size in byte: 259584, Range:18030592--18292736
+Output Tensor: Base Address: 19415040, Size in byte: 519168, Range:19415040--19935232
+d_Input Tensor: Base Address: 30552064, Size in byte: 259584, Range:30552064--30814208
+d_Output Tensor: Base Address: 31334400, Size in byte: 519168, Range:31334400--31854592
+Weight Tensor: Base Address: 19935232, Size in byte: 5308416, Range:19935232--25243648
+d_Weight Tensor: Base Address: 25243648, Size in byte: 5308416, Range:25243648--30552064
+______________________________________________________________________________
+Layer ID:7; Name:ReLU
+(1,384,13,13)
+Input Tensor: Base Address: 19415040, Size in byte: 519168, Range:19415040--19935232
+Output Tensor: Base Address: 30814208, Size in byte: 519168, Range:30814208--31334400
+d_Input Tensor: Base Address: 31334400, Size in byte: 519168, Range:31334400--31854592
+d_Output Tensor: Base Address: 46358528, Size in byte: 519168, Range:46358528--46878720
+______________________________________________________________________________
+Layer ID:8; Name:Conv2d
+(1,384,13,13)
+Input Tensor: Base Address: 30814208, Size in byte: 519168, Range:30814208--31334400
+Output Tensor: Base Address: 31854592, Size in byte: 346112, Range:31854592--32202752
+d_Input Tensor: Base Address: 46358528, Size in byte: 519168, Range:46358528--46878720
+d_Output Tensor: Base Address: 47226880, Size in byte: 346112, Range:47226880--47575040
+Weight Tensor: Base Address: 32202752, Size in byte: 7077888, Range:32202752--39280640
+d_Weight Tensor: Base Address: 39280640, Size in byte: 7077888, Range:39280640--46358528
+______________________________________________________________________________
+Layer ID:9; Name:ReLU
+(1,256,13,13)
+Input Tensor: Base Address: 31854592, Size in byte: 346112, Range:31854592--32202752
+Output Tensor: Base Address: 46878720, Size in byte: 346112, Range:46878720--47226880
+d_Input Tensor: Base Address: 47226880, Size in byte: 346112, Range:47226880--47575040
+d_Output Tensor: Base Address: 57360384, Size in byte: 346112, Range:57360384--57708544
+______________________________________________________________________________
+Layer ID:10; Name:Conv2d
+(1,256,13,13)
+Input Tensor: Base Address: 46878720, Size in byte: 346112, Range:46878720--47226880
+Output Tensor: Base Address: 47575040, Size in byte: 346112, Range:47575040--47923200
+d_Input Tensor: Base Address: 57360384, Size in byte: 346112, Range:57360384--57708544
+d_Output Tensor: Base Address: 58056704, Size in byte: 346112, Range:58056704--58404864
+Weight Tensor: Base Address: 47923200, Size in byte: 4718592, Range:47923200--52641792
+d_Weight Tensor: Base Address: 52641792, Size in byte: 4718592, Range:52641792--57360384
+______________________________________________________________________________
+Layer ID:11; Name:ReLU
+(1,256,13,13)
+Input Tensor: Base Address: 47575040, Size in byte: 346112, Range:47575040--47923200
+Output Tensor: Base Address: 57708544, Size in byte: 346112, Range:57708544--58056704
+d_Input Tensor: Base Address: 58056704, Size in byte: 346112, Range:58056704--58404864
+d_Output Tensor: Base Address: 58478592, Size in byte: 346112, Range:58478592--58826752
+______________________________________________________________________________
+Layer ID:12; Name:MaxPool2d
+(1,256,13,13)
+Input Tensor: Base Address: 57708544, Size in byte: 346112, Range:57708544--58056704
+Output Tensor: Base Address: 58404864, Size in byte: 73728, Range:58404864--58478592
+d_Input Tensor: Base Address: 58478592, Size in byte: 346112, Range:58478592--58826752
+d_Output Tensor: Base Address: 58900480, Size in byte: 73728, Range:58900480--58974208
+______________________________________________________________________________
+Layer ID:13; Name:AdaptiveAvgPool2d
+(1,256,6,6)
+Input Tensor: Base Address: 58404864, Size in byte: 73728, Range:58404864--58478592
+Output Tensor: Base Address: 58826752, Size in byte: 73728, Range:58826752--58900480
+d_Input Tensor: Base Address: 58900480, Size in byte: 73728, Range:58900480--58974208
+d_Output Tensor: Base Address: 59121664, Size in byte: 73728, Range:59121664--59195392
+______________________________________________________________________________
+Layer ID:14; Name:Dropout
+(1,256,6,6)
+Input Tensor: Base Address: 58826752, Size in byte: 73728, Range:58826752--58900480
+Output Tensor: Base Address: 59047936, Size in byte: 73728, Range:59047936--59121664
+d_Input Tensor: Base Address: 59121664, Size in byte: 73728, Range:59121664--59195392
+d_Output Tensor: Base Address: 361218048, Size in byte: 73728, Range:361218048--361291776
+Musk_array Tensor: Base Address: 58974208, Size in byte: 73728, Range:58974208--59047936
+______________________________________________________________________________
+Layer ID:15; Name:Linear
+(1,256,6,6)
+Input Tensor: Base Address: 59047936, Size in byte: 73728, Range:59047936--59121664
+Output Tensor: Base Address: 361185280, Size in byte: 32768, Range:361185280--361218048
+d_Input Tensor: Base Address: 361218048, Size in byte: 73728, Range:361218048--361291776
+d_Output Tensor: Base Address: 663379968, Size in byte: 32768, Range:663379968--663412736
+Weight Tensor: Base Address: 59195392, Size in byte: 301989888, Range:59195392--361185280
+d_Weight Tensor: Base Address: 361291776, Size in byte: 301989888, Range:361291776--663281664
+Bias Tensor: Base Address: 663281664, Size in byte: 32768, Range:663281664--663314432
+d_Bias Tensor: Base Address: 663314432, Size in byte: 32768, Range:663314432--663347200
+______________________________________________________________________________
+Layer ID:16; Name:ReLU
+(1,4096,1,1)
+Input Tensor: Base Address: 361185280, Size in byte: 32768, Range:361185280--361218048
+Output Tensor: Base Address: 663347200, Size in byte: 32768, Range:663347200--663379968
+d_Input Tensor: Base Address: 663379968, Size in byte: 32768, Range:663379968--663412736
+d_Output Tensor: Base Address: 663478272, Size in byte: 32768, Range:663478272--663511040
+______________________________________________________________________________
+Layer ID:17; Name:Dropout
+(1,4096,1,1)
+Input Tensor: Base Address: 663347200, Size in byte: 32768, Range:663347200--663379968
+Output Tensor: Base Address: 663445504, Size in byte: 32768, Range:663445504--663478272
+d_Input Tensor: Base Address: 663478272, Size in byte: 32768, Range:663478272--663511040
+d_Output Tensor: Base Address: 797761536, Size in byte: 32768, Range:797761536--797794304
+Musk_array Tensor: Base Address: 663412736, Size in byte: 32768, Range:663412736--663445504
+______________________________________________________________________________
+Layer ID:18; Name:Linear
+(1,4096,1,1)
+Input Tensor: Base Address: 663445504, Size in byte: 32768, Range:663445504--663478272
+Output Tensor: Base Address: 797728768, Size in byte: 32768, Range:797728768--797761536
+d_Input Tensor: Base Address: 797761536, Size in byte: 32768, Range:797761536--797794304
+d_Output Tensor: Base Address: 932110336, Size in byte: 32768, Range:932110336--932143104
+Weight Tensor: Base Address: 663511040, Size in byte: 134217728, Range:663511040--797728768
+d_Weight Tensor: Base Address: 797794304, Size in byte: 134217728, Range:797794304--932012032
+Bias Tensor: Base Address: 932012032, Size in byte: 32768, Range:932012032--932044800
+d_Bias Tensor: Base Address: 932044800, Size in byte: 32768, Range:932044800--932077568
+______________________________________________________________________________
+Layer ID:19; Name:ReLU
+(1,4096,1,1)
+Input Tensor: Base Address: 797728768, Size in byte: 32768, Range:797728768--797761536
+Output Tensor: Base Address: 932077568, Size in byte: 32768, Range:932077568--932110336
+d_Input Tensor: Base Address: 932110336, Size in byte: 32768, Range:932110336--932143104
+d_Output Tensor: Base Address: 964919296, Size in byte: 32768, Range:964919296--964952064
+______________________________________________________________________________
+Layer ID:20; Name:Linear
+(1,4096,1,1)
+Input Tensor: Base Address: 932077568, Size in byte: 32768, Range:932077568--932110336
+Output Tensor: Base Address: 964911104, Size in byte: 8000, Range:964911104--964919296
+d_Input Tensor: Base Address: 964919296, Size in byte: 32768, Range:964919296--964952064
+d_Output Tensor: Base Address: 997736448, Size in byte: 8000, Range:997736448--997744640
+Weight Tensor: Base Address: 932143104, Size in byte: 32768000, Range:932143104--964911104
+d_Weight Tensor: Base Address: 964952064, Size in byte: 32768000, Range:964952064--997720064
+Bias Tensor: Base Address: 997720064, Size in byte: 8000, Range:997720064--997728256
+d_Bias Tensor: Base Address: 997728256, Size in byte: 8000, Range:997728256--997736448
+______________________________________________________________________________
